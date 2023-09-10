@@ -1,0 +1,157 @@
+\begin{frame}{Implementacja teleskopowej kaskody ze zintegrowanym sprzężeniem AC}
+    \begin{columns}
+
+        \column{.6\textwidth}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.8]{ch4/chap4Scheme.pdf} 
+        \end{figure}
+
+        \column{.35\textwidth}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale = 0.5]{scripts/tmp/differentialPair.pdf}  
+        \end{figure}
+
+        \vspace{-5mm} %5mm vertical space
+        {\renewcommand\normalsize{\small}%
+\normalsize
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll} 
+    \toprule
+    \begin{tabular}[c]{@{}l@{}}Kluczowe \\tranzystory\end{tabular} & $W$ [$\SI{}{\micro\metre}$] & $L$ [$\SI{}{\micro\metre}$]  \\ 
+    \toprule
+    $M_{bias}$                                                       & 10                          & 10                           \\
+    $M_1,\ M_2$                                                    & 300                         & 1                            \\
+    $M_3,\ M_4$                                                    & 20                          & 2                            \\
+    $M_5,\ M_6$                                                    & 5                           & 5                            \\
+    $M_7,\ M_8$                                                    & 4                           & 48                           \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+}
+
+
+    \end{columns}   
+ \end{frame}
+
+
+
+
+
+
+
+\begin{frame}{}
+    \begin{columns}
+
+    \column{.75\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{ch4/channel.pdf} 
+    \end{figure}   
+
+    \column{.2\textwidth}
+
+    \begin{block}{
+        Przedwzmacniacz z wejściowym obwodem sprzęgającym AC oraz obwody polaryzujące
+    }
+
+    \end{block}
+    \end{columns}   
+  
+\end{frame}
+
+
+\begin{frame}{Efekty niedopasowania -- blok korekcji}
+\begin{columns}
+
+    \column{.35\textwidth}
+    \begin{block}{
+        Projekt kanału}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale = 0.4]{ch4/chap4Scheme.pdf}
+        \end{figure} 
+        \end{block}
+
+
+
+
+    \column{.6\textwidth}
+    \begin{columns}
+    \column{.45\textwidth}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.5]{scripts/tmp/analyseVgsTHD_1.pdf}
+    \end{figure} 
+    \column{.45\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale =0.5]{scripts/tmp/analyseVgsTHD_2.pdf}
+    \end{figure} 
+    \end{columns}   
+\end{columns}  
+
+\begin{columns}
+
+\column{.35\textwidth}
+\begin{block}{
+Wyzwania do rozwiązania}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.6]{ch4/vgs_corr_sch.pdf} 
+\end{figure}   
+\end{block}
+
+\column{.6\textwidth}
+    \begin{columns}
+    \column{.45\textwidth}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.5]{ch4/vgs_corr0.pdf}
+    \end{figure} 
+    \column{.45\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale =0.5]{ch4/vgs_corr1.pdf}
+    \end{figure} 
+    \end{columns}   
+\end{columns}  
+\end{frame}
+
+
+\begin{frame}{}
+    \begin{columns}
+
+    \column{.35\textwidth}
+    TODo - usunąć dół, dac tabelke z wersjami
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{ch4/layoutASIC.pdf} 
+    \end{figure}   
+    \column{.6\textwidth}
+
+    \begin{block}{
+        Symulacje z uwzględnieniem elementów pasożytniczych
+    }
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.6]{scripts/tranSchematicLayout/tranSchematicLayout.pdf}  
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.6]{scripts/noiseContribution/noiseContributionOut.pdf}  
+    \end{figure}
+    \end{block}
+    \end{columns}   
+  
+\end{frame}
+
+
+

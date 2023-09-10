@@ -1,0 +1,183 @@
+\documentclass[aspectratio=1610, polish]{beamer} 
+% Jeśli chcesz otrzymać prezentację w języku polskim, to, powyżej, zamień „english” na „polish”
+\usepackage{babel}
+\makeatletter
+\@ifclasswith{beamer}{polish}{
+	\usepackage{polski}
+}
+\makeatother
+\usepackage[utf8]{inputenc}
+\usepackage{listings} % We want to put listings
+% \usepackage{minted}   % We want to put listings
+
+\mode<beamer>{ 	% In the 'beamer' mode
+	\hypersetup{pdfpagemode=FullScreen}         % Enable Full screen mode
+	\usetheme[parttitle=rightfooter, nosidebar, margins=1em]{AGH}       % Show part title in right footer
+	%\usetheme[nosidebar]{AGH}                  % Do not show sidebar on non-title slides
+	% \usetheme[nosidebar, margins=1em]{AGH}     % Do not show sidebar on non-title slides and set both margins (left / right) to 1em
+	%\usetheme[dark]{AGH}                       % Use dark background
+	%\usetheme[dark, parttitle=leftfooter]{AGH} % Use dark background and show part title in left footer
+}
+\mode<handout>{	% In the 'handout' mode
+	\hypersetup{pdfpagemode=None}		
+	\usepackage{pgfpages}
+	\pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm,landscape]	% Show 4 slides on 1 page
+	\pgfpageslogicalpageoptions{1}{border code=\pgfusepath{stroke}}
+	\pgfpageslogicalpageoptions{2}{border code=\pgfusepath{stroke}}
+	\pgfpageslogicalpageoptions{3}{border code=\pgfusepath{stroke}}
+	\pgfpageslogicalpageoptions{4}{border code=\pgfusepath{stroke}}
+  	\usetheme{boxes}
+  	\addheadbox{structure}{\quad\insertpart\hfill\insertsection\hfill\insertsubsection\qquad}          % Content of header
+ 	\addfootbox{structure}{\quad\insertshortauthor\hfill\insertframenumber\hfill\insertsubtitle\qquad} % Content of footer
+}
+
+\AtBeginPart{ % At begin part: display its name
+	\frame{\partpage}
+} 
+\author[XYZ]{mgr inż. Beata \textsc{Trzpil-Jurgielewicz}
+\newline 
+promotorzy:
+\newline
+prof. dr hab. inż. Władysław \textsc{Dąbrowski} 
+\newline 
+dr inż. Paweł \textsc{Hottowy}}
+\date{}
+\iflanguage{polish}
+{
+	\title{Opracowanie wielokanałowego układu scalonego w technologii CMOS do rejestracji aktywności neuronalnej oraz jego aplikacja w funkcjonalnych badaniach mózgu
+	}
+	% \institute[AGH]{
+	% 		\inst{1}Instytut Informatyki\newline
+	% 		ul. Kawiory 21\newline
+	% 		30-055 Kraków\newline
+	% 		\url{http://www.icsr.agh.edu.pl/~polak/}
+	% 	\and
+	% 		\inst{2}Druga afiliacja
+ 	% }
+}{
+	\title{---}
+	% \institute[AGH]{
+	% 		\inst{1}Institute of Computer Science\newline
+	% 		Kawiory 21 Street\newline
+	% 		30-055 Kraków\newline
+	% 		Poland\newline
+	% 		\url{http://www.icsr.agh.edu.pl/~polak/}
+	% 	\and
+	% 		\inst{2}Second affiliation
+	% }
+}
+%%%%%%%%%%% Configuration of the listings package %%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings#Using_the_listings_package
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{green},      % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{gray},   % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{cyan},        % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname,                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+                                   % needed if you want to use UTF-8 Polish chars
+  literate={ą}{{\k{a}}}1
+           {Ą}{{\k{A}}}1
+           {ę}{{\k{e}}}1
+           {Ę}{{\k{E}}}1
+           {ó}{{\'o}}1
+           {Ó}{{\'O}}1
+           {ś}{{\'s}}1
+           {Ś}{{\'S}}1
+           {ł}{{\l{}}}1
+           {Ł}{{\L{}}}1
+           {ż}{{\.z}}1
+           {Ż}{{\.Z}}1
+           {ź}{{\'z}}1
+           {Ź}{{\'Z}}1
+           {ć}{{\'c}}1
+           {Ć}{{\'C}}1
+           {ń}{{\'n}}1
+           {Ń}{{\'N}}1
+}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\sisetup{locale = PL,
+         exponent-product=\ensuremath{\times}}
+\graphicspath{{../PhD_Thesis_BTJ/Figures/}}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[most]{tcolorbox}    	% for COLORED BOXES (tikz and xcolor included)
+\usepackage{ninecolors}
+\selectcolormodel{rgb}
+\definecolor{main}{HTML}{1F77B4}    % setting main color to be used
+\definecolor{sub}{HTML}{cde4ff}     % setting sub color to be used
+\definecolor{deepblue}{HTML}{1F77B4}
+\definecolor{deepred}{HTML}{D92728}
+\definecolor{lightred}{HTML}{D98789}
+\definecolor{deepgreen}{HTML}{2CA02C}
+
+\tcbset{
+    sharp corners,
+    colback = white,
+    before skip = 0.2cm,    % add extra space before the box
+    after skip = 0.5cm      % add extra space after the box
+}  
+
+\newtcolorbox{boxR}{
+    enhanced, % for a fancier setting,
+    boxrule = 0pt, % clearing the default rule
+    borderline = {0.75pt}{0pt}{deepred}, % outer line
+    borderline = {0.75pt}{2pt}{lightred}, % inner line
+    % title = sda
+}
+
+%%%%%%%%%%% Configuration of the minted package %%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setminted[C++]{frame=single,linenos}
+
+%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+
+% \part{Tematyka pracy}
+\begin{frame}{\iflanguage{polish}{Plan prezentacji}{Outline}}
+	\tableofcontents[pausesections]
+\end{frame}
+\section{Systemy do rejestracji aktywności elektrycznej żywych tkanek nerwowych}
+\section{Projekt liniowego pseudo-rezystora w zakresie \si{\giga\ohm}}
+\section{Operacyjny wzmacniacz transkonduktancyjny}
+\section{Weryfikacja elektroniczna i neurofizjologiczna układu scalonego HiFiNeuroPre}
+
+\part{Systemy do rejestracji aktywności elektrycznej żywych tkanek nerwowyc}
+\input{theory.tex}
+
+\part{Liniowy pseudo-rezystor}
+
+\input{pseudo.tex}
+
+\part{Operacyjny wzmacniacz transkonduktancyjny}
+\input{amp.tex}
+
+
+\part{Weryfikacja elektroniczna i neurofizjologiczna układu scalonego HiFiNeuroPre}
+\input{results.tex}
+
+% \input{examples.tex}
+\end{document}
