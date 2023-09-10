@@ -24,13 +24,13 @@
         \begin{subfigure}[b]{0.485\textwidth}
             \centering
             \includegraphics{scripts/tmp/bodePlotFc_2.pdf}  
-            \caption{}
+
         \end{subfigure}
         % \hfill
         \begin{subfigure}[b]{0.485\textwidth}
             \centering
             \includegraphics{scripts/tmp/bodePlotFc_ictrl.pdf}
-            \caption{}
+
         \end{subfigure}     
 
     \end{figure}
@@ -44,110 +44,137 @@
         \begin{subfigure}[b]{0.485\textwidth}
             \centering
             \includegraphics{scripts/tmp/bodePlotFc_0.pdf}
-            \caption{}
+
         \end{subfigure}
         % \hfill
         \begin{subfigure}[b]{0.485\textwidth}
             \centering
             \includegraphics{scripts/tmp/bodePlotFc_1.pdf}
-            \caption{}
+
         \end{subfigure}     
     \end{figure}
 \end{frame}
 
-\begin{frame}{Pomiary zniekształceń harmonicznych}
-    \begin{figure}[H]
-        \centering
-            \begin{subfigure}[b]{0.485\textwidth}
+\begin{frame}{Pomiary zniekształceń harmonicznych -- wpływ korekty}
+
+    \begin{columns}
+
+        \column{.45\textwidth}
+        \begin{block}{Brak globalnej korekty}
+            \begin{figure}[H]
                 \centering
-                \includegraphics{scripts/tmp/thdFreqCorr0_0.pdf}
-            \end{subfigure}
-            % \hfill
-            \begin{subfigure}[b]{0.485\textwidth}
+                \includegraphics[scale = 0.85]{scripts/tmp/thdFreqCorr0_0.pdf} 
+            \end{figure}   
+        \end{block}
+
+        \column{.45\textwidth}
+
+        \begin{block}{Korekta globalna}
+            \begin{figure}[H]
                 \centering
-                \includegraphics{scripts/tmp/thdFreqCorr100_0.pdf}
-            \end{subfigure}     
-        \end{figure}
+                \includegraphics[scale = 0.85]{scripts/tmp/thdFreqCorr100_0.pdf}
+            \end{figure}   
+        \end{block}
+    \end{columns}
+
 \end{frame}
 
-\begin{frame}{}
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}{0.485\textwidth}
-            \centering
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip]{scripts/embc2021THD_size/embc2021THD_size_0_0.pdf}
-        \end{subfigure}
-        % \hfill
-        \begin{subfigure}{0.485\textwidth}
-            \centering
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip]{scripts/embc2021THD_size/embc2021THD_size_1_0.pdf}
-        \end{subfigure} 
-        % \vfill
-        \begin{subfigure}{0.485\textwidth}
-            \centering
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip]{scripts/embc2021THD_size/embc2021THD_size_0_100.pdf}
-        \end{subfigure}
-        % \hfill
-        \begin{subfigure}{0.485\textwidth}
-            \centering
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip]{scripts/embc2021THD_size/embc2021THD_size_1_100.pdf}
-        \end{subfigure}   
-    \end{figure}
+\begin{frame}{Konfiguracje przedwzmacniacza}
+
+
+    \begin{columns}
+
+        \column{.45\textwidth}
+        \begin{block}{Symetryczna konfiguracja}
+
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.8]{scripts/embc2021THD_size/embc2021THD_size_0_100.pdf}
+            \end{figure}   
+        \end{block}
+
+        \column{.45\textwidth}
+
+        \begin{block}{Drugi wariant przedwzmacniacza z większymi pojemnościami wejściowymi}
+
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.8]{scripts/embc2021THD_size/embc2021THD_size_1_100.pdf}
+            \end{figure}   
+        \end{block}
+    \end{columns}
+
+
+    % \begin{figure}[H]
+    %     \centering
+    %     \begin{subfigure}{0.485\textwidth}
+    %         \centering
+    %         \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/embc2021THD_size/embc2021THD_size_0_0.pdf}
+    %     \end{subfigure}
+    %     % \hfill
+    %     \begin{subfigure}{0.485\textwidth}
+    %         \centering
+    %         \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/embc2021THD_size/embc2021THD_size_1_0.pdf}
+    %     \end{subfigure} 
+    %     % \vfill
+    %     \begin{subfigure}{0.485\textwidth}
+    %         \centering
+    %         \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/embc2021THD_size/embc2021THD_size_0_100.pdf}
+    %     \end{subfigure}
+    %     % \hfill
+    %     \begin{subfigure}{0.485\textwidth}
+    %         \centering
+    %         \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/embc2021THD_size/embc2021THD_size_1_100.pdf}
+    %     \end{subfigure}   
+    % \end{figure}
 \end{frame}
 
 \begin{frame}{Pomiary szumów}
-    \begin{figure}[H]
-        \centering 
-        \includegraphics[scale=0.4]{scripts/tmp/measurementNoiseDataset.pdf}  
-    \end{figure}
+    % \begin{figure}[H]
+    %     \centering 
+    %     \includegraphics[scale=0.4]{scripts/tmp/measurementNoiseDataset.pdf}  
+    % \end{figure}
 
     \begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.485\textwidth}
             \centering
             \includegraphics{scripts/tmp/noiseGND_in.pdf}
-            \caption{}
-            \label{fig:noiseGND_in}
         \end{subfigure}
         % \hfill
         \begin{subfigure}[b]{0.485\textwidth}
             \centering
             \includegraphics{scripts/tmp/noiseElektrodaNaCl.pdf}
-            \caption{}
-            \label{fig:noiseElektrodaNaCl}
         \end{subfigure}     
     \end{figure}
 \end{frame}
 
-\begin{frame}{Podsumowanie testów elektronicznych}
-    Todod - dodav tabele
-\end{frame}
+
 
 \begin{frame}{System pomiarowy do akwizycji sygnałów neurobiologicznych}
     \begin{figure}[H]
         \centering 
-        \includegraphics[scale=0.4]{ch6/setupIBDtot.png}  
+        \includegraphics[scale=0.25]{ch6/setupIBDtot.png}  
     \end{figure}
 \end{frame}
 
 \begin{frame}{}
     \begin{figure}[H]
-        \centering
        % \begin{subfigure}{0.3\textwidth}
    
        %  \end{subfigure}
        %      \hfill
    
        \begin{subfigure}{0.25\textwidth}
-           \centering
-           \includegraphics{ch6/meaLFPnexus.pdf}
+           \includegraphics[scale = 0.75]{ch6/meaLFPnexus.pdf}
             % \vfill
         \end{subfigure}
        % \hfill
-           \hspace{-6em}
+           \hspace{-5em}
         \begin{subfigure}{0.7\textwidth}
-           \centering
-           \includegraphics{scripts/tmp/signal_MEA_LFP_wide.pdf}
+           \includegraphics[scale = 0.75]{scripts/tmp/signal_MEA_LFP_wide.pdf}
         \end{subfigure}
    \end{figure}
 \end{frame}
@@ -157,13 +184,13 @@
         \centering
         \begin{subfigure}[b]{0.485\textwidth}
             \centering
-            \includegraphics{scripts/tmp/signal_MEA_AP_1.pdf}
+            \includegraphics[scale=0.8]{scripts/tmp/signal_MEA_AP_1.pdf}
             \caption{}
         \end{subfigure}
         % \hfill
         \begin{subfigure}[b]{0.485\textwidth}
             \centering
-            \includegraphics{scripts/tmp/signal_MEA_AP_2.pdf}
+            \includegraphics[scale=0.8]{scripts/tmp/signal_MEA_AP_2.pdf}
             \caption{}
         \end{subfigure}     
     \end{figure}

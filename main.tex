@@ -34,7 +34,7 @@
 \AtBeginPart{ % At begin part: display its name
 	\frame{\partpage}
 } 
-\author[XYZ]{mgr inż. Beata \textsc{Trzpil-Jurgielewicz}
+\author[Beata Trzpil-Jurgielewicz]{mgr inż. Beata \textsc{Trzpil-Jurgielewicz}
 \newline 
 promotorzy:
 \newline
@@ -44,7 +44,7 @@ dr inż. Paweł \textsc{Hottowy}}
 \date{}
 \iflanguage{polish}
 {
-	\title{Opracowanie wielokanałowego układu scalonego w technologii CMOS do rejestracji aktywności neuronalnej oraz jego aplikacja w funkcjonalnych badaniach mózgu
+	\title[]{Opracowanie wielokanałowego układu scalonego w technologii CMOS do rejestracji aktywności neuronalnej oraz jego aplikacja w funkcjonalnych badaniach mózgu
 	}
 	% \institute[AGH]{
 	% 		\inst{1}Instytut Informatyki\newline
@@ -119,9 +119,11 @@ dr inż. Paweł \textsc{Hottowy}}
 \sisetup{locale = PL,
          exponent-product=\ensuremath{\times}}
 \graphicspath{{../PhD_Thesis_BTJ/Figures/}}
+% \graphicspath{{../BTJ_Thesis/Figures/}}
 
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{tabularray}
 
 \usepackage[most]{tcolorbox}    	% for COLORED BOXES (tikz and xcolor included)
 \usepackage{ninecolors}
@@ -157,15 +159,15 @@ dr inż. Paweł \textsc{Hottowy}}
 
 
 % \part{Tematyka pracy}
-\begin{frame}{\iflanguage{polish}{Plan prezentacji}{Outline}}
-	\tableofcontents[pausesections]
+\begin{frame}{Plan prezentacji}
+	\tableofcontents%[pausesections]
 \end{frame}
 \section{Systemy do rejestracji aktywności elektrycznej żywych tkanek nerwowych}
 \section{Projekt liniowego pseudo-rezystora w zakresie \si{\giga\ohm}}
 \section{Operacyjny wzmacniacz transkonduktancyjny}
 \section{Weryfikacja elektroniczna i neurofizjologiczna układu scalonego HiFiNeuroPre}
 
-\part{Systemy do rejestracji aktywności elektrycznej żywych tkanek nerwowyc}
+\part{Tematyka pracy}
 \input{theory.tex}
 
 \part{Liniowy pseudo-rezystor}
@@ -178,6 +180,32 @@ dr inż. Paweł \textsc{Hottowy}}
 
 \part{Weryfikacja elektroniczna i neurofizjologiczna układu scalonego HiFiNeuroPre}
 \input{results.tex}
+\part{Podsumowanie}
+\begin{frame}{Podsumowanie testów elektronicznych}
 
+\begin{longtblr}[
+    caption = {Parametry przedwzmacniacza na podstawie pomiarów weryfikacyjnych}
+    % label = {table:paramResult},
+  ]{
+    hline{1-2,11} = {-}{0.08em},
+  }
+  \textbf{Parametr}                                                                 & \textbf{Wartość}                    \\
+  Napięcia zasilania                                                                & $\SI{\pm 1.8}{\volt}$               \\
+  Całkowity prąd                                                                    & $\SI{2}{\micro\ampere}$             \\
+  Pobór mocy dla pojedynczego kanału                                                & $\SI{7.2}{\micro\watt}$             \\
+  Wzmocnienie z zamkniętą pętlą sprzężenia                                          & $\SI{25.9}{\deci\bel}$              \\
+  Zakres dolnej częstotliwości granicznej                                           & $\SIrange{0.1}{20}{\hertz}$         \\
+  Ekwiwalentny szum wejściowy w zakresie LFP                                        & $\SI{7.5}{\micro\volt_{rms}}$       \\
+  Ekwiwalentny szum wejściowy w zakresie AP                                         & $\SI{6.7}{\micro\volt_{rms}}$       \\
+  Zniekształcenia harmonioczne THD – $\SI{10}{\milli\volt_{pp}}\ \SI{1.68}{\hertz}$ & $\SI{0.94}{\percent}$               \\
+  Pole powierzchni pojedynczego przedwzmacniacza                                    & $\SI{0.0071}{\milli\metre\squared}$ 
+  \end{longtblr}
+\end{frame}
+
+\begin{frame}{Wnioski}
+\begin{itemize}
+    \item 	
+\end{itemize}
+\end{frame}
 % \input{examples.tex}
 \end{document}
