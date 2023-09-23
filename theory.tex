@@ -9,15 +9,18 @@
             \item obszar badań 
         \end{itemize}
     \end{block}
+    \vspace{-3mm} %5mm vertical space
+
 \begin{columns}
         \column{.55\textwidth}
         \begin{figure}[H]
             \includegraphics[scale=0.5]{ch1/intra-extra.png}  
         \end{figure}
+
         \column{.4\textwidth}
         \begin{alertblock}{Potencjał czynnościowy}
             \begin{figure}[H]
-                \includegraphics[scale=0.3]{ch1/ap.png}
+                \includegraphics[scale=0.25]{ch1/ap.png}
             \end{figure}
         \end{alertblock}
 
@@ -83,7 +86,7 @@
 
 
 \begin{frame}{Kanał rejestracji neuronowej z wykorzystaniem elektrod zewnątrzkomórkowych}
-
+\vspace{-1em}
     \begin{columns}
         \column{.48\textwidth}
         \begin{figure}[H]
@@ -100,11 +103,11 @@
         \column{.48\textwidth}
         \begin{block}{Wymagania stawiane interfejsom neuroelektronicznym umożliwiającym rejestrację sygnałów LFP i AP}
             \begin{itemize}
-                \item Offset stały na styku elektrody -- nawet $\SIrange{1}{2}{\volt}$ 
+                \item Offset stały na styku elektrody -- do $\SIrange{1}{2}{\volt}$ 
                 \item Szumy $<\SI{5}{\micro\volt}$ dla pasma LFP i AP
-                \item Liniowość rejestrowanego sygnału w całym paśmie
-                \item Pobór mocy 
-                \item Zróżnicowane sygnały: amplituda do $\SI{10}{\milli\volt_{pp}}$ dla LFP i $>\SI{50}{\micro\volt}$ dla AP
+                \item Liniowość rejestrowanego sygnału
+                \item Pobór mocy -- limit ogrzewania tkanki mózgowej --  mniej niż  $\SI{1}{\degreeCelsius}$ 
+                \item Zróżnicowane sygnały: amplituda do $\SI{10}{\milli\volt_{pp}}$ dla LFP i od  $\SI{50}{\micro\volt}$ dla AP
                 \item Skalowalność systemu -- tysiące kanałów dla przyszłych systemów
             \end{itemize}
         \end{block}
@@ -164,8 +167,13 @@
     \begin{exampleblock}{Zalety}
         \begin{itemize}
             \item Brak konieczności używania dużych rezystancji w pętli sprzężenia zwrotnego
-            \item 
         \end{itemize}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{ch2/dc-integrator.pdf} 
+        \end{figure}
+
     \end{exampleblock}
 \end{columns}
 
