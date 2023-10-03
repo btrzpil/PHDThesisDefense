@@ -1,0 +1,202 @@
+%%% Pfitzner
+\begin{frame}[t]
+    
+    \begin{block}{\af}
+        \cit{
+            Autorka nie sformułowała tezy rozprawy, co wynika ze specyfiki pracy, natomiast celem praktycznym było opracowanie takiego rozwiązania konstrukcyjnego przedwzmacniacza, aby umożliwić skuteczną realizację zintegrowanego narzędzia do badań mózgu przez zespół Katedry Oddziaływań i Detekcji Cząstek AGH.
+        }
+    \end{block}
+
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\af}
+        \cit{
+            W tekście pracy jest relatywnie dużo literówek, występują też drobne błędy gramatyczne, co świadczy prawdopodobnie o nadmiernie pospiesznym finalizowaniu rozprawy. 
+            Innych niedociągnięć jest niewiele, np.: na rysunkach 3.13 i 3.14 na osi odciętych skala częstotliwości obejmuje zakres od 0.1 Hz do 100 Hz, podczas gdy w podpisie podano pasmo 1 Hz -- 10 kHz. 
+            Ponadto tabela 4.3 jest wadliwie zbudowana i bez dodatkowego opisu nieczytelna.
+        }
+    \end{block}
+
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\af}
+        \cit{
+            Zwykle jednak wymagania projektowe formułowane są explicite w formie granicznych wartości istotnych parametrów, lecz takich na dla pracy nie określono. 
+            W tej sytuacji pierwszorzędnego znaczenia nabiera porównanie wartości osiągniętych parametrów zaprojektowanego wzmacniacza z danymi dostępnymi z literatury. 
+            Brak zestawienia porównawczego w formie tabeli budzi pewien niedosyt. Wprawdzie standardowo w odniesieniu do zniekształceń harmonicznych wartość THD podawana jest zwykle dla częstotliwości 1 kHz, a nie w szerszym zakresie, to jednak takie zestawienie byłoby zasadne uwzględniając zarówno ogólne stwierdzenia jak i wartości innych parametrów.
+        }
+    \end{block}
+\end{frame}
+
+%%% Komorowski
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            W przypadku przedstawionej pracy Autorka precyzyjnie przedstawiła główny cel pracy oraz wyszczególniła kolejny etapy pracy prowadzące do realizacji celu głównego.
+            Niestety w pracy nie zauważyłem wyszczególnionych tez pracy. 
+            \high{
+                Jakie są zatem cele pracy? Czy tezy pracy zostały udowodnione?
+            }
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Omówiono również inne koncepcje eliminacji składowej stałej: technikę wzmacniaczy z modulacją [...] oraz zastosowanie wzmacniacza o małym lub jednostkowym wzmocnieniu i przetwornika analogowo-cyfrowego o dużej rozdzielczości.
+            Z uwagi na rosnącą popularność tego ostatniego rozwiązania w przypadku akwizycji sygnałów biologicznych i biomedycznych uważam, że ta część rozdziału powinna być bardziej szczegółowa. 
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Struktura rozprawy jest logiczna, jednak w pracy występuje pewna (moim zdaniem stanowczo zbyt liczna) liczba uchybień edycyjnych (tekstowych, językowych), np. forma gramatyczna, powtórzenia, brak przedimków lub słów itp.
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            W pracy występuje dość obszerna część medyczno-biologiczna służąca w zasadzie do uzasadnienia podziału sygnałów na dwie grupy LFP i AP o odpowiednich charakterystykach (pasmo i zakres amplitud).
+            Materiał ciekawy i ważny z punktu widzenia pracy, ale być może mógłby być krótszy.
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Niektóre używane w pracy określenia moim zdaniem są nietypowe, głównie dotyczy to określenia "\high{układ odczytu}" zamiast wzmacniacz.
+            [...]
+            Podobnie użycie słowa "\high{zaadresowany}".
+            Wyrażenie "\high{mniejsze multipleksery}" (str. 34) jest mało precyzyjne, a właściwie w użytym kontekście nieprawidłowe.
+            Również definicja wyrażenia "\high{front-end}" (str. 35) budzi moje wątpliwości.
+            Użycie wyrażenia "\high{może zostać drastycznie zmniejszona}" wydaje mi się również niezbyt fortunne.
+            Autorka rozprawy dosyć często używa wyrażenia \high{offset wyjściowy}, moim zdaniem jednak poprawnie powinno się użytwać wyrażenia offset napięcia wyjściowego.
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            \high{
+                Impedancja mikroelektrody jest ważnym parametrem dla rejestracji zewnątrzkomórkowej, ponieważ określa szumy elektrody oraz tłumienie sygnału.} -- w jaki sposób impedanca określa te parametry?
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            \high{Wzmacniacz LNA występuje w każdym kanale, skąd następnie sygnał jest przesyłany poprzez MUX z podziałem czasu.
+            Wadą tego rozwiązania jest to, że gdy liczba kanałów wzrasta, częstotliwość próbkowania ADC również wzrasta, co powoduje większy pobór mocy.} - Częstotliwość próbkowania powinna być zależna od właściwości próbkowanego (rejestrowanego) sygnału, a nie zależeć od architektury systemu.
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Niektóre fragmenty tekstu są dla mnie niezrozumiałe lub budzą pewne wątpliwości
+            [...]
+            \high{
+                Z punktu widzenia minimalizacji poboru mocy najkorzystniejsza jest polaryzacja tranzystorów w zakresie słabej inwersji, poniważ w tym zakresie transkonduktancji do prądu polaryzacji tranzystora jest największy [48].
+            }
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Niektóre fragmenty tekstu są dla mnie niezrozumiałe lub budzą pewne wątpliwości
+            [...]
+            \high{ale przy stałym stosunku $C_{in}/C_{f} = 20 V/V$}
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Niektóre fragmenty tekstu są dla mnie niezrozumiałe lub budzą pewne wątpliwości
+            [...]
+            \high{
+                Jak wspomniano wcześniej, w docelowym rozwiązaniu przewiduje się zastosowanie drugiego stopnia wzmacniającego. 
+                Przy założeniu, że kolejny stopień będzie miał wysoką impedancję wyjściową, może on być sterowany bezpośrednio z kaskody o wysokiej impedancji wyjściowej. 
+                Dla celów testowych potrzebujemy jednak stopnia wyjściowego o relatywnie niskiej impedancji wyjściowej, który skutkowałby zwiększeniem poboru mocy układu prototypowego.
+            }
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Wzór 2.2 na str. 88 -- brak liczby 4 w mianowniku pod pierwiastkiem, nie wszystkie składowe wzoru są wyjaśnione i opisane.
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            W pracy przyjęto wzmocnienie dla pierwszego stopnia projektowanego wzmacniacza na poziomie $K = 20 V/V$.
+            Czy w kontekście możliwości pojawienia się składowej stałej napięcia na wejściu wzmacniacza spowodowanego zjawiskami zachodzącymi na styku tkanka-elektroda wartość ta nie jest zbyt duża i czy nie będzie powodowała nasycenia stopnia wejściowego wzmacniacza?
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            W pracy skupiono się na analizie własności i projektowaniu rezystora półprzewodnikowego, nieco mniej zajmując się samym wzmacniaczem -- który jest najważniejszym elementem pracy.
+            W szczególności dotyczy to parametrou CMRR wzmacniacza.
+            Podobnie niewiele uwagi poświęconu napięciu offsetu wzmacniacza, chociaż jego obecność jest widoczna we wszystkich zarejestrowanych przebiegach.
+            Tu przydatne byłoby jakieś oszacowanie.
+            Konsekwencją takiego podejścia jest dość zwięzły opis samej struktury wzmacniacza i jego własności tu przydałaby się nieco bardziej obszerna analiza.
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Wybór współczynnika THD do oceny parametrów wzmacniacza jest poprawny, ale w mojej opinii w pracy trochę za mało uwagi poświęcono innym, dość istotnym parametrom wzmacniacza mających wpływ na jakość rejestrowanych sygnałów np. takich jak liniowość fazy, odpowiedź na skok jednostkowy czy szybkość narastania (SR -- ang. slew rate).
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Teza o dużym znaczeniu współczynnika THD dla niskoczęstotliwościowych składowych sygnałów nie jest poparta odpowiednimi przykładami uzasadniającymi to znaczenie.
+            Jednak wymagałoby to dokładniejszej analizy własności rejestrowanych sygnałów neuronalnych, co jednak wykracza poza zakres pracy.
+        }
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            Zastanawiający jest brak w analizach widmowych zarejestrowanych sygnałów, składowych sieci i ich harmonicznych.
+            Być może zostały użyte filtry typu \high{notch}, ale nie wspomniano o tym w pracy.
+        }
+    \end{block}
+\end{frame}
+
+% \begin{frame}[t]
+%     \begin{block}{\dk}
+%         \cit{
+
+%         }
+%     \end{block}
+% \end{frame}
