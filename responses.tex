@@ -82,6 +82,20 @@
             Autorka rozprawy dosyć często używa wyrażenia \high{offset wyjściowy}, moim zdaniem jednak poprawnie powinno się użytwać wyrażenia offset napięcia wyjściowego.
         }
     \end{block}
+    \begin{columns}
+
+        \column{.33\textwidth}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.2]{ch2/afe.png}
+        \end{figure}
+    
+        \column{.6\textwidth}
+        Schematy rodzajów architektur systemów wielokanałowych do rejestracji biosygnałów elektrycznych. 
+        W pierwszym rozwiązaniu jedno ADC używane jest do wszystkich
+        kanałów, w kolejnym rozwiązaniu każdy kanał rejestrujący posiada własne ADC, ostatnie rozwiązanie stanowi połączenie obu koncepcji zakładające jedno ADC dla jednej kolumny LNA
+    \end{columns}
+
+    
 \end{frame}
 
 \begin{frame}[t]
@@ -91,6 +105,21 @@
                 Impedancja mikroelektrody jest ważnym parametrem dla rejestracji zewnątrzkomórkowej, ponieważ określa szumy elektrody oraz tłumienie sygnału.} -- w jaki sposób impedanca określa te parametry?
         }
     \end{block}
+    \begin{columns}
+
+        \column{.43\textwidth}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.6]{ch2/ImpedancjaWykres.pdf}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.2]{ch2/chemNeuroInterface.png}
+        \end{figure}
+        
+    
+        \column{.55\textwidth}
+        Zależność impedancji elektrody $Z$ od częstości sygnału
+
+    \end{columns}
 \end{frame}
 
 \begin{frame}[t]
@@ -100,6 +129,19 @@
             Wadą tego rozwiązania jest to, że gdy liczba kanałów wzrasta, częstotliwość próbkowania ADC również wzrasta, co powoduje większy pobór mocy.} - Częstotliwość próbkowania powinna być zależna od właściwości próbkowanego (rejestrowanego) sygnału, a nie zależeć od architektury systemu.
         }
     \end{block}
+W przypadku systemów z multipleksem o podziale czasowym (TDM), częstotliwość próbkowania musi być zazwyczaj wyższa niż minimalna częstotliwość Nyquista wynikająca z charakterystyki pojedynczego kanału. Jest to spowodowane faktem, że każdy kanał jest próbkowany w sekwencji, co wprowadza dodatkowe wymagania dotyczące częstotliwości próbkowania.
+
+Oto dlaczego częstotliwość próbkowania musi być wyższa niż minimalna częstotliwość Nyquista:
+
+Częstotliwość Nyquista dla pojedynczego kanału: Minimalna częstotliwość próbkowania wynika z zasady Nyquista i jest określona przez maksymalną częstotliwość sygnału w pojedynczym kanale. Jeśli ta częstotliwość jest na poziomie, na przykład, 10 kHz, to minimalna częstotliwość próbkowania wynosiłaby 20 kHz zgodnie z zasadą Nyquista.
+
+Multipleksowanie kanałów: Jednak w systemie TDM sygnały z różnych kanałów są próbkowane w określonym czasie w sekwencji. Oznacza to, że system musi być w stanie przetworzyć dane z każdego kanału w odpowiednim czasie. Dlatego potrzebna jest wyższa częstotliwość próbkowania, aby zebrać dane z każdego kanału zgodnie z cyklem TDM.
+
+Przepustowość systemu: Wyższa częstotliwość próbkowania oznacza większą ilość danych do przetworzenia i przesłania. Przepustowość systemu, zarówno sprzętowa, jak i komunikacyjna, musi być wystarczająca, aby obsłużyć te dane.
+
+Zasoby sprzętowe i przetwarzanie danych: Wybór częstotliwości próbkowania musi być dostosowany do dostępnych zasobów sprzętowych i zdolności przetwarzania danych systemu.
+
+Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzględnić dodatkowe wymagania wynikające z próbkowania wielu kanałów w sekwencji. Wybór odpowiedniej częstotliwości próbkowania w takim systemie jest istotny, aby zapewnić dokładność pomiarów i niezakłócone przetwarzanie danych z każdego kanału.
 \end{frame}
 
 \begin{frame}[t]
@@ -110,8 +152,20 @@
             \high{
                 Z punktu widzenia minimalizacji poboru mocy najkorzystniejsza jest polaryzacja tranzystorów w zakresie słabej inwersji, poniważ w tym zakresie transkonduktancji do prądu polaryzacji tranzystora jest największy [48].
             }
+
         }
     \end{block}
+    \begin{columns}
+
+        \column{.43\textwidth}
+        \begin{figure}[H]
+            \includegraphics[scale=0.25]{ch3/gmid_id.png} 
+        \end{figure}
+    
+        \column{.55\textwidth}
+        Stosunek transkonduktancji do prądu drenu w funkcji znormalizowanego prąd drenu dla trzech technologii 
+    \end{columns}
+
 \end{frame}
 
 \begin{frame}[t]
@@ -122,6 +176,7 @@
             \high{ale przy stałym stosunku $C_{in}/C_{f} = 20 V/V$}
         }
     \end{block}
+
 \end{frame}
 
 \begin{frame}[t]
@@ -136,7 +191,33 @@
             }
         }
     \end{block}
+
+
+    \begin{columns}
+
+        \column{.43\textwidth}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.4]{ch4/sf.pdf}
+        \end{figure}
+
+        \column{.55\textwidth}
+
+        By móc utrzymać wysokie wzmocnienie różnicowe prądu stałego oferowane przez przedwzmacniacz niezależnie od dalszych elementów toru odczytowego powinien on zapewniać niską rezystancję wyjściową ze względu na możliwość obciążenia parametrów przedwzmacniacza.
+        Aby układ przedwzmacniacza miał niską rezystancję wyjściową należało dodać stopień buforujący do wyjścia OTA.
+
+
+
+    \end{columns} 
+
 \end{frame}
+    % Zaproponowany przedwzmacniacz jest pierwszym fragmentem toru odczytowego do rejestracji sygnałów neuronalnych. 
+    % By móc utrzymać wysokie wzmocnienie różnicowe prądu stałego oferowane przez przedwzmacniacz niezależnie od dalszych elementów toru odczytowego powinien on zapewniać niską rezystancję wyjściową ze względu na możliwość obciążenia parametrów przedwzmacniacza.
+    % Rezystancja wyjściowa dla OTA jest odwrotnością konduktancji gds, która jest w przybliżeniu proporcjonalna do prądu drenu par różnicowych. 
+    % Aby układ przedwzmacniacza miał niską rezystancję wyjściową należało dodać stopień buforujący do wyjścia OTA.
+    % Zdecydowano się wykorzystać do tego prosty wzmacniacz w konfiguracji wtórnika,który skonstruowany jest z tranzystora PMOS w konfiguracji wspólnego drenu (MSF) polaryzowanego za pomocą obciążenia aktywnego (tranzystoryMpolar). 
+    % Wtórnik wyjściowy ze względu na obciążenie aktywne wymaga sygnału prądowego Ipolar co przekłada się na pobór mocy całego układu.
+
+
 
 \begin{frame}[t]
     \begin{block}{\dk}
@@ -153,6 +234,10 @@
             Czy w kontekście możliwości pojawienia się składowej stałej napięcia na wejściu wzmacniacza spowodowanego zjawiskami zachodzącymi na styku tkanka-elektroda wartość ta nie jest zbyt duża i czy nie będzie powodowała nasycenia stopnia wejściowego wzmacniacza?
         }
     \end{block}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
+    \end{figure}
 \end{frame}
 
 \begin{frame}[t]
@@ -191,6 +276,19 @@
             Być może zostały użyte filtry typu \high{notch}, ale nie wspomniano o tym w pracy.
         }
     \end{block}
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.485\textwidth}
+            \centering
+            \includegraphics[scale = 0.75]{scripts/tmp/noiseGND_in.pdf}
+        \end{subfigure}
+        % \hfill
+        \begin{subfigure}[b]{0.485\textwidth}
+            \centering
+            \includegraphics[scale = 0.75]{scripts/tmp/noiseElektrodaNaCl.pdf}
+        \end{subfigure}     
+    \end{figure}
 \end{frame}
 
 %%% Buchner
@@ -201,6 +299,9 @@
             Nie jest zachowany klasyczny układ publikacji naukowej, natomiast zaproponowany układ jest logiczny i przejrzysty.
         }
     \end{block}
+    Co to znaczy klasyczny układ publikacji naukowej?
+    Nature
+    IEEE
 \end{frame}
 
 \begin{frame}[t]
@@ -438,3 +539,11 @@
 %         }
 %     \end{block}
 % \end{frame}
+
+\begin{block}{Kluczowe wymagnia}
+    \begin{itemize}
+        \item optymalizacja szumowa
+        \item powierzchnia
+        \item pobór mocy
+    \end{itemize}
+     \end{block}
