@@ -13,16 +13,13 @@
             Niestety w pracy nie zauważyłem wyszczególnionych tez pracy. 
             \high{
                 Jakie są zatem cele pracy? Czy tezy pracy zostały udowodnione?
-            }
-
-        
-        }
+            }}
     \end{block}
-
-    Ze powodu specyfiki pracy tezy pracy tożsame są z celem pracy, czyli możliwością realizacji zintegrowanego układu scalonego w technologii CMOS o zadanych parametrach.
-
+    Tezy prace są tożsame z celem pracy i explicite nie zostały sformułowane w ramach odrębnych stwierdzeń.
+Zdaję sobie po uwagach, że byłby to przydatne podczas czytania, chociaż uważałam to w momencie za nienaturalne z wyżej wymienionego powodu.
 
 \end{frame}
+
 
 \begin{frame}[t]
     \vspace{-1em}
@@ -35,6 +32,7 @@
             }
         }
 \end{block}
+\vspace{-1em}
 
     \begin{block}{\af}
         \cit{
@@ -60,7 +58,6 @@
         \end{figure}
     
         \column{.65\textwidth}
-        \vspace{-1em}
 
         {\renewcommand\normalsize{\small}%
         \normalsize
@@ -75,8 +72,6 @@
 \end{frame}
 
 \begin{frame}[t]
-
-
     \input{tab.tex}
 \end{frame}
 
@@ -84,19 +79,29 @@
 
 
 \begin{frame}[t]
+    \vspace{-1em}
     \begin{block}{\af}
         \cit{
+            {\renewcommand\normalsize{\small}%
+            \normalsize
             Zwykle jednak wymagania projektowe formułowane są explicite w formie granicznych wartości istotnych parametrów, lecz takich na dla pracy nie określono. 
             W tej sytuacji pierwszorzędnego znaczenia nabiera porównanie wartości osiągniętych parametrów zaprojektowanego wzmacniacza z danymi dostępnymi z literatury. 
             Brak zestawienia porównawczego w formie tabeli budzi pewien niedosyt. 
-            Wprawdzie standardowo w odniesieniu do zniekształceń harmonicznych wartość THD podawana jest zwykle dla częstotliwości 1 kHz, a nie w szerszym zakresie, to jednak takie zestawienie byłoby zasadne uwzględniając zarówno ogólne stwierdzenia jak i wartości innych parametrów.
+            Wprawdzie standardowo w odniesieniu do zniekształceń harmonicznych wartość THD podawana jest zwykle dla częstotliwości 1 kHz, a nie w szerszym zakresie, to jednak takie zestawienie byłoby zasadne uwzględniając zarówno ogólne stwierdzenia jak i wartości innych parametrów.}
         }
     \end{block}
-\end{frame}
-Oczywiście możliwe jest podanie sztywnych wartości granicznych istotnych parametrów jednak na etapie pisania pracy uznano, że będzie to miało formę sztuczną ponieważ projekt zakładał eksplorowanie tychże parametrów.
-Dzięki tej formie miałam chęć przedstawienie, że optymalizacja dokonywana jest na etapie dostosowania do konkretne zastosowanie i jest zwykle wykonywana kosztem wyborów ponieważ często wymagania są przeciwstawne w możliwości co do ich realizacji.
+    {\renewcommand\normalsize{\small}%
+\normalsize
+Powodem dla którego nie zostały podane sztywne wartości dotyczące systemu wynika z tego, że celem projektu było eksplorowanie zakresu parametrów, nie zaś  osiąganie konkretnych wartości. 
+W zależności od użytych elektrod podczas eksperymentu jak również celu samego eksperymentu wymagania dotyczące toru odczytowego mogą być różne.
+Dzięki temu podejściu możliwe było poznanie ograniczeń technologii, architektury.
+Rozumiem, że brak zbiorczej tabeli porównującej budzi niedosyt ale jak przedstawiono na samym początku prezentacji porównywanie wartości THD mijałoby się z celem ponieważ w literature brak danych, które byłyby porównywalne. Jedyna praca, którą udało mi się znaleźć wzmiankę na ten temat, o której wspominałam w pracy pochodzi z grupy profesora Genova z Toronto.}
+% Pozostałe parametry jak szumy, powierzchnia, pobór mocy jest wypadkową optymalizacji projektowej o której wspomniano powyżej.
 
-Jak już przedstawiano wcześniej porównanie wartości THD mijałoby się z celem ze względu na brak tego typu zestawień dla szerokiego spektrum, zaś w przypadku innych parametrów jak szumy, powierzchnia, pobór mocy jest wypadkową optymalizacji projektowej o której wspomniano powyżej.
+
+    
+\end{frame}
+
 %%% Komorowski
 
 
@@ -109,8 +114,8 @@ Jak już przedstawiano wcześniej porównanie wartości THD mijałoby się z cel
         }
     \end{block}
 
-    Na etapie pisania pracy uznałam, że treść w rozdziale jest wystarczająca, aby zrozumieć koncepcje związane z eliminacją składowej stałej i powód dla którego zdecydowano się na konkretne rozwiązanie.
-    Rosnąca popularność tego typu rozwiązań widać w systemach komercyjnych, które nie są możliwe do dostosowana do wielkoskalowych systemów aplikowanych w mózgu dla których projektowano rozwiązanie w pracy dlatego zdecydowano się nie rozszerzać o ten aspekt pracy.
+    Rozumiem, że w kontekście rosnącej popularności rozwiązań opartych o wzmacniacz o małym lub jednostkowym wzmocnieniu i przetwornikom analogowo-cyfrowym ubogi fragment w rozdziale dotyczącym obecnego stanu wiedzy bddzi niedosyt.
+    Rozwiązanie te jednak tyczą  się głównie zastosowań związanych z rejestracją sygnałów EEG. Układy  te charakteryzują się innymi wymaganiami dotyczącymi ilości kanałów pomiarowych, rozmiarów oraz technologii w której są wykonywane, dlatego zdecydowano się nie poszerzać o ten aspekt pracy szczególnie, że wymagania dotyczące projektu były inne. 
 \end{frame}
 
 
@@ -121,9 +126,9 @@ Jak już przedstawiano wcześniej porównanie wartości THD mijałoby się z cel
             Materiał ciekawy i ważny z punktu widzenia pracy, ale być może mógłby być krótszy.
         }
     \end{block}
-    Chociaż obszerna część medyczno-biologiczna w przedstawionej pracy może wydawać się długa, warto podkreślić, że jej rozmiar jest wynikiem interdyscyplinarnego charakteru tego projektu. 
-    Moim celem było dostarczenie wszechstronnej wiedzy, aby sprostać potrzebom różnych grup odbiorców, w tym osób korzystających z wyników oraz profesjonalistów projektujących podobne systemy.
-    Ta obszerność miała pozwolić na lepsze zrozumienie charakterystyk sygnałów LFP i AP oraz zwiększyć użyteczność przedstawionych badań do innych zastosowań poprzez sprowadzenie sygnałów do pojęć znanych grupie projektantów.
+    Chociaż obszerna część medyczno-biologiczna w przedstawionej pracy może się wydawać długo chiałam podkreślić, że jej rozmiar był wynikiem interdyscyplinarnego charakteru projektu i chęci przedstawienia wszechstronnej wiedzy różnej grupie odbiorców. Ta obszerność miała pozwolić na lepsze zrozumieni charkaterystyk sygnałów LFP i AP oraz zwiększyć użyteczność badań do innych zastosowań poprzez sporwadzenie wymagań biologicznych do rozumianych pojeć używanych w grupie projektantów elektroniki. Rozumiem jednak że część mogłayby być krótsza.
+    
+
 \end{frame}
 
 \begin{frame}[t]
@@ -141,44 +146,24 @@ Jak już przedstawiano wcześniej porównanie wartości THD mijałoby się z cel
 
     \begin{columns}
 
-        \column{.33\textwidth}
-        Schematy rodzajów architektury systemów wielokanałowych do rejestracji biosygnałów elektrycznych.
+        \column{.3\textwidth}
+        \vspace{-1em}
         \begin{figure}[H]
             \includegraphics[scale = 0.2]{ch2/afe.png}
         \end{figure}
 
     
-        \column{.6\textwidth}
-        Układ odczytu jest pojęciem szerszym aniżeli wzmacniacz, który jest częścią układu odczytowego.
-        Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obejmujące mniej kanałów wejściowych.
- 
-
+        \column{.75\textwidth}
+        {\renewcommand\normalsize{\small}%
+\normalsize
+Układ odczytu jest pojęciem szerszym aniżeli wzmacniacz, który jest częścią układu odczytowego. Pojęcie może jest niefortunne i lepsze byłoby używanie określenia tor odczytu opisując drogę sygnału. 
+Dodatkowo pojęcie \textit{Front End} jest powszechnie używane w kontekście struktur scalonych opisując fragment toru odczytowego, który odpowiada za wstępne przetworzenie sygnału.
+Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obejmujące mniejszą liczbę kanałów wejściowych. Dzięki mniejszej liczbie kanałów można wykorzystywać niższe częstotliwości zegarów odpowiedzialnych za próbkowanie sygnału.}
     \end{columns}
     
 \end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\dk}
-        \cit{
-            \high{
-                Impedancja mikroelektrody jest ważnym parametrem dla rejestracji zewnątrzkomórkowej, ponieważ określa szumy elektrody oraz tłumienie sygnału.} -- w jaki sposób impedanca określa te parametry?
-        }
-    \end{block}
 
-    \begin{columns}
-
-        \column{.43\textwidth}
-        \begin{figure}[H]
-            \includegraphics[scale = 0.6]{ch2/ImpedancjaWykres.pdf}
-        \end{figure}
-        \begin{figure}[H]
-            \includegraphics[scale = 0.2]{ch2/chemNeuroInterface.png}
-        \end{figure}
-    
-        \column{.55\textwidth}
-
-    \end{columns}
-\end{frame}
 
 \begin{frame}[t]
     \begin{block}{\dk}
@@ -187,15 +172,37 @@ Jak już przedstawiano wcześniej porównanie wartości THD mijałoby się z cel
             Wadą tego rozwiązania jest to, że gdy liczba kanałów wzrasta, częstotliwość próbkowania ADC również wzrasta, co powoduje większy pobór mocy.} - Częstotliwość próbkowania powinna być zależna od właściwości próbkowanego (rejestrowanego) sygnału, a nie zależeć od architektury systemu.
         }
     \end{block}
+    Oczywiście częstotliwość próbkowania jest zdeterminowana charakterystyką sygnału zgodnie z twierdzeniem Nyquista.
+    W powyższym stwierdzeniu nieumiejętnie próbowano przekazać, że częstotliwość wielokanałowego ADC zależy od architektury, a konkretnie od ilości obsługiwanych kanałów w przetworniku.
+    Jeżeli użyjemy ADC obsługujące jeden kanał jego częstotliwość próbkowania jest tożsama z częstotliwością próbkowana kanału, ale w przypadku wielokanałowego ADC jego częstotliwość systemu musi być skalowanie odpowiednio większa i stąd doszło do słabego wytłumaczenia zagadnienia.
     
-    Oczywiście częstotliwość próbkowania zależy od właściwości sygnału zgodnie z twierdzniem Nyquista.
-    W powyższym stwierdzeniu niefortunnie próbowano przekazać, że częstotliwość próbkowania wielkoanałowego ADC zależy od architektury i elosci kanałów obsługiwanych 
-  
+\end{frame}
 
+\begin{frame}[t]
+    \begin{block}{\dk}
+        \cit{
+            \high{
+                Impedancja mikroelektrody jest ważnym parametrem dla rejestracji zewnątrzkomórkowej, ponieważ określa szumy elektrody oraz tłumienie sygnału.} -- w jaki sposób impedancja określa te parametry?
+        }
+    \end{block}
 
+    \begin{columns}
 
-        Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzględnić dodatkowe wymagania wynikające z próbkowania wielu kanałów w sekwencji. 
-
+        \column{.43\textwidth}
+        \vspace{-1em}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.5]{ch2/ImpedancjaWykres.pdf}
+        \end{figure}
+        \vspace{-1em}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.2]{ch2/chemNeuroInterface.png}
+        \end{figure}
+    
+        \column{.55\textwidth}
+        Impedancja przy niskich częstotliwościach ma charakter rezystancyjny, gdzie główny wpływ ma rezystancja Rsp, która wprowadza szum termiczny. 
+        Podobnie w przypadku niskich częstotliwości jeżeli impedancja jest duża w stosunku do impedancji wejściowej pierwszego elementu toru odczytowego czyli w tym przypadku wzmacniacza otrzymujemy dzielnik napięciowy, który może powodować atenuację sygnału. 
+        
+    \end{columns}
 \end{frame}
 
 \begin{frame}[t]
@@ -220,24 +227,39 @@ Jak już przedstawiano wcześniej porównanie wartości THD mijałoby się z cel
 \end{frame}
 
 \begin{frame}[t]
+    \vspace{-1em}
     \begin{block}{\dk}
         \cit{
             Niektóre fragmenty tekstu są dla mnie niezrozumiałe lub budzą pewne wątpliwości
             [...]
-            \high{ale przy stałym stosunku $C_{in}/C_{f} = 20 V/V$}
+            \high{
+                ale przy stałym stosunku $C_{in}/C_{f} = 20 V/V$
+            }
         }
     \end{block}
 
     \begin{block}{\dk}
         \cit{
             W pracy przyjęto wzmocnienie dla pierwszego stopnia projektowanego wzmacniacza na poziomie $K = 20 V/V$.
-            Czy w kontekście możliwości pojawienia się składowej stałej napięcia na wejściu wzmacniacza spowodowanego zjawiskami zachodzącymi na styku tkanka--elektroda wartość ta nie jest zbyt duża i czy nie będzie powodowała nasycenia stopnia wejściowego wzmacniacza?
+            Czy w kontekście możliwości pojawienia się składowej stałej napięcia na wejściu wzmacniacza spowodowanego zjawiskami zachodzącymi na styku tkanka--elektroda wartość ta nie jest zbyt duża i czy nie będzie powodowała nasycenia stopnia wejściowego wzmacniacza? 
         }
     \end{block}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
-    \end{figure}
+
+    \begin{columns}
+
+        \column{.3\textwidth}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.35]{ch2/conceptAC_Harrison.pdf} 
+        \end{figure}
+    
+        \column{.75\textwidth}
+        "ale przy stałym stosunku $C_{in}/C_{f} = 20 V/V$" oczywiście jest niefortunno pomyłką wynikającą z tego, że stosunek pojemności określa wzmocnienie, które wynosi $K = 20 V/V$. Jednak w przypadku stosunku pojemności należało użyć właściwych jednostek.
+
+        Sprzężenie zmiennoprądowe zapewnia usunięcie składowej stałej, dlatego nie ma obawy o nasycenie wzmacniacza jak w przypadku sprzężenia stałoprądowego.
+
+
+    \end{columns}
+
 \end{frame}
 
 \begin{frame}[t]
@@ -276,11 +298,17 @@ Jak już przedstawiano wcześniej porównanie wartości THD mijałoby się z cel
         }
     \end{block}
     \begin{equation}
-        NEF = v_{ni,rms}\cdot\sqrt{\frac{2\cdot I_{tot}}{V_t\cdot k\cdot T \cdot \Delta f \cdot \pi}},
+        NEF = v_{ni,rms}\cdot\sqrt{\frac{2\cdot I_{tot}}{V_t\cdot 4k\cdot T \cdot \Delta f \cdot \pi}},
         \label{equ:NEF}
     \end{equation}
-    gdzie $v_{ni,rms}$ ekwiwalentne szumy wejściowe~(IRN), a $I_{tot}$ to prąd całkowity płynący przez obwód.
-    % gdzie $v_{ni,rms}$ ekwiwalentne szumy wejściowe~(\gls{irn}), a $I_{tot}$ to prąd całkowity płynący przez obwód.
+    gdzie $v_{ni,rms}$ ekwiwalentne szumy wejściowe~(IRN), a $I_{tot}$ to prąd całkowity płynący przez obwód wzmacniacza, 
+    
+ 
+    $\Delta f$ To jest efektywna szerokość pasma szumowego wzmacniacza. Reprezentuje zakres częstotliwości, w którym rozważa się szum wzmacniacza.
+
+    $V_t$To napięcie termiczne, zazwyczaj wyrażane jako kT/q, gdzie "k" to stała Boltzmanna, "T" to temperatura w kelwinach, a "q" to ładunek elektronu.
+
+
 \end{frame}
 
 
@@ -554,36 +582,37 @@ Rozumiem, że różni czytelnicy preferują różne metody sortowania, ale w tym
 \end{frame}
 
 \begin{frame}[t]
+    \vspace{-1em}
     \begin{block}{\tb}
         \cit{
+            {\renewcommand\normalsize{\scriptsize}%
+            \normalsize
             Co do mankamentów merytorycznych, występujących w dysertacji, jest ich kilka.
             Pierwszy z nich [...] dotyczy faktu, że model źródła, tkanki i sprzężenia jest niejednoznaczny i nie do końca odpowiada rzeczywistości pomiarowej.
             Niezależnie od widma samego źródła, skumulowane efekty pojemności i lokalnego przewodzenia w tkance, nakładają na źródł swoją charakterystykę, która faworyzuje niskie częstotliwości [8].
-            Efekty jonowe są składową tego zjawiska [9] ale nie mają dominującego charakteru [10].
+            Efekty jonowe są składową tego zjawiska [9] ale nie mają dominującego charakteru [10].}
         }
-    \end{block}
-\end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\tb}
         \cit{
+            {\renewcommand\normalsize{\scriptsize}%
+            \normalsize
             Potencjał stały jest przede wszystki efektem brzegowym, związanym z tworzeniem warstwy podwójnej, które z kolei wynika z różnicy potencjałów chemicznych między kontaktującymi się fazami [10].
             Oczywiście rozdzielenie ładunku objętościowego również zachodzi [9], ale jest to efekt fizyczny a nie fizykochemiczny.
             Przemiany elektrochemiczne modą zachodzić dopiero gdy przekroczona jest określona energia aktywacji [10].
-            W odniesieniu do elektrod stymulujących piszą o tym Merrill i wsp. -- pozycja [113] literatury -- te rozważania można rozszerzyć na elektrody pomiarowe [8-10].
-        }
-    \end{block}
-\end{frame}
+            W odniesieniu do elektrod stymulujących piszą o tym Merrill i wsp. -- pozycja [113] literatury -- te rozważania można rozszerzyć na elektrody pomiarowe [8-10]. }
+            }
 
-\begin{frame}[t]
-    \begin{block}{\tb}
         \cit{
+            {\renewcommand\normalsize{\scriptsize}%
+            \normalsize
             Fluktuacje termincze dotyczą nie tylko rezystancji ale również pojemności -- taki proces jak tworzenie warstwy podwójnej również jest poddany fluktuacjom.
             W związku z tym nie ma potrzeby odwoływania się do rezystancyjnej natury tkanki, po to, żeby uzasadnić użycie twierdzenia Nyquista.
             Należy to raczej uznać za brak modelu.
             Również rezystywny charakter tkanki nerwowej można poddać w wątpliwość -- cytowany przez Autorkę Destexhe ma w swoim dorobku pracę [7] poświęconą temu zagadnieniu.
-        }
+         }}
     \end{block}
+\end{frame}
+\begin{frame}[t]
 \end{frame}
 
 \begin{frame}[t]
