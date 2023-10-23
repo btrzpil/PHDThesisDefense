@@ -1,51 +1,76 @@
 
+% \begin{frame}{Podstawowe rozwiązania psuedo-rezystorów}
+
+
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale = 0.6]{ch2/ntpr.pdf}
+
+%         \end{figure}
+%         \vspace{-5mm} %5mm vertical space
+%         % Różne topologie pseudo-rezystorów z niekontrolowaną wartością rezystancji zaimplementowane w przedwzmacniaczu ze sprzężeniem zmiennoprądowym.        
+%         \begin{alertblock}{Wady}
+%             \begin{itemize}
+%                 \item stała rezystancja 
+%                 \item brak możliwości regulacji częstotliwości granicznej
+%             \end{itemize}
+%         \end{alertblock}
+
+
+
+% \end{frame}
+
+% \begin{frame}{Podstawowe rozwiązania psuedo-rezystorów - regulowana wartość rezystancji}
+%     \begin{block}{}
+%         Regulacja częstotliowści granicznej
+%     \end{block}
+
+%     \begin{columns}
+%         \column{.58\textwidth}
+%         \hspace{-10mm} %5mm vertical space
+%         \begin{figure}[H]
+
+%             \includegraphics[scale = 0.6]{ch2/tpr.pdf}
+
+%         \end{figure}
+%         \column{.35\textwidth}
+%         % Różne topologie pseudo-rezystorów z kontrolowaną wartością rezystancji zaimplementowane w przedwzmacniaczu ze sprzężeniem zmiennoprądowym.
+%         \vspace{-5mm} \begin{alertblock}{}
+%         Zmieniające się napięcie panujące pomiędzy bramką a źródłem tranzystora w zależności od sygnału wejściowego
+%         \end{alertblock}
+%         \vspace{5mm} 
+%         \begin{exampleblock}{}
+%             Zachowanie stałego napięcia pomiędzy bramką, a źródłem niezależnie od sygnału wejsciowego 
+
+%         \end{exampleblock}
+%     \end{columns}
+
+
+% \end{frame}
+
+
 \begin{frame}{Podstawowe rozwiązania psuedo-rezystorów}
-
-
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale = 0.6]{ch2/ntpr.pdf}
-
-        \end{figure}
-        \vspace{-5mm} %5mm vertical space
-        % Różne topologie pseudo-rezystorów z niekontrolowaną wartością rezystancji zaimplementowane w przedwzmacniaczu ze sprzężeniem zmiennoprądowym.        
-        \begin{alertblock}{Wady}
-            \begin{itemize}
-                \item stała rezystancja 
-                \item brak możliwości regulacji częstotliwości granicznej
-            \end{itemize}
-        \end{alertblock}
-
-
-
-\end{frame}
-
-\begin{frame}{Podstawowe rozwiązania psuedo-rezystorów - regulowana wartość rezystancji}
-    \begin{block}{}
-        Regulacja częstotliowści granicznej
-    \end{block}
-
     \begin{columns}
-        \column{.58\textwidth}
-        \hspace{-10mm} %5mm vertical space
+        \column{.48\textwidth}
+
         \begin{figure}[H]
-
-            \includegraphics[scale = 0.6]{ch2/tpr.pdf}
-
+            \includegraphics[scale = 0.5]{ch2/ntpr.pdf}
         \end{figure}
-        \column{.35\textwidth}
-        % Różne topologie pseudo-rezystorów z kontrolowaną wartością rezystancji zaimplementowane w przedwzmacniaczu ze sprzężeniem zmiennoprądowym.
-        \vspace{-5mm} \begin{alertblock}{}
-        Zmieniające się napięcie panujące pomiędzy bramką a źródłem tranzystora w zależności od sygnału wejściowego
+        \begin{alertblock}{}
+            brak możliwości regulacji wartości rezystancji
         \end{alertblock}
-        \vspace{5mm} 
+
+
+
+        \column{.48\textwidth}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.5]{ch2/tpr.pdf}
+        \end{figure}
         \begin{exampleblock}{}
-            Zachowanie stałego napięcia pomiędzy bramką, a źródłem niezależnie od sygnału wejsciowego 
-
+            możliwość sterowania częstotliwością graniczną
         \end{exampleblock}
+
     \end{columns}
-
-
 \end{frame}
 
 
@@ -54,49 +79,55 @@
 
 
 
-\begin{frame}{Analiza stałoprądowa}
+
+% \begin{frame}{Analiza stałoprądowa}
 
         
-    \vspace{-1em}
+%     \vspace{-1em}
 
 
-    \begin{columns}
-        \column{.48\textwidth}
-         \begin{alertblock}{}
-            \begin{figure}[H]
-                \includegraphics[scale=0.8]{ch3/ptune.pdf}
-            \end{figure}
-            \end{alertblock}
-        \column{.48\textwidth}
-        \begin{exampleblock}{}
-            \begin{figure}[H]
-                \includegraphics[scale=0.8]{ch3/pvgs.pdf}
-            \end{figure}
+%     \begin{columns}
+%         \column{.48\textwidth}
+%          \begin{alertblock}{}
+%             \begin{figure}[H]
+%                 \includegraphics[scale=0.8]{ch3/ptune.pdf}
+%             \end{figure}
+%             \end{alertblock}
+%         \column{.48\textwidth}
+%         \begin{exampleblock}{}
+%             \begin{figure}[H]
+%                 \includegraphics[scale=0.8]{ch3/pvgs.pdf}
+%             \end{figure}
 
-        \end{exampleblock}
-    \end{columns}
+%         \end{exampleblock}
+%     \end{columns}
 
-\vspace{-0.5em}
-    \begin{columns}
-        \column{.48\textwidth}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale = 0.7]{scripts/tmp/pseudoresistors_IV.pdf}
-                \end{figure}
-        \column{.48\textwidth}
-        \begin{figure}[H]
-            \centering
-            \includegraphics [scale = 0.7]{scripts/tmp/pseudoresistors_R.pdf}
-        \end{figure}
-    \end{columns}
+% \vspace{-0.5em}
+%     \begin{columns}
+%         \column{.48\textwidth}
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale = 0.7]{scripts/tmp/pseudoresistors_IV.pdf}
+%                 \end{figure}
+%         \column{.48\textwidth}
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics [scale = 0.7]{scripts/tmp/pseudoresistors_R.pdf}
+%         \end{figure}
+%     \end{columns}
 
 
-\end{frame}
+% \end{frame}
 
 \begin{frame}{Architektura wzmacniacza neuronowego wykorzystującego sprzężenie zmiennoprądowe w różnych implementacjach pseudo-rezystorów}
     \begin{columns}[t]
-        \column{.4\textwidth}
+
+        \column{.5\textwidth}
+        \vspace{-2em} %5mm vertical space
+
         \begin{alertblock}{Zmienne napięcia na bramce -- $variable-V_{gs}$}
+                    Zmieniające się napięcie panujące pomiędzy bramką a źródłem tranzystora w zależności od sygnału wejściowego
+
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale = 0.75]{ch3/fig1-ac_standard.pdf}
@@ -105,8 +136,11 @@
 
 
 
-        \column{.4\textwidth}
+        \column{.45\textwidth}
+        \vspace{-2em} %5mm vertical space
+
         \begin{exampleblock}{Słałe napięcia na bramce -- $fixed-V_{gs}$}
+                        Zachowanie stałego napięcia pomiędzy bramką, a źródłem niezależnie od sygnału wejsciowego 
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale = 0.75]{ch3/fig1-ac_work_simplicite}
@@ -117,9 +151,10 @@
 \end{frame}
 
 \begin{frame}{Analiza Transient sprzężenia AC}
+    \vspace{-1em}
     \begin{block}{Ustawienia symulacji}
 \begin{itemize}
-    \item Czeęstotliwość graniczna dla sprzężenia AC $\SI{\sim 1}{\hertz}$
+    \item Częstotliwość graniczna dla sprzężenia AC $\SI{\sim 1}{\hertz}$
     \item $\mathrm{THD} = \frac{\sqrt{\sum_{n=2}^{+\infty} U_k^2}}{U_1}$
 \end{itemize}
     \end{block}
@@ -127,11 +162,14 @@
 
     \begin{columns}
         \column{.48\textwidth}
+        \vspace{-1em} %5mm vertical space
+
         \begin{figure}[H]
             \centering
             \includegraphics[scale = 0.7]{scripts/tranTHDAmp/tranTHDAmp_ner.pdf}
         \end{figure}
         \column{.48\textwidth}
+        \vspace{-1em} %5mm vertical space
         \begin{figure}[H]
             \centering
             \includegraphics[scale = 0.7]{scripts/tranTHDAmp/tranTHDAmp_pr_sim.pdf}
@@ -142,137 +180,146 @@
 
 
 
-\begin{frame}{Projekt przedwzmacniacza z modelem pseudo-rezystora w technologii $\SI{180}{\nano\metre}$  XFAB}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=1.0]{ch3/pseudo-lay.pdf} 
+% \begin{frame}{Projekt przedwzmacniacza z modelem pseudo-rezystora w technologii $\SI{180}{\nano\metre}$  XFAB}
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale=1.0]{ch3/pseudo-lay.pdf} 
 
-    \end{figure}
+%     \end{figure}
 
 
-\end{frame}
+% \end{frame}
 
-\begin{frame}{Wpływ pojemnościowych prądów bramki pseudo-rezystorów na zniekształcenia  w technologii $\SI{180}{\nano\metre}$}
-    \vspace{-5mm} %5mm vertical space
+% \begin{frame}{Wpływ pojemnościowych prądów bramki pseudo-rezystorów na zniekształcenia  w technologii $\SI{180}{\nano\metre}$}
+%     \vspace{-5mm} %5mm vertical space
 
-    \begin{columns}
-        \column{.3\textwidth}
-        \begin{figure}[H]
+%     \begin{columns}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
 
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/IdsA.pdf}
+%             \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/IdsA.pdf}
 
-        \end{figure}
-        \column{.3\textwidth}
-        \begin{figure}[H]
+%         \end{figure}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
 
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/IdsB.pdf}
+%             \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/IdsB.pdf}
 
-        \end{figure}
-        \column{.3\textwidth}
-        \begin{figure}[H]
+%         \end{figure}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
 
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/IgbA.pdf}
+%             \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/IgbA.pdf}
 
-        \end{figure}
+%         \end{figure}
 
-    \end{columns}
-    \vspace{-10mm} %5mm vertical space
-    \begin{columns}
-        \column{.3\textwidth}
-        \begin{figure}[H]
+%     \end{columns}
+%     \vspace{-10mm} %5mm vertical space
+%     \begin{columns}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
 
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/IgbB.pdf}
+%             \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/IgbB.pdf}
 
-        \end{figure}
-        \column{.3\textwidth}
-        \begin{figure}[H]
+%         \end{figure}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
 
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/vOut.pdf}
+%             \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/vOut.pdf}
 
-        \end{figure}
-        \column{.3\textwidth}
-        \begin{figure}[H]
+%         \end{figure}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
 
-            \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/Igb_diff.pdf}
+%             \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.6]{scripts/tmp/Igb_diff.pdf}
 
-        \end{figure}
+%         \end{figure}
 
-    \end{columns}
+%     \end{columns}
         
 
 
 
-\end{frame}
+% \end{frame}
 
 
-\begin{frame}{Skalowanie zniekształceń z powierzchnią bramki i grubością tlenku tranzystorów tworzących pseudo-rezystory}
-    \begin{columns}
-        \column{.48\textwidth}
-        \begin{block}{Powierzchnia bramki -- technologia $\SI{180}{\nano\metre}$ }
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale = 0.7]{scripts/analyseTran/analyseTranSize.pdf}
-            \end{figure}
-        \end{block}
+% \begin{frame}{Skalowanie zniekształceń z powierzchnią bramki i grubością tlenku tranzystorów tworzących pseudo-rezystory}
+%     \begin{columns}
+%         \column{.48\textwidth}
+%         \begin{block}{Powierzchnia bramki -- technologia $\SI{180}{\nano\metre}$ }
+%             \begin{figure}[H]
+%                 \centering
+%                 \includegraphics[scale = 0.7]{scripts/analyseTran/analyseTranSize.pdf}
+%             \end{figure}
+%         \end{block}
 
-        \column{.48\textwidth}
-        \begin{block}{Zależnosć od technologii}
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale = 0.7]{scripts/analyseTran/analyseTranTechnology.pdf}
-            \end{figure}
-        \end{block}
-
-
-    \end{columns}
-
-\end{frame}
-
-\begin{frame}{Szumy}
-    \vspace{-5mm} %5mm vertical space
-
-    \begin{columns}
-    \column{.3\textwidth}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
-    \end{figure}
-        \column{.3\textwidth}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale = 0.5]{scripts/tmp/fig3_R1.pdf}
-        \end{figure}
-        \column{.3\textwidth}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale = 0.5]{scripts/tmp/fig3_R2.pdf}
-        \end{figure}
-    \end{columns}
-
-    \vspace{-5mm} %5mm vertical space
+%         \column{.48\textwidth}
+%         \begin{block}{Zależnosć od technologii}
+%             \begin{figure}[H]
+%                 \centering
+%                 \includegraphics[scale = 0.7]{scripts/analyseTran/analyseTranTechnology.pdf}
+%             \end{figure}
+%         \end{block}
 
 
-    \begin{columns}
-        \column{.3\textwidth}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.5]{scripts/noiseOutResistors/fig1_R1.pdf}
-        \end{figure}
-        \column{.3\textwidth}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.5]{scripts/noiseOutResistors/fig2.pdf}
-        \end{figure}
-    \end{columns}
+%     \end{columns}
+
+% \end{frame}
+
+% \begin{frame}{Szumy}
+%     \vspace{-5mm} %5mm vertical space
+
+%     \begin{columns}
+%     \column{.3\textwidth}
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
+%     \end{figure}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale = 0.5]{scripts/tmp/fig3_R1.pdf}
+%         \end{figure}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale = 0.5]{scripts/tmp/fig3_R2.pdf}
+%         \end{figure}
+%     \end{columns}
+
+%     \vspace{-5mm} %5mm vertical space
 
 
-\end{frame}
+%     \begin{columns}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale=0.5]{scripts/noiseOutResistors/fig1_R1.pdf}
+%         \end{figure}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale=0.5]{scripts/noiseOutResistors/fig2.pdf}
+%         \end{figure}
+%     \end{columns}
+
+
+% \end{frame}
 
 
 \begin{frame}{Wpływ pojemności wejściowych na szumy i zniekształcenia}
+    \begin{columns}
+        \column{.3\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
+        \end{figure}
+            \column{.7\textwidth}
+
     \begin{figure}[H]
         \centering
         \includegraphics{scripts/tmp/thd_C_in.pdf} 
     \end{figure}
+\end{columns}
 
 \end{frame}

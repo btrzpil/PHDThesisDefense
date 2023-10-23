@@ -1,28 +1,50 @@
 
 
-\begin{frame}{Wstęp}
+\begin{frame}{Kierunki rozwoju współczesnych systemów pomiarowych i matryc mikroelektrodowych}
+   
+    \begin{columns}
+    \column{.55\textwidth}
 
-    \begin{block}{Techniki pomiarowe wewnątrz i zewnątrzkomórkowe w neurobiologii}
+    \begin{block}{Techniki pomiarowe wewnątrz i \\
+        zewnątrzkomórkowe w neurobiologii}
         \begin{itemize}
             \item różne amplitudy sygnałów
             \item inwazyjność badań
             \item obszar badań 
         \end{itemize}
     \end{block}
-    \vspace{-3mm} %5mm vertical space
+    \column{.4\textwidth}
+    \vspace{-3em} %5mm vertical space
 
-\begin{columns}
-        \column{.55\textwidth}
+        \begin{columns}
+        \column{.5\textwidth}
         \begin{figure}[H]
-            \includegraphics[scale=0.5]{ch1/intra-extra.png}  
+            \includegraphics[scale=0.13]{ch2/masm64Dsharp.png}
+        \end{figure}
+
+        \column{.5\textwidth}
+            \begin{figure}[H]
+                \includegraphics[scale=0.13]{ch2/utahArr.png}
+            \end{figure}
+        \end{columns}
+    \end{columns}
+
+    \begin{columns}
+
+        \column{.55\textwidth}
+        % \vspace{-3em} %5mm vertical space
+
+        \begin{figure}[H]
+            \includegraphics[scale=0.45]{ch1/intra-extra.png}  
         \end{figure}
 
         \column{.4\textwidth}
-        \begin{alertblock}{Potencjał czynnościowy}
-            \begin{figure}[H]
-                \includegraphics[scale=0.25]{ch1/ap.png}
-            \end{figure}
-        \end{alertblock}
+        \vspace{-2em} %5mm vertical space
+        \begin{figure}[H]
+                % \includegraphics[scale=0.25]{ch1/ap.png}
+            \includegraphics[scale=0.25]{ch2/neuropixel10.png}  
+        \end{figure}
+
 
     \end{columns}
 
@@ -30,33 +52,33 @@
     
 \end{frame}
 
-\begin{frame}{Kierunki rozwoju współczesnych systemów pomiarowych i matryc mikroelektrodowych}
-    \vspace{-5mm} %5mm vertical space
+% \begin{frame}{Kierunki rozwoju współczesnych systemów pomiarowych i matryc mikroelektrodowych}
+%     \vspace{-5mm} %5mm vertical space
 
-    \begin{columns}[t]
-        \column{.3\textwidth}
-        \begin{figure}[H]
-            \includegraphics[scale=0.35]{ch2/neuropixel10.png}  
-        \end{figure}
+%     \begin{columns}[t]
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
+%             \includegraphics[scale=0.35]{ch2/neuropixel10.png}  
+%         \end{figure}
 
-        \column{.3\textwidth}
-        \begin{figure}[H]
-            \includegraphics[scale=0.35]{ch2/argo.jpeg}  
-        \end{figure}
+%         \column{.3\textwidth}
+%         \begin{figure}[H]
+%             \includegraphics[scale=0.35]{ch2/argo.jpeg}  
+%         \end{figure}
 
-        \column{.35\textwidth}
-        \begin{figure}[H]
-            \includegraphics[scale=0.2]{ch2/masm64Dsharp.png}
-        \end{figure}
+%         \column{.35\textwidth}
+%         \begin{figure}[H]
+%             \includegraphics[scale=0.2]{ch2/masm64Dsharp.png}
+%         \end{figure}
 
-        \begin{figure}[H]
-            \includegraphics[scale=0.25]{ch2/utahArr.png}
-        \end{figure}
+%         \begin{figure}[H]
+%             \includegraphics[scale=0.25]{ch2/utahArr.png}
+%         \end{figure}
 
-    \end{columns}
+%     \end{columns}
 
 
-\end{frame}
+% \end{frame}
 
 \begin{frame}{Zakresy amplitud i częstotliwości sygnałów neuronowych}
     \begin{columns}
@@ -121,62 +143,136 @@
 \end{frame}
 
 
-\begin{frame}{Sprzężenie zmiennoprądowe}
+% \begin{frame}{Sprzężenie zmiennoprądowe}
+%     \begin{columns}
+%         \column{.48\textwidth}
+
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale=0.75]{ch2/conceptAC_Harrison.pdf} 
+%     \end{figure}
+%     \column{.48\textwidth}
+%     \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem AC}
+%         \begin{itemize}
+%             \item Niska dolna częstotliwość graniczna rzędu~$\SI{\sim 1}{\hertz}$ 
+%             \item Pojemności w technologi CMOS są rzędu $\SI{}{\femto\farad\per\micro\metre\squared}$
+%             \item Rezystancja sprzężenia zwrotnego w zakresie $\SI{}{\tera\ohm}$
+%         \end{itemize}
+%     \end{alertblock}
+%     \begin{exampleblock}{Zalety}
+%         \begin{itemize}
+%             \item Usunięcie składowej stałej od elektrody niezależnie od jej wartości
+%             \item Wydajność szumowa i poboru mocy
+%         \end{itemize}
+%     \end{exampleblock}
+% \end{columns}
+
+% \end{frame}
+
+
+
+% \begin{frame}{Sprzężenie stałoprądowe}
+%     \begin{columns}
+%         \column{.48\textwidth}
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale = 0.5]{ch2/dc_coupling.pdf}
+%         \end{figure}
+
+%     \column{.48\textwidth}
+%     \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem DC}
+%         \begin{itemize}
+%             \item Duża wrażliwość na offset
+%             \item Pobór mocy
+%         \end{itemize}
+%     \end{alertblock}
+%     \begin{exampleblock}{Zalety}
+%         \begin{itemize}
+%             \item Brak konieczności używania dużych rezystancji w pętli sprzężenia zwrotnego
+%         \end{itemize}
+
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale=0.5]{ch2/dc-integrator.pdf} 
+%         \end{figure}
+
+%     \end{exampleblock}
+% \end{columns}
+
+% \end{frame}
+
+\begin{frame}{Sprzężenie stałoprądowe i zmiennoprądowe}
+
     \begin{columns}
         \column{.48\textwidth}
+        \vspace{-2em} %5mm vertical space
 
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.75]{ch2/conceptAC_Harrison.pdf} 
-    \end{figure}
-    \column{.48\textwidth}
-    \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem AC}
-        \begin{itemize}
-            \item Niska dolna częstotliwość graniczna rzędu~$\SI{\sim 1}{\hertz}$ 
-            \item Pojemności w technologi CMOS są rzędu $\SI{}{\femto\farad\per\micro\metre\squared}$
-            \item Rezystancja sprzężenia zwrotnego w zakresie $\SI{}{\tera\ohm}$
-        \end{itemize}
-    \end{alertblock}
-    \begin{exampleblock}{Zalety}
-        \begin{itemize}
-            \item Usunięcie składowej stałej od elektrody niezależnie od jej wartości
-            \item Wydajność szumowa i poboru mocy
-        \end{itemize}
-    \end{exampleblock}
-\end{columns}
-
-\end{frame}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
+        \end{figure}
+        
 
 
-
-\begin{frame}{Sprzężenie stałoprądowe}
-    \begin{columns}
         \column{.48\textwidth}
         \begin{figure}[H]
             \centering
-            \includegraphics[scale = 0.5]{ch2/dc_coupling.pdf}
+            \includegraphics[scale = 0.3]{ch2/dc_coupling.pdf}
         \end{figure}
+    \end{columns}
+
+    \begin{columns}
 
     \column{.48\textwidth}
-    \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem DC}
+
+    {\renewcommand\normalsize{\small}%
+    \normalsize
+
+    % \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem AC}
+    \vspace{-1em} %5mm vertical space
+    \begin{alertblock}{}
+
+        \begin{itemize}
+            \item Dolna częstotliwość graniczna rzędu~$\SI{\sim 1}{\hertz}$ 
+            \item Pojemności w CMOS $\sim\SI{}{\femto\farad\per\micro\metre\squared}$
+            \item Rezystancja sprzężenia zwrotnego  $\sim\SI{}{\tera\ohm}$
+        \end{itemize}
+    \end{alertblock}
+    \vspace{-1em} %5mm vertical space
+
+    % \begin{exampleblock}{Zalety}
+    \begin{exampleblock}{}
+        \begin{itemize}
+            \item Brak składowej stałej od elektrody
+            \item Wydajność szumowa 
+        \end{itemize}
+    \end{exampleblock}
+
+    }
+
+       
+
+    \column{.48\textwidth}
+    {\renewcommand\normalsize{\small}%
+    \normalsize
+    % \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem DC}
+    \vspace{-1em} %5mm vertical space
+
+    \begin{alertblock}{}
         \begin{itemize}
             \item Duża wrażliwość na offset
             \item Pobór mocy
         \end{itemize}
     \end{alertblock}
-    \begin{exampleblock}{Zalety}
+    \vspace{-1em} %5mm vertical space
+
+    \begin{exampleblock}{}
         \begin{itemize}
-            \item Brak konieczności używania dużych rezystancji w pętli sprzężenia zwrotnego
+            \item Brak dużych rezystancji w pętli sprzężenia zwrotnego
         \end{itemize}
-
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.5]{ch2/dc-integrator.pdf} 
-        \end{figure}
-
     \end{exampleblock}
-\end{columns}
+    }
+
+    \end{columns}
 
 \end{frame}
-
-

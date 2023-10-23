@@ -1,69 +1,68 @@
-\begin{frame}{Implementacja teleskopowej kaskody ze zintegrowanym sprzężeniem AC}
-    \begin{columns}
+% \begin{frame}{Implementacja teleskopowej kaskody ze zintegrowanym sprzężeniem AC}
+%     \begin{columns}
 
-        \column{.6\textwidth}
-        \begin{figure}[H]
-            \includegraphics[scale = 0.75]{ch4/chap4Scheme.pdf} 
-        \end{figure}
+%         \column{.6\textwidth}
+%         \begin{figure}[H]
+%             \includegraphics[scale = 0.75]{ch4/chap4Scheme.pdf} 
+%         \end{figure}
 
-        \column{.35\textwidth}
-
-
-        \begin{block}{Kluczowe wymagnia}
-        \begin{itemize}
-            \item optymalizacja szumowa
-            \item powierzchnia
-            \item pobór mocy
-        \end{itemize}
-            \end{block}
+%         \column{.35\textwidth}
 
 
-
-    \end{columns}   
- \end{frame}
+%         \begin{block}{Kluczowe wymagnia}
+%         \begin{itemize}
+%             \item optymalizacja szumowa
+%             \item powierzchnia
+%             \item pobór mocy
+%         \end{itemize}
+%             \end{block}
 
 
 
-\begin{frame}{Analiza szumowa pary różnicowej}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.75]{scripts/tmp/differentialPair.pdf}  
-    \end{figure}
-
-\end{frame}
+%     \end{columns}   
+%  \end{frame}
 
 
 
-\begin{frame}{}
+% \begin{frame}{Analiza szumowa pary różnicowej}
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale = 0.75]{scripts/tmp/differentialPair.pdf}  
+%     \end{figure}
+
+% \end{frame}
+
+
+
+\begin{frame}{Przedwzmacniacz z wejściowym obwodem sprzęgającym AC}
     \begin{columns}
 
     \column{.65\textwidth}
     \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.5]{ch4/channel.pdf} 
+        \includegraphics[scale=0.45]{ch4/channel.pdf} 
     \end{figure}   
 
     \column{.35\textwidth}
 
     \begin{block}{
-        Przedwzmacniacz z wejściowym obwodem sprzęgającym AC oraz obwody polaryzujące
     }
     {\renewcommand\normalsize{\small}%
     \normalsize
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{lll} 
-        \toprule
-        \begin{tabular}[c]{@{}l@{}}Kluczowe \\tranzystory\end{tabular} & $W$ [$\SI{}{\micro\metre}$] & $L$ [$\SI{}{\micro\metre}$]  \\ 
-        \toprule
-        $M_{bias}$                                                       & 10                          & 10                           \\
-        $M_1,\ M_2$                                                    & 300                         & 1                            \\
-        $M_3,\ M_4$                                                    & 20                          & 2                            \\
-        $M_5,\ M_6$                                                    & 5                           & 5                            \\
-        $M_7,\ M_8$                                                    & 4                           & 48                           \\
-        \bottomrule
-        \end{tabular}
-    \end{table}
+    % \begin{table}[H]
+    %     \centering
+    %     \begin{tabular}{lll} 
+    %     \toprule
+    %     \begin{tabular}[c]{@{}l@{}}Kluczowe \\tranzystory\end{tabular} & $W$ [$\SI{}{\micro\metre}$] & $L$ [$\SI{}{\micro\metre}$]  \\ 
+    %     \toprule
+    %     $M_{bias}$                                                       & 10                          & 10                           \\
+    %     $M_1,\ M_2$                                                    & 300                         & 1                            \\
+    %     $M_3,\ M_4$                                                    & 20                          & 2                            \\
+    %     $M_5,\ M_6$                                                    & 5                           & 5                            \\
+    %     $M_7,\ M_8$                                                    & 4                           & 48                           \\
+    %     \bottomrule
+    %     \end{tabular}
+    % \end{table}
     }
     \end{block}
     \end{columns}   
@@ -71,58 +70,58 @@
 \end{frame}
 
 
-\begin{frame}{Blok korekcji}
-\begin{columns}
+% \begin{frame}{Blok korekcji}
+% \begin{columns}
 
-    \column{.35\textwidth}
-    \begin{block}{
-        Projekt kanału}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale = 0.4]{ch4/chap4Scheme.pdf}
-        \end{figure} 
-        \end{block}
+%     \column{.35\textwidth}
+%     \begin{block}{
+%         Projekt kanału}
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale = 0.4]{ch4/chap4Scheme.pdf}
+%         \end{figure} 
+%         \end{block}
 
-        \begin{block}{
-            Wyzwania do rozwiązania}
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale = 0.6]{ch4/vgs_corr_sch.pdf} 
-            \end{figure}   
-            \end{block}
+%         \begin{block}{
+%             Wyzwania do rozwiązania}
+%             \begin{figure}[H]
+%                 \centering
+%                 \includegraphics[scale = 0.6]{ch4/vgs_corr_sch.pdf} 
+%             \end{figure}   
+%             \end{block}
 
 
 
-    \column{.6\textwidth}
-    \begin{columns}
-    \column{.45\textwidth}
+%     \column{.6\textwidth}
+%     \begin{columns}
+%     \column{.45\textwidth}
 
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.45]{scripts/tmp/analyseVgsTHD_1.pdf}
-    \end{figure} 
-    \column{.45\textwidth}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale =0.45]{scripts/tmp/analyseVgsTHD_2.pdf}
-    \end{figure} 
-    \end{columns}   
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale = 0.45]{scripts/tmp/analyseVgsTHD_1.pdf}
+%     \end{figure} 
+%     \column{.45\textwidth}
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale =0.45]{scripts/tmp/analyseVgsTHD_2.pdf}
+%     \end{figure} 
+%     \end{columns}   
 
-    \begin{columns}
-    \column{.45\textwidth}
+%     \begin{columns}
+%     \column{.45\textwidth}
 
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.4]{ch4/vgs_corr0.pdf}
-    \end{figure} 
-    \column{.45\textwidth}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.4]{ch4/vgs_corr1.pdf}
-    \end{figure} 
-    \end{columns}   
-\end{columns}  
-\end{frame}
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale = 0.4]{ch4/vgs_corr0.pdf}
+%     \end{figure} 
+%     \column{.45\textwidth}
+%     \begin{figure}[H]
+%         \centering
+%         \includegraphics[scale = 0.4]{ch4/vgs_corr1.pdf}
+%     \end{figure} 
+%     \end{columns}   
+% \end{columns}  
+% \end{frame}
 
 
 \begin{frame}{}
@@ -130,16 +129,17 @@
 
     \column{.45\textwidth}
     \begin{block}{}
+        {\renewcommand\normalsize{\small}%
+        \normalsize
         \begin{itemize}
-            \item 8 wersji przedwzmacniacza
-            \item 14 kanałów pomiarowych
-            \item cztery wersje rozmiarów tranzystorów PMOS tworzących pseudo-rezystory  -- odpowiednio $W/L$: $2/40,\ 1/40,\ 2/20,\ 1/20\ \SI{}{\micro\metre / \micro\metre}$
+            \item 8 wersji przedwzmacniacza i 14 kanałów
+            \item 4 wersje tranzystorów PMOS tworzących pseudo-rezystory  --  $W/L$: $2/40,\ 1/40,\ 2/20,\ 1/20\ \SI{}{\micro\metre / \micro\metre}$
             \item 2 konfiguracje pojemności -- $C_{in}/C_f = 4/200\ \SI{}{\pico\farad}/\SI{}{\femto\farad}$
         \end{itemize}
-        
+        }
     \end{block}
 
-\vspace{-2em}
+\vspace{-1em}
     \begin{figure}[H]
         \centering
         \includegraphics[trim={0 12cm 0 0},clip, scale = 0.5]{ch4/layoutASIC.pdf} 
@@ -152,12 +152,12 @@ Symulacje Post-Layout
 
     \begin{figure}[H]
         \centering
-        \includegraphics[scale = 0.5]{scripts/tranSchematicLayout/tranSchematicLayout.pdf}  
+        \includegraphics[scale = 0.45]{scripts/tranSchematicLayout/tranSchematicLayout.pdf}  
     \end{figure}
     \vspace{-5mm} %5mm vertical space
     \begin{figure}[H]
         \centering
-        \includegraphics[scale = 0.5]{scripts/noiseContribution/noiseContributionOut.pdf}  
+        \includegraphics[scale = 0.45]{scripts/noiseContribution/noiseContributionOut.pdf}  
     \end{figure}
     \end{block}
     \end{columns}   

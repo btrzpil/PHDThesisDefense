@@ -1,0 +1,31 @@
+\begin{frame}{Podsumowanie testów elektronicznych}
+
+    \begin{longtblr}[
+        caption = {Parametry przedwzmacniacza na podstawie pomiarów weryfikacyjnych}
+        % label = {table:paramResult},
+      ]{
+        hline{1-2,11} = {-}{0.08em},
+      }
+      \textbf{Parametr}                                                                 & \textbf{Wartość}                    \\
+      Napięcia zasilania                                                                & $\SI{\pm 1.8}{\volt}$               \\
+      Całkowity prąd                                                                    & $\SI{2}{\micro\ampere}$             \\
+      Pobór mocy dla pojedynczego kanału                                                & $\SI{7.2}{\micro\watt}$             \\
+      Wzmocnienie z zamkniętą pętlą sprzężenia                                          & $\SI{25.9}{\deci\bel}$              \\
+      Zakres dolnej częstotliwości granicznej                                           & $\SIrange{0.1}{20}{\hertz}$         \\
+      Ekwiwalentny szum wejściowy w zakresie LFP                                        & $\SI{7.5}{\micro\volt_{rms}}$       \\
+      Ekwiwalentny szum wejściowy w zakresie AP                                         & $\SI{6.7}{\micro\volt_{rms}}$       \\
+      Zniekształcenia harmonioczne THD – $\SI{10}{\milli\volt_{pp}}\ \SI{1.68}{\hertz}$ & $\SI{0.94}{\percent}$               \\
+      Pole powierzchni pojedynczego przedwzmacniacza                                    & $\SI{0.0071}{\milli\metre\squared}$ 
+      \end{longtblr}
+    \end{frame}
+    
+    \begin{frame}{Podsumowanie}
+    \begin{itemize}
+        \item  analiza nieliniowości wejściowego obwodu sprzęgającego, który jest odpowiedzialny za ustawienie dolnej częstotliwości granicznej;
+        \item największe zniekształcenia występują dla częstotliwości sygnałów w okolicy dolnej częstotliwości granicznej;
+        \item zaproponowano i zaimplementowano w opracowanym układzie scalonym nowe rozwiązanie dla pseudo-rezystorów stosowanych w obwodzie sprzęgającym;
+        \item  opracowany testowy układ scalony zawiera 14 kanałów, każdy kanał został opracowany w ośmiu wersjach umożliwiających weryfikację różnych wariantów projektowych;
+        \item zostały wykonane kompletne testy elektroniczne;
+        \item przeprowadzono ekspeyment neurobiologiczny.
+    \end{itemize}
+    \end{frame}

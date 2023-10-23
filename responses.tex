@@ -7,32 +7,6 @@
         }
     \end{block}
 
-\end{frame}
-
-\begin{frame}[t]
-    \begin{block}{\af}
-        \cit{
-            W tekście pracy jest relatywnie dużo literówek, występują też drobne błędy gramatyczne, co świadczy prawdopodobnie o nadmiernie pospiesznym finalizowaniu rozprawy. 
-            Innych niedociągnięć jest niewiele, np.: na rysunkach 3.13 i 3.14 na osi odciętych skala częstotliwości obejmuje zakres od 0.1 Hz do 100 Hz, podczas gdy w podpisie podano pasmo 1 Hz -- 10 kHz. 
-            Ponadto tabela 4.3 jest wadliwie zbudowana i bez dodatkowego opisu nieczytelna.
-        }
-    \end{block}
-
-\end{frame}
-
-\begin{frame}[t]
-    \begin{block}{\af}
-        \cit{
-            Zwykle jednak wymagania projektowe formułowane są explicite w formie granicznych wartości istotnych parametrów, lecz takich na dla pracy nie określono. 
-            W tej sytuacji pierwszorzędnego znaczenia nabiera porównanie wartości osiągniętych parametrów zaprojektowanego wzmacniacza z danymi dostępnymi z literatury. 
-            Brak zestawienia porównawczego w formie tabeli budzi pewien niedosyt. Wprawdzie standardowo w odniesieniu do zniekształceń harmonicznych wartość THD podawana jest zwykle dla częstotliwości 1 kHz, a nie w szerszym zakresie, to jednak takie zestawienie byłoby zasadne uwzględniając zarówno ogólne stwierdzenia jak i wartości innych parametrów.
-        }
-    \end{block}
-\end{frame}
-
-%%% Komorowski
-
-\begin{frame}[t]
     \begin{block}{\dk}
         \cit{
             W przypadku przedstawionej pracy Autorka precyzyjnie przedstawiła główny cel pracy oraz wyszczególniła kolejny etapy pracy prowadzące do realizacji celu głównego.
@@ -40,9 +14,92 @@
             \high{
                 Jakie są zatem cele pracy? Czy tezy pracy zostały udowodnione?
             }
+
+        
+        }
+    \end{block}
+
+    Ze powodu specyfiki pracy tezy pracy tożsame są z celem pracy, czyli możliwością realizacji zintegrowanego układu scalonego w technologii CMOS o zadanych parametrach.
+
+
+\end{frame}
+
+\begin{frame}[t]
+    \vspace{-1em}
+
+    \begin{block}{\dk}
+        \cit{
+            {\renewcommand\normalsize{\small}%
+            \normalsize
+            Struktura rozprawy jest logiczna, jednak w pracy występuje pewna (moim zdaniem stanowczo zbyt liczna) liczba uchybień edycyjnych (tekstowych, językowych), np. forma gramatyczna, powtórzenia, brak przedimków lub słów itp.
+            }
+        }
+\end{block}
+
+    \begin{block}{\af}
+        \cit{
+            {\renewcommand\normalsize{\small}%
+            \normalsize
+            W tekście pracy jest relatywnie dużo literówek, występują też drobne błędy gramatyczne, co świadczy prawdopodobnie o nadmiernie pospiesznym finalizowaniu rozprawy. 
+            Innych niedociągnięć jest niewiele, np.: na rysunkach 3.13 i 3.14 na osi odciętych skala częstotliwości obejmuje zakres od 0.1 Hz do 100 Hz, podczas gdy w podpisie podano pasmo 1 Hz -- 10 kHz. 
+            Ponadto tabela 4.3 jest wadliwie zbudowana i bez dodatkowego opisu nieczytelna.
+            }
+        }
+    \end{block}
+
+
+    
+
+
+    \begin{columns}
+
+        \column{.35\textwidth}
+        \vspace{-1.5em}
+        \begin{figure}[H]
+            \includegraphics[scale = 0.45]{scripts/tmp/thd_f_C.pdf}
+        \end{figure}
+    
+        \column{.65\textwidth}
+        \vspace{-1em}
+
+        {\renewcommand\normalsize{\small}%
+        \normalsize
+        Zależność współczynnika THD od częstotliwości oraz rozkłady PSD na wyjściu dla różnych ustawień granicznej przy stałej wartości $C_{in} = \SI{4}{\pico\farad}$ i wzmocnieniu $\SI{20}{\frac{\volt}{\volt}}$.
+            Amplituda sygnału: $\SI{10}{\milli\volt_{pp}}$.
+            Wartości napięcia $V_{gs} $ były ustawione dla każdej symulacji niezależnie, aby uzyskać wymagane wartości dolnej częstotliwości granicznej.  
+            Na wykresie \textbf{w legendzie} zostały \textbf{podane} ekwiwalentne szumy wejściowe w paśmie $\SI{1}{\hertz}$ -- $\SI{10}{\kilo\hertz}$ dla poszczególnych rozwiązań.
+        }
+    
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}[t]
+
+
+    \input{tab.tex}
+\end{frame}
+
+
+
+
+\begin{frame}[t]
+    \begin{block}{\af}
+        \cit{
+            Zwykle jednak wymagania projektowe formułowane są explicite w formie granicznych wartości istotnych parametrów, lecz takich na dla pracy nie określono. 
+            W tej sytuacji pierwszorzędnego znaczenia nabiera porównanie wartości osiągniętych parametrów zaprojektowanego wzmacniacza z danymi dostępnymi z literatury. 
+            Brak zestawienia porównawczego w formie tabeli budzi pewien niedosyt. 
+            Wprawdzie standardowo w odniesieniu do zniekształceń harmonicznych wartość THD podawana jest zwykle dla częstotliwości 1 kHz, a nie w szerszym zakresie, to jednak takie zestawienie byłoby zasadne uwzględniając zarówno ogólne stwierdzenia jak i wartości innych parametrów.
         }
     \end{block}
 \end{frame}
+Oczywiście możliwe jest podanie sztywnych wartości granicznych istotnych parametrów jednak na etapie pisania pracy uznano, że będzie to miało formę sztuczną ponieważ projekt zakładał eksplorowanie tychże parametrów.
+Dzięki tej formie miałam chęć przedstawienie, że optymalizacja dokonywana jest na etapie dostosowania do konkretne zastosowanie i jest zwykle wykonywana kosztem wyborów ponieważ często wymagania są przeciwstawne w możliwości co do ich realizacji.
+
+Jak już przedstawiano wcześniej porównanie wartości THD mijałoby się z celem ze względu na brak tego typu zestawień dla szerokiego spektrum, zaś w przypadku innych parametrów jak szumy, powierzchnia, pobór mocy jest wypadkową optymalizacji projektowej o której wspomniano powyżej.
+%%% Komorowski
+
+
 
 \begin{frame}[t]
     \begin{block}{\dk}
@@ -51,15 +108,11 @@
             Z uwagi na rosnącą popularność tego ostatniego rozwiązania w przypadku akwizycji sygnałów biologicznych i biomedycznych uważam, że ta część rozdziału powinna być bardziej szczegółowa. 
         }
     \end{block}
+
+    Na etapie pisania pracy uznałam, że treść w rozdziale jest wystarczająca, aby zrozumieć koncepcje związane z eliminacją składowej stałej i powód dla którego zdecydowano się na konkretne rozwiązanie.
+    Rosnąca popularność tego typu rozwiązań widać w systemach komercyjnych, które nie są możliwe do dostosowana do wielkoskalowych systemów aplikowanych w mózgu dla których projektowano rozwiązanie w pracy dlatego zdecydowano się nie rozszerzać o ten aspekt pracy.
 \end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\dk}
-        \cit{
-            Struktura rozprawy jest logiczna, jednak w pracy występuje pewna (moim zdaniem stanowczo zbyt liczna) liczba uchybień edycyjnych (tekstowych, językowych), np. forma gramatyczna, powtórzenia, brak przedimków lub słów itp.
-        }
-    \end{block}
-\end{frame}
 
 \begin{frame}[t]
     \begin{block}{\dk}
@@ -68,6 +121,9 @@
             Materiał ciekawy i ważny z punktu widzenia pracy, ale być może mógłby być krótszy.
         }
     \end{block}
+    Chociaż obszerna część medyczno-biologiczna w przedstawionej pracy może wydawać się długa, warto podkreślić, że jej rozmiar jest wynikiem interdyscyplinarnego charakteru tego projektu. 
+    Moim celem było dostarczenie wszechstronnej wiedzy, aby sprostać potrzebom różnych grup odbiorców, w tym osób korzystających z wyników oraz profesjonalistów projektujących podobne systemy.
+    Ta obszerność miała pozwolić na lepsze zrozumienie charakterystyk sygnałów LFP i AP oraz zwiększyć użyteczność przedstawionych badań do innych zastosowań poprzez sprowadzenie sygnałów do pojęć znanych grupie projektantów.
 \end{frame}
 
 \begin{frame}[t]
@@ -82,19 +138,22 @@
             Autorka rozprawy dosyć często używa wyrażenia \high{offset wyjściowy}, moim zdaniem jednak poprawnie powinno się użytwać wyrażenia offset napięcia wyjściowego.
         }
     \end{block}
+
     \begin{columns}
 
         \column{.33\textwidth}
+        Schematy rodzajów architektury systemów wielokanałowych do rejestracji biosygnałów elektrycznych.
         \begin{figure}[H]
             \includegraphics[scale = 0.2]{ch2/afe.png}
         \end{figure}
+
     
         \column{.6\textwidth}
-        Schematy rodzajów architektur systemów wielokanałowych do rejestracji biosygnałów elektrycznych. 
-        W pierwszym rozwiązaniu jedno ADC używane jest do wszystkich
-        kanałów, w kolejnym rozwiązaniu każdy kanał rejestrujący posiada własne ADC, ostatnie rozwiązanie stanowi połączenie obu koncepcji zakładające jedno ADC dla jednej kolumny LNA
-    \end{columns}
+        Układ odczytu jest pojęciem szerszym aniżeli wzmacniacz, który jest częścią układu odczytowego.
+        Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obejmujące mniej kanałów wejściowych.
+ 
 
+    \end{columns}
     
 \end{frame}
 
@@ -105,6 +164,7 @@
                 Impedancja mikroelektrody jest ważnym parametrem dla rejestracji zewnątrzkomórkowej, ponieważ określa szumy elektrody oraz tłumienie sygnału.} -- w jaki sposób impedanca określa te parametry?
         }
     \end{block}
+
     \begin{columns}
 
         \column{.43\textwidth}
@@ -114,10 +174,8 @@
         \begin{figure}[H]
             \includegraphics[scale = 0.2]{ch2/chemNeuroInterface.png}
         \end{figure}
-        
     
         \column{.55\textwidth}
-        Zależność impedancji elektrody $Z$ od częstości sygnału
 
     \end{columns}
 \end{frame}
@@ -129,19 +187,15 @@
             Wadą tego rozwiązania jest to, że gdy liczba kanałów wzrasta, częstotliwość próbkowania ADC również wzrasta, co powoduje większy pobór mocy.} - Częstotliwość próbkowania powinna być zależna od właściwości próbkowanego (rejestrowanego) sygnału, a nie zależeć od architektury systemu.
         }
     \end{block}
-W przypadku systemów z multipleksem o podziale czasowym (TDM), częstotliwość próbkowania musi być zazwyczaj wyższa niż minimalna częstotliwość Nyquista wynikająca z charakterystyki pojedynczego kanału. Jest to spowodowane faktem, że każdy kanał jest próbkowany w sekwencji, co wprowadza dodatkowe wymagania dotyczące częstotliwości próbkowania.
+    
+    Oczywiście częstotliwość próbkowania zależy od właściwości sygnału zgodnie z twierdzniem Nyquista.
+    W powyższym stwierdzeniu niefortunnie próbowano przekazać, że częstotliwość próbkowania wielkoanałowego ADC zależy od architektury i elosci kanałów obsługiwanych 
+  
 
-Oto dlaczego częstotliwość próbkowania musi być wyższa niż minimalna częstotliwość Nyquista:
 
-Częstotliwość Nyquista dla pojedynczego kanału: Minimalna częstotliwość próbkowania wynika z zasady Nyquista i jest określona przez maksymalną częstotliwość sygnału w pojedynczym kanale. Jeśli ta częstotliwość jest na poziomie, na przykład, 10 kHz, to minimalna częstotliwość próbkowania wynosiłaby 20 kHz zgodnie z zasadą Nyquista.
 
-Multipleksowanie kanałów: Jednak w systemie TDM sygnały z różnych kanałów są próbkowane w określonym czasie w sekwencji. Oznacza to, że system musi być w stanie przetworzyć dane z każdego kanału w odpowiednim czasie. Dlatego potrzebna jest wyższa częstotliwość próbkowania, aby zebrać dane z każdego kanału zgodnie z cyklem TDM.
+        Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzględnić dodatkowe wymagania wynikające z próbkowania wielu kanałów w sekwencji. 
 
-Przepustowość systemu: Wyższa częstotliwość próbkowania oznacza większą ilość danych do przetworzenia i przesłania. Przepustowość systemu, zarówno sprzętowa, jak i komunikacyjna, musi być wystarczająca, aby obsłużyć te dane.
-
-Zasoby sprzętowe i przetwarzanie danych: Wybór częstotliwości próbkowania musi być dostosowany do dostępnych zasobów sprzętowych i zdolności przetwarzania danych systemu.
-
-Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzględnić dodatkowe wymagania wynikające z próbkowania wielu kanałów w sekwencji. Wybór odpowiedniej częstotliwości próbkowania w takim systemie jest istotny, aby zapewnić dokładność pomiarów i niezakłócone przetwarzanie danych z każdego kanału.
 \end{frame}
 
 \begin{frame}[t]
@@ -152,11 +206,9 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             \high{
                 Z punktu widzenia minimalizacji poboru mocy najkorzystniejsza jest polaryzacja tranzystorów w zakresie słabej inwersji, poniważ w tym zakresie transkonduktancji do prądu polaryzacji tranzystora jest największy [48].
             }
-
         }
     \end{block}
     \begin{columns}
-
         \column{.43\textwidth}
         \begin{figure}[H]
             \includegraphics[scale=0.25]{ch3/gmid_id.png} 
@@ -165,7 +217,6 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
         \column{.55\textwidth}
         Stosunek transkonduktancji do prądu drenu w funkcji znormalizowanego prąd drenu dla trzech technologii 
     \end{columns}
-
 \end{frame}
 
 \begin{frame}[t]
@@ -177,6 +228,16 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
         }
     \end{block}
 
+    \begin{block}{\dk}
+        \cit{
+            W pracy przyjęto wzmocnienie dla pierwszego stopnia projektowanego wzmacniacza na poziomie $K = 20 V/V$.
+            Czy w kontekście możliwości pojawienia się składowej stałej napięcia na wejściu wzmacniacza spowodowanego zjawiskami zachodzącymi na styku tkanka--elektroda wartość ta nie jest zbyt duża i czy nie będzie powodowała nasycenia stopnia wejściowego wzmacniacza?
+        }
+    \end{block}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
+    \end{figure}
 \end{frame}
 
 \begin{frame}[t]
@@ -192,7 +253,6 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
         }
     \end{block}
 
-
     \begin{columns}
 
         \column{.43\textwidth}
@@ -204,19 +264,9 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
 
         By móc utrzymać wysokie wzmocnienie różnicowe prądu stałego oferowane przez przedwzmacniacz niezależnie od dalszych elementów toru odczytowego powinien on zapewniać niską rezystancję wyjściową ze względu na możliwość obciążenia parametrów przedwzmacniacza.
         Aby układ przedwzmacniacza miał niską rezystancję wyjściową należało dodać stopień buforujący do wyjścia OTA.
-
-
-
     \end{columns} 
 
 \end{frame}
-    % Zaproponowany przedwzmacniacz jest pierwszym fragmentem toru odczytowego do rejestracji sygnałów neuronalnych. 
-    % By móc utrzymać wysokie wzmocnienie różnicowe prądu stałego oferowane przez przedwzmacniacz niezależnie od dalszych elementów toru odczytowego powinien on zapewniać niską rezystancję wyjściową ze względu na możliwość obciążenia parametrów przedwzmacniacza.
-    % Rezystancja wyjściowa dla OTA jest odwrotnością konduktancji gds, która jest w przybliżeniu proporcjonalna do prądu drenu par różnicowych. 
-    % Aby układ przedwzmacniacza miał niską rezystancję wyjściową należało dodać stopień buforujący do wyjścia OTA.
-    % Zdecydowano się wykorzystać do tego prosty wzmacniacz w konfiguracji wtórnika,który skonstruowany jest z tranzystora PMOS w konfiguracji wspólnego drenu (MSF) polaryzowanego za pomocą obciążenia aktywnego (tranzystoryMpolar). 
-    % Wtórnik wyjściowy ze względu na obciążenie aktywne wymaga sygnału prądowego Ipolar co przekłada się na pobór mocy całego układu.
-
 
 
 \begin{frame}[t]
@@ -225,20 +275,15 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Wzór 2.2 na str. 88 -- brak liczby 4 w mianowniku pod pierwiastkiem, nie wszystkie składowe wzoru są wyjaśnione i opisane.
         }
     \end{block}
+    \begin{equation}
+        NEF = v_{ni,rms}\cdot\sqrt{\frac{2\cdot I_{tot}}{V_t\cdot k\cdot T \cdot \Delta f \cdot \pi}},
+        \label{equ:NEF}
+    \end{equation}
+    gdzie $v_{ni,rms}$ ekwiwalentne szumy wejściowe~(IRN), a $I_{tot}$ to prąd całkowity płynący przez obwód.
+    % gdzie $v_{ni,rms}$ ekwiwalentne szumy wejściowe~(\gls{irn}), a $I_{tot}$ to prąd całkowity płynący przez obwód.
 \end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\dk}
-        \cit{
-            W pracy przyjęto wzmocnienie dla pierwszego stopnia projektowanego wzmacniacza na poziomie $K = 20 V/V$.
-            Czy w kontekście możliwości pojawienia się składowej stałej napięcia na wejściu wzmacniacza spowodowanego zjawiskami zachodzącymi na styku tkanka-elektroda wartość ta nie jest zbyt duża i czy nie będzie powodowała nasycenia stopnia wejściowego wzmacniacza?
-        }
-    \end{block}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
-    \end{figure}
-\end{frame}
+
 
 \begin{frame}[t]
     \begin{block}{\dk}
@@ -250,6 +295,11 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Konsekwencją takiego podejścia jest dość zwięzły opis samej struktury wzmacniacza i jego własności tu przydałaby się nieco bardziej obszerna analiza.
         }
     \end{block}
+
+     Celem w tej pracy była głównie analiza nieliniowości pseudorezystora, dlatego skupiono się na opisie tej struktury i jej własności. 
+     Oczywiście na etapie projektu  badano wpływ 
+     Niemniej jednak, rozumiem, że parametry wzmacniacza, takie jak CMRR i napięcie offsetu, są istotne w kontekście całej analizy. Chociaż nie były one głównym celem  pracy, doceniamy sugestie dotyczące ich bardziej obszernej analizy.
+     Moim celem było szczegółowe opisanie i analiza własnych, oryginalnych rozwiązań, które były głównym wkładem w dziedzinie. W efekcie, mniej miejsca poświęciłam opisowi struktury wzmacniacza.  
 \end{frame}
 
 \begin{frame}[t]
@@ -258,6 +308,16 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Wybór współczynnika THD do oceny parametrów wzmacniacza jest poprawny, ale w mojej opinii w pracy trochę za mało uwagi poświęcono innym, dość istotnym parametrom wzmacniacza mających wpływ na jakość rejestrowanych sygnałów np. takich jak liniowość fazy, odpowiedź na skok jednostkowy czy szybkość narastania (SR -- ang. slew rate).
         }
     \end{block}
+
+
+    Chciałam podkreślić, że wybór był wynikiem identyfikacji problemu występującego w literaturze, gdzie współczynnik THD często podawany jest dla zakresu,
+    
+    w
+    Oczywiście na etapie przygotowania projektu (podczas optymalizacji OTA skupiono się na na podstawowych parametrach) jednak ze względu na inny cel pracy nie przedstawiono tego etapu w sposób dokładny gdyż
+ . 
+
+    Niemożliwe jest uwzględnienie wszystkich parametrów wzmacniacza w jednym projekcie badawczym, ale doceniamy sugestie dotyczące innych istotnych parametrów, takich jak liniowość fazy, odpowiedź na skok jednostkowy i szybkość narastania. 
+
 \end{frame}
 
 \begin{frame}[t]
@@ -267,6 +327,9 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Jednak wymagałoby to dokładniejszej analizy własności rejestrowanych sygnałów neuronalnych, co jednak wykracza poza zakres pracy.
         }
     \end{block}
+
+    Dziękuje za zwrócenie uwagi na brak odpowiednich przykładów uzasadniających znaczenie współczynnika THD dla niskoczęstotliwościowych składowych sygnałów w pracy. 
+
 \end{frame}
 
 \begin{frame}[t]
@@ -276,7 +339,6 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Być może zostały użyte filtry typu \high{notch}, ale nie wspomniano o tym w pracy.
         }
     \end{block}
-
     \begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.485\textwidth}
@@ -296,45 +358,34 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
 \begin{frame}[t]
     \begin{block}{\tb}
         \cit{
-            Nie jest zachowany klasyczny układ publikacji naukowej, natomiast zaproponowany układ jest logiczny i przejrzysty.
-        }
-    \end{block}
-    Co to znaczy klasyczny układ publikacji naukowej?
-    Nature
-    IEEE
-\end{frame}
-
-\begin{frame}[t]
-    \begin{block}{\tb}
-        \cit{
-            Protokół badania nie jest dokładnie opisany, ale zakłada badanie odpowiedzi wywołanej na mechaniczne drażnienie wibrys u szczura, z jednoczesną rejestracją aktywności LFP w obszarze od kory mózgowej (Cx) do wnętrza mózgu (Th).
-        }
-    \end{block}
-\end{frame}
-
-\begin{frame}[t]
-    \begin{block}{\tb}
-        \cit{
             Język rozprawy jest bardzo dobry, odnotowano jedynie nieliczne przypadki łączenia imiesłowu przysłówkowego ze stroną bierną.
         }
-    \end{block}
+\end{block}
+
+\begin{block}{\tb}
+    \cit{
+        Nie jest zachowany klasyczny układ publikacji naukowej, natomiast zaproponowany układ jest logiczny i przejrzysty.
+    }
+\end{block}
+
+Dziękuje za uwagi dotyczące układu  pracy. Cieszę się, że zaproponowany  układ został uznany za logiczny i przejrzysty. 
+
+
+\begin{block}{\tb}
+    \cit{
+        Użycie bibliografii jest nieco utrudnione przez brak sortowania alfabetycznego.
+    }
+\end{block}
+
+Dziękuje za uwagę dotyczącą sortowania bibliografii w pracy. 
+Sortowanie numeryczne pozwoliło mi uporządkować cytowane prace w sposób, który lepiej oddawał hierarchię źródeł. 
+Rozumiem, że różni czytelnicy preferują różne metody sortowania, ale w tym przypadku uznałam, że sortowanie numeryczne za bardziej odpowiednie.
+
 \end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\tb}
-        \cit{
-            natomiast rysunki stanowiące autocytaty z prac, których współautorką jest Autorką nie są oznaczone jako takie.
-        }
-    \end{block}
-\end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\tb}
-        \cit{
-            Użycie bibliografii jest nieco utrudnione przez brak sortowania alfabetycznego.
-        }
-    \end{block}
-\end{frame}
+
+
 
 \begin{frame}[t]
     \begin{block}{\tb}
@@ -343,6 +394,38 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Podane są one [...] bez daty dostępu, co jest błędem, jednak ich charakter nie wskazuje na ulotność ponieważ są to w większości strony firmowe, zawierające charakterystyki produktów.
         }
     \end{block}
+
+
+
+    \begin{block}{\tb}
+        \cit{
+            natomiast rysunki stanowiące autocytaty z prac, których współautorką jest Autorką nie są oznaczone jako takie.
+        }
+    \end{block}
+
+
+    Dziękuję za uwagę dotyczącą rysunków w pracy. 
+    Chciałabym wyjaśnić, że te rysunki stanowią autocytaty z wcześniejszych prac, w których byłam współautorem oraz autorem głównym wszystkich grafik. Rysunki zostały dostosowane i poprawione zgodnie z potrzebami i kontekstem bieżącej pracy. W związku z tym, uznałam, że nie było konieczności oznaczania ich jako autocytaty, ponieważ zostały one zmodyfikowane w celu dostosowania do przedstawianej pracy. Rozumiem jednak, że ta kwestia może wydawać się niejasna.
+
+
+\end{frame}
+
+\begin{frame}[t]
+    \begin{block}{\tb}
+        \cit{
+            W tekście cytowanych jest kilka rodzin modeli symulacyjnych tranzystora MOS, należy się domyślać, że w dalszym ciągu użyty został model EKV.
+        }
+    \end{block}
+    
+
+    \begin{block}{\tb}
+        \cit{
+            Protokół badania nie jest dokładnie opisany, ale zakłada badanie odpowiedzi wywołanej na mechaniczne drażnienie wibrys u szczura, z jednoczesną rejestracją aktywności LFP w obszarze od kory mózgowej (Cx) do wnętrza mózgu (Th).
+        }
+    \end{block}
+    Zgadza się, że protokół badania nie został dokładnie opisany, ale chciałam podkreślić, że aspekt biologiczny, w tym przygotowanie zwierzęcia oraz samo badanie odpowiedzi wywołanej na mechaniczne drażnienie wibrysem, nie był w zakresie mojej odpowiedzialności.
+
+
 \end{frame}
 
 \begin{frame}[t]
@@ -351,7 +434,18 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Kod źródłowy skryptów wypracowanych w ramach pracy nie jest częścią rozprawy ani nie jest dostępny w publicznym repozytorium, choś publikacja kodu pomogłaby w ocenie kompetencji Autorki.
         }
     \end{block}
+    W pełni rozumiem, że publikacja kodu źródłowego może być ważna z punktu widzenia oceny kompetencji, ale w niektórych przypadkach, ze względu na specyfikę badań lub innych czynników, może to być trudne lub niemożliwe.
+
+    \begin{block}{\tb}
+        \cit{
+            w analizie stanu sztuki Autorka pomija dorobek jej macierzystego zespołu, chociaż go cytuje [...].
+            W związku z tym recenzent skazany jest na domysły.
+            Należy przyjąć, że istotną nowością omawianej pracy jest użycie pseudorezystorów, ponieważ ta technika nie pojawia się w tytułach wymienionych [...] powyżej pozycji dorobku.
+        }
+    \end{block}
+
 \end{frame}
+
 
 \begin{frame}[t]
     \begin{block}{\tb}
@@ -361,6 +455,16 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Jedyny zidentyfikowany brak dotyczy wspomnianych na str. 68 wolnozmiennych oscylacji, które nie zostały uwzględnione w scenariuszach testowych, a jak wspomniano wcześniej w tekście, mają istotne znacznie dla działalności wzmancniacza.
         }
     \end{block}
+
+    \begin{block}{\tb}
+        \cit{
+            Uwaga co do modelowania, wynikająca z rozważań na str. 60 jest taka, że konsekwencją zależności $C_{gb}$ od $V_{gb}$ jest obecność wyrazu kwadratowego w zależności $I_{gb}(U_{gb})$ -- warto rozważyć cząstkową publikację tego wyniku.
+        }
+    \end{block}
+
+
+
+
 \end{frame}
 
 \begin{frame}[t]
@@ -373,9 +477,7 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Istnieją również wspierające ten proces metody statystyczne, takie jak metoda Blanda-Altmana.
         }
     \end{block}
-\end{frame}
 
-\begin{frame}[t]
     \begin{block}{\tb}
         \cit{
             W przypadku niniejszej pracy zastosowano jakościową metodę weryfikacji, którą jest zgodność otrzymanych z użyciem urządzenia wyników z oczekiwaniami eksperymentatora.
@@ -385,21 +487,9 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
     \end{block}
 \end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\tb}
-        \cit{
-            W tekście cytowanych jest kilka rodzin modeli symulacyjnych tranzystora MOS, należy się domyślać, że w dalszym ciągu użyty został model EKV.
-        }
-    \end{block}
-\end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\tb}
-        \cit{
-            Uwaga co do modelowania, wynikająca z rozważań na str. 60 jest taka, że konsekwencją zależności $C_{gb}$ od $V_{gb}$ jest obecność wyrazu kwadratowego w zależności $I_{gb}(U_{gb})$ -- warto rozważyć cząstkową publikację tego wyniku.
-        }
-    \end{block}
-\end{frame}
+
+
 
 \begin{frame}[t]
     \begin{block}{\tb}
@@ -407,28 +497,20 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             wykres przedstawiony na rys. 2.4 przedstawia filtr górnoprzepustowy a nie dolnoprzepustowy (wysoka impedancja występuje w paśmie niskich częstotliwości, a impedancja w paśmie wysokich częstości jest niska).
         }
     \end{block}
-\end{frame}
 
-\begin{frame}[t]
     \begin{block}{\tb}
         \cit{
             Warto również odnotować niekonsekwentny charakter opisu procesów fizykochemicznych zachodzących po stronie tkanki, które czasem opisywane są jako procesy jonowe, czasem jako procesy elektrochemiczne, a czasem odnoszone są do pojęcia warstwy podwójnej i efektów pojemnościowych.
             Co do zasady użyte modele matematyczne nie budzą wątpliwości, choć model matematyczny tkanki jest zdawkowy [...]
         }
     \end{block}
+
+
 \end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\tb}
-        \cit{
-            w analizie stanu sztuki Autorka pomija dorobek jej macierzystego zespołu, chociaż go cytuje [...].
-            W związku z tym recenzent skazany jest na domysły.
-            Należy przyjąć, że istotną nowością omawianej pracy jest użycie pseudorezystorów, ponieważ ta technika nie pojawia się w tytułach wymienionych [...] powyżej pozycji dorobku.
-        }
-    \end{block}
-\end{frame}
 
 \begin{frame}[t]
+    \vspace{-1em}
     \begin{block}{\tb}
         \cit{
             Autorka opisuje proces inżynierski z perspektywy ex post. 
@@ -439,9 +521,7 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
             Staje się to jasne w rozdziale 3.2.2, kiedy okazuje się, że celem tego rozdziału było rozważenie przesłanek za wyborem jednej z dwóch konfiguracji.
         }
     \end{block}
-\end{frame}
-
-\begin{frame}[t]
+\vspace{-0.5em}
     \begin{block}{\tb}
         \cit{
             Zdarza się również, że Autorka uznaje, że wniosek w sposób oczywisty wynika z przedstawionych wykresów, co nie jest oczywiste w interdyscyplinarnym środowisku odbiorców.
@@ -453,6 +533,7 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
 \end{frame}
 
 \begin{frame}[t]
+
     \begin{block}{\tb}
         \cit{
             Kilkukrotnie Autorka traktuje uzyskane wyniki jako oczywiste i nie tłumaczy która z cech wykresu dowodzi wyciąganego wniosku.
@@ -461,12 +542,15 @@ Dlatego częstotliwość próbkowania w systemie TDM musi być wyższa, aby uwzg
     \end{block}
 \end{frame}
 
+
+
 \begin{frame}[t]
     \begin{block}{\tb}
         \cit{
             Z całkowitych drobiazgów należy zwrócić uwagę na tabelę 3.1, w której zmienna $R_f$ powinna stanowić kolejną kolumnę tabeli.
         }
     \end{block}
+    \input{tab2.tex}
 \end{frame}
 
 \begin{frame}[t]
