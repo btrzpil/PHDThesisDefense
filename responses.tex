@@ -92,13 +92,10 @@ Zdaję sobie po uwagach, że byłby to przydatne podczas czytania, chociaż uwa�
     \end{block}
     {\renewcommand\normalsize{\small}%
 \normalsize
-Powodem dla którego nie zostały podane sztywne wartości dotyczące systemu wynika z tego, że celem projektu było eksplorowanie zakresu parametrów, nie zaś  osiąganie konkretnych wartości. 
-W zależności od użytych elektrod podczas eksperymentu jak również celu samego eksperymentu wymagania dotyczące toru odczytowego mogą być różne.
-Dzięki temu podejściu możliwe było poznanie ograniczeń technologii, architektury.
-Rozumiem, że brak zbiorczej tabeli porównującej budzi niedosyt ale jak przedstawiono na samym początku prezentacji porównywanie wartości THD mijałoby się z celem ponieważ w literature brak danych, które byłyby porównywalne. Jedyna praca, którą udało mi się znaleźć wzmiankę na ten temat, o której wspominałam w pracy pochodzi z grupy profesora Genova z Toronto.}
-% Pozostałe parametry jak szumy, powierzchnia, pobór mocy jest wypadkową optymalizacji projektowej o której wspomniano powyżej.
+Powodem dla którego nie zostały podane sztywne wartości dotyczące systemu wynika z tego, że celem projektubyło zbadanie możliwości zbudowanie takiego wzmacniacza. Natomiast specyficzne wymagania sa zależne od zastosowanie. Celem pracy było zbadanie i zrozumienie ograniczeń wynikających z technologii oraz możliwości zakresu parametrów jakie są osiągalne  niż celowanie w jeden konkretny zestaw parametrów. W zależności z jakimi  elektrodami  przeprowadza się eksperyment te wymagania mogą być różne ponieważ powierzchnia, moc i szumy są parametrami, które się wymieniają - zestaw który z parametrów jest bardziej krytyczny zależy od elektrod i eksperymentów. 
+% Rozumiem, że brak zbiorczej tabeli porównującej budzi niedosyt. O ile w przypadku szumów jest przyjety konsensus dotyczący wartości i raczej wiekszość prac operuje w podobnym przedziale (5-8 uVrms dla obu zakresów) to w przypadku wartości THD mijałoby się z celem ponieważ w literature brak danych, które byłyby porównywalne.
 
-
+}
     
 \end{frame}
 
@@ -115,7 +112,8 @@ Rozumiem, że brak zbiorczej tabeli porównującej budzi niedosyt ale jak przeds
     \end{block}
 
     Rozumiem, że w kontekście rosnącej popularności rozwiązań opartych o wzmacniacz o małym lub jednostkowym wzmocnieniu i przetwornikom analogowo-cyfrowym ubogi fragment w rozdziale dotyczącym obecnego stanu wiedzy bddzi niedosyt.
-    Rozwiązanie te jednak tyczą  się głównie zastosowań związanych z rejestracją sygnałów EEG. Układy  te charakteryzują się innymi wymaganiami dotyczącymi ilości kanałów pomiarowych, rozmiarów oraz technologii w której są wykonywane, dlatego zdecydowano się nie poszerzać o ten aspekt pracy szczególnie, że wymagania dotyczące projektu były inne. 
+    Rozwiązanie te jednak tyczą  się głównie zastosowań związanych z rejestracją sygnałów EEG. Układy  te charakteryzują się innymi wymaganiami dotyczącymi ilości kanałów pomiarowych, rozmiarów oraz technologii w której są wykonywane, dlatego zdecydowano się nie poszerzać o ten aspekt pracy szczególnie, że w przypadku systemów dedykowanych rejestracji mikroelektrodowej aplikowanych wewnątrz mózgu nie jest to kierunek wiodący dlatego nie poszerzano pracy o ten aspekt.
+
 \end{frame}
 
 
@@ -175,7 +173,7 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
     Oczywiście częstotliwość próbkowania jest zdeterminowana charakterystyką sygnału zgodnie z twierdzeniem Nyquista.
     W powyższym stwierdzeniu nieumiejętnie próbowano przekazać, że częstotliwość wielokanałowego ADC zależy od architektury, a konkretnie od ilości obsługiwanych kanałów w przetworniku.
     Jeżeli użyjemy ADC obsługujące jeden kanał jego częstotliwość próbkowania jest tożsama z częstotliwością próbkowana kanału, ale w przypadku wielokanałowego ADC jego częstotliwość systemu musi być skalowanie odpowiednio większa i stąd doszło do słabego wytłumaczenia zagadnienia.
-    
+ 
 \end{frame}
 
 \begin{frame}[t]
@@ -188,7 +186,7 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
 
     \begin{columns}
 
-        \column{.43\textwidth}
+        \column{.4\textwidth}
         \vspace{-1em}
         \begin{figure}[H]
             \includegraphics[scale = 0.5]{ch2/ImpedancjaWykres.pdf}
@@ -198,8 +196,8 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
             \includegraphics[scale = 0.2]{ch2/chemNeuroInterface.png}
         \end{figure}
     
-        \column{.55\textwidth}
-        Impedancja przy niskich częstotliwościach ma charakter rezystancyjny, gdzie główny wpływ ma rezystancja Rsp, która wprowadza szum termiczny. 
+        \column{.6\textwidth}
+        Impedancja przy niskich częstotliwościach ma charakter rezystancyjny, Wartość Rct (rezystancja elektrochemiczna) jest duża i dla szumów nie ma znaczenia podobnie jak wartość pojemności warstwy podwójnej.  Szum termiczny zależy od parametru Rsp (rezystancja rozproszona), który w modelu jest w szeregowym połączeniu ścieżki sygnału, i parametr ten zależy on od rozmiaru elektrody.
         Podobnie w przypadku niskich częstotliwości jeżeli impedancja jest duża w stosunku do impedancji wejściowej pierwszego elementu toru odczytowego czyli w tym przypadku wzmacniacza otrzymujemy dzielnik napięciowy, który może powodować atenuację sygnału. 
         
     \end{columns}
@@ -222,10 +220,9 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
         \end{figure}
     
         \column{.55\textwidth}
-        TODO
-
-        Stosunek transkonduktancji do prądu drenu w funkcji znormalizowanego prąd drenu dla trzech technologii 
-    \end{columns}
+        Szumy termiczne kanału tranzystora są odwrotnie proporcjonalne do transkonduktancji dlatego zależy nam na dużej wartości tego parametru. Wartość tego parametru jest ściśle związana z wartością prądu polaryzacji tranzystora, która przekłada się pobór mocy, dlatego ważne jest jak uzyskać daną transkonduktancje przy minimalnym prądzie. 
+        Na rysunku przedstawiono stosunek transkonduktancji do prądu drenu w funkcji znormalizowanego prądu drenu dla trzech technologii i na podstawie tego można zobaczyć, że najkorzystniejszy jest obszar podprogowy.
+     \end{columns}
 \end{frame}
 
 \begin{frame}[t]
@@ -279,15 +276,24 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
 
     \begin{columns}
 
-        \column{.43\textwidth}
+        \column{.4\textwidth}
         \begin{figure}[H]
             \includegraphics[scale = 0.4]{ch4/sf.pdf}
         \end{figure}
 
-        \column{.55\textwidth}
-TODO
-        By móc utrzymać wysokie wzmocnienie różnicowe prądu stałego oferowane przez przedwzmacniacz niezależnie od dalszych elementów toru odczytowego powinien on zapewniać niską rezystancję wyjściową ze względu na możliwość obciążenia parametrów przedwzmacniacza.
-        Aby układ przedwzmacniacza miał niską rezystancję wyjściową należało dodać stopień buforujący do wyjścia OTA.
+
+        \column{.6\textwidth}
+
+
+
+Powyższe zdania stanowią uchybienie edytorskie i powinno być. Ostatnie zdanie nie jest już również potrzebne.
+\cit{
+Jak wspomniano wcześniej, w docelowym rozwiązaniu przewiduje się zastosowanie drugiego stopnia wzmacniającego. Przy założeniu, że kolejny stopień będzie miał wysoką impedancję \textbf{wejściową}, może on być sterowany bezpośrednio z kaskody o wysokiej impedancji wyjściowej.
+}
+
+
+        % By móc utrzymać wysokie wzmocnienie różnicowe prądu stałego oferowane przez przedwzmacniacz niezależnie od dalszych elementów toru odczytowego powinien on zapewniać niską rezystancję wyjściową ze względu na możliwość obciążenia parametrów przedwzmacniacza.
+        % Aby układ przedwzmacniacza miał niską rezystancję wyjściową należało dodać stopień buforujący do wyjścia OTA.
     \end{columns} 
 
 \end{frame}
@@ -306,9 +312,9 @@ TODO
     gdzie $v_{ni,rms}$ ekwiwalentne szumy wejściowe~(IRN), a $I_{tot}$ to prąd całkowity płynący przez obwód wzmacniacza, 
     
  
-    $\Delta f$ To jest efektywna szerokość pasma szumowego wzmacniacza. Reprezentuje zakres częstotliwości, w którym rozważa się szum wzmacniacza.
+    $\Delta f$ Jest to efektywna szerokość pasma szumowego wzmacniacza. Reprezentuje zakres częstotliwości, w którym rozważa się szum wzmacniacza.
 
-    $V_t$To napięcie termiczne, zazwyczaj wyrażane jako kT/q, gdzie "k" to stała Boltzmanna, "T" to temperatura w kelwinach, a "q" to ładunek elektronu.
+    $V_t$ To napięcie termiczne, zazwyczaj wyrażane jako kT/q, gdzie "k" to stała Boltzmanna, "T" to temperatura w kelwinach, a "q" to ładunek elektronu.
 
 
 \end{frame}
@@ -316,7 +322,10 @@ TODO
 
 
 \begin{frame}[t]
+    \vspace{-1em}
     \begin{block}{\dk}
+        {\renewcommand\normalsize{\small}%
+        \normalsize
         \cit{
             W pracy skupiono się na analizie własności i projektowaniu rezystora półprzewodnikowego, nieco mniej zajmując się samym wzmacniaczem -- który jest najważniejszym elementem pracy.
             W szczególności dotyczy to parametrou CMRR wzmacniacza.
@@ -324,43 +333,57 @@ TODO
             Tu przydatne byłoby jakieś oszacowanie.
             Konsekwencją takiego podejścia jest dość zwięzły opis samej struktury wzmacniacza i jego własności tu przydałaby się nieco bardziej obszerna analiza.
         }
-    \end{block}
-
-    %  Celem w tej pracy była głównie analiza nieliniowości pseudorezystora, dlatego skupiono się na opisie tej struktury i jej własności. 
-    %  Oczywiście na etapie projektu  badano wpływ 
-    %  Niemniej jednak, rozumiem, że parametry wzmacniacza, takie jak CMRR i napięcie offsetu, są istotne w kontekście całej analizy. Chociaż nie były one głównym celem  pracy, doceniamy sugestie dotyczące ich bardziej obszernej analizy.
-    %  Moim celem było szczegółowe opisanie i analiza własnych, oryginalnych rozwiązań, które były głównym wkładem w dziedzinie. W efekcie, mniej miejsca poświęciłam opisowi struktury wzmacniacza.  
-\end{frame}
-
-\begin{frame}[t]
-    \begin{block}{\dk}
         \cit{
             Wybór współczynnika THD do oceny parametrów wzmacniacza jest poprawny, ale w mojej opinii w pracy trochę za mało uwagi poświęcono innym, dość istotnym parametrom wzmacniacza mających wpływ na jakość rejestrowanych sygnałów np. takich jak liniowość fazy, odpowiedź na skok jednostkowy czy szybkość narastania (SR -- ang. slew rate).
         }
+        }
     \end{block}
+    {\renewcommand\normalsize{\small}%
+    \normalsize
+Celem w tej pracy była głónie analiza nieliniowości pseudo-rezystora, dlatego skupiono się na opisie tej struktury i jej własności.  Przy projektowaniu wzmacniacza powyższe  parametry  były brane pod uwagę, razem z innymi parametrami jak szumy czy offset co uznano za standardową procedurę optymaliacji pary różnocowej natomiast nie zostały szczegółowo opisane.
 
 
-%     Chciałam podkreślić, że wybór był wynikiem identyfikacji problemu występującego w literaturze, gdzie współczynnik THD często podawany jest dla zakresu,
-    
-%     w
-%     Oczywiście na etapie przygotowania projektu (podczas optymalizacji OTA skupiono się na na podstawowych parametrach) jednak ze względu na inny cel pracy nie przedstawiono tego etapu w sposób dokładny gdyż
-%  . 
-
-%     Niemożliwe jest uwzględnienie wszystkich parametrów wzmacniacza w jednym projekcie badawczym, ale doceniamy sugestie dotyczące innych istotnych parametrów, takich jak liniowość fazy, odpowiedź na skok jednostkowy i szybkość narastania. 
-
+Parametry,  jak slew rate, odpowiedź na skok jednostkowy czy też liniowosć fazy zostały wzięte pod uwagę przy projekcie. Te aspekty nie zostały detalicznie opisane ponieważ nie uznano tych parametrów za krytyczne ze względu na zakres pracy wzmacniacza (pasmo rejestrowanych sygnałów) jak również trudne do osiągnięcia na akceptowalnym poziomie. 
+    }
 \end{frame}
 
 \begin{frame}[t]
-    \begin{block}{\dk}
-        \cit{
-            Teza o dużym znaczeniu współczynnika THD dla niskoczęstotliwościowych składowych sygnałów nie jest poparta odpowiednimi przykładami uzasadniającymi to znaczenie.
-            Jednak wymagałoby to dokładniejszej analizy własności rejestrowanych sygnałów neuronalnych, co jednak wykracza poza zakres pracy.
-        }
-    \end{block}
+    \begin{columns}
+
+        \column{.48\textwidth}
+
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.45]{scripts/tmp/responses.pdf}
+        \end{figure}
+        \column{.48\textwidth}
+        W przypadku stałego poziomu dc, który jest widoczny na przebiegach sygnału wynika on z właściwości wtórnika źródłowego, który jest na wyjściu i zapewnia odpowiednią impedancję wyjściową. Jest to systematyczny efekt po wszystkich kanałach co jest widoczne na poniższym wykresie. 
+
+    \end{columns}
+
+
+\end{frame}
+
+
+
+\begin{frame}[t]
+\begin{block}{\dk}
+    \cit{
+        Teza o dużym znaczeniu współczynnika THD dla niskoczęstotliwościowych składowych sygnałów nie jest poparta odpowiednimi przykładami uzasadniającymi to znaczenie.
+        Jednak wymagałoby to dokładniejszej analizy własności rejestrowanych sygnałów neuronalnych, co jednak wykracza poza zakres pracy.
+    }
+\end{block}
+
+W tym miejscu chciałabym podkreślić, że współczynnik THD na poziomie 1\% to nie jest bardzo niską wartością. W pracy nie optymalizowano tego parametru do poziomu bardzo niskiego, co faktycznie wymagałoby uzasadnienia biologicznego. THD jest miarą liniowości rejestrowanego sygnału powszechnie używaną w literaturze, jednak dla tego typu systemów podawany jest dla jednej wartości daleko od zakresu, w którym jest narażony na bardzo dużą nieliniowość. W pracy i na prezentacji przedstawiono że w niektórych systemach THD może być nawet o jeden rząd wielkości większe niż proponowany wymóg projektowy 1\% dlatego podnoszono znaczenie tego parametru.
+
+
+\end{frame}
+
+
 
     % Dziękuje za zwrócenie uwagi na brak odpowiednich przykładów uzasadniających znaczenie współczynnika THD dla niskoczęstotliwościowych składowych sygnałów w pracy. 
 
-\end{frame}
+
 
 \begin{frame}[t]
     \begin{block}{\dk}
@@ -451,6 +474,9 @@ Faktycznie doszło do pominięcia tych informacji i nie wyświetlenia ich przy k
     Należy przypomnieć, że tworząc symulacje dostosowane do submikronowych procesów technologicznych CMOS nadal opiera się na niedoskonałych modelach BSIM w wersji 4.3.0.}
 
     Model EKV nie jest zaimplementowany w środowisku CADENCE, czyli narzędziach które służą przeprowadzaniu symulacji submikronowych procesów technologicznych CMOS ale jest pożyteczny w kontekście zrozumienia zjawisk fizycznych w tranzystorach MOS. 
+\end{frame}
+  
+\begin{frame}[t]
 
     \begin{block}{\tb}
         \cit{
@@ -458,8 +484,6 @@ Faktycznie doszło do pominięcia tych informacji i nie wyświetlenia ich przy k
         }
     \end{block}
     Eksperyment biologiczny, który jest opisany w pracy opiera się na standardowej procedurze badania odpowiedzi neuronalnej w korze mózgowe na mechaniczne drażnienie wibrys u szczura oraz aktywności spontanicznej w wzgórzu. Protokół badania opisany jest w formie minimalistycznej koniecznej do zrozumienia otrzymanych odpowiedzi. Chciałam podkreślić, że aspekt biologiczny, w tym przygotowanie zwierzęcia stał po stronie osoby wykonującej tego typu eksperymentuy i mającej doświadczenie w tej kwestii.
-
-
 \end{frame}
 
 \begin{frame}[t]
@@ -522,21 +546,29 @@ Wymagało to oczywiście stworzenia indywidualnych narzędzi symulacyjnych, proj
 
 \begin{frame}[t]
     \begin{block}{\tb}
+
         \cit{
+            {\renewcommand\normalsize{\small}%
+            \normalsize
             Pewne wątpliwości budzi natomiast metodyka procesu weryfikacji w eksperymencie neurofizjologicznym.
             W przypadku pomiarów o charakterze unikatowym nie ma możliwości porównania wyniku z urządzeniami referencyjnymi.
             Wydaje się jednak, że ten przypadek tu nie zachodzi.
             Bardziej właściwe wydaje się porównanie omawianego urządzenia pomiarowego z urządzeniem referencyjnym w sposób, który wykaże prawidłowość realizowanych za jego pomocą pomiarów.
-            Istnieją również wspierające ten proces metody statystyczne, takie jak metoda Blanda-Altmana.
+            Istnieją również wspierające ten proces metody statystyczne, takie jak metoda Blanda-Altmana.}
         }
 
         \cit{
+            {\renewcommand\normalsize{\small}%
+            \normalsize
             W przypadku niniejszej pracy zastosowano jakościową metodę weryfikacji, którą jest zgodność otrzymanych z użyciem urządzenia wyników z oczekiwaniami eksperymentatora.
             Oczekiwania te zbudowane są na podstawie dostępnej wiedzy, a ta zawiera oczywiście wyniki pomiarów, które można uznać za referencyjne.
             Jednak nie ulega wątpliwości, że tego typu analiza jest dużo słabsza z perspektywy matematycznej niż analiza porównawcza dwóch urządzeń korzystających z tego samego źródła sygnału.
         }
+}
     \end{block}
-    Eksperyment przeprowadzony w IBD był standardową procedurą opartą na doświadczeniu osoby go wykonującej, wykorzystującej różne systemy pomiarowe dlatego w momencie opisu pracy uznano za wystarczające tego typu porównanie. Dziękuję jednak za podanie propozycji w jaki sposób można byłoby udoskonalić ten aspekt co może się przydać podczas potencjalnej publikacji wyników układu scalonego.
+    {\renewcommand\normalsize{\small}%
+    \normalsize
+    Eksperyment przeprowadzony w IBD był standardową procedurą opartą na doświadczeniu osoby go wykonującej, wykorzystującej różne systemy pomiarowe dlatego w momencie opisu pracy uznano za wystarczające tego typu porównanie. Dziękuję jednak za podanie propozycji w jaki sposób można byłoby udoskonalić ten aspekt co może się przydać podczas potencjalnej publikacji wyników układu scalonego.}
 \end{frame}
 
 
@@ -588,23 +620,29 @@ W pracy opierano się na powszechnie używanym prostym modelu tkanka elektroda. 
     \vspace{-1em}
     \begin{block}{\tb}
         \cit{
+            {\renewcommand\normalsize{\scriptsize}%
+            \normalsize
             Autorka opisuje proces inżynierski z perspektywy ex post. 
             W związku z tym zdarza się, że relacjonując wykonane badanie czy analizę nie umieszcza na końcu rozdziału wniosków z tego badania.
             Pojawiają się one niejako mimochodem jako uzasadnienie decyzji projektowej, której podjęcie jest ralaconowane w rozdziale następnym.
             Taka sytuacja występuje na granicy rozdziałów 3.2.1 i 3.2.2, kiedy zostaje w zasadzie podjęta decyzja o eliminacji z dalszych rozważań konfiguracji variable-$V_{gs}$, do czego przesłanki dostarcza rozdział 3.2.1.
             Co do rozdziału 3.2.1 to skądinąd nie jest od początku jasne w jakim celu są prowadzone opisywane w nim rozważania.
-            Staje się to jasne w rozdziale 3.2.2, kiedy okazuje się, że celem tego rozdziału było rozważenie przesłanek za wyborem jednej z dwóch konfiguracji.
+            Staje się to jasne w rozdziale 3.2.2, kiedy okazuje się, że celem tego rozdziału było rozważenie przesłanek za wyborem jednej z dwóch konfiguracji.}
         }
 
         \cit{
+            {\renewcommand\normalsize{\scriptsize}%
+            \normalsize
             Zdarza się również, że Autorka uznaje, że wniosek w sposób oczywisty wynika z przedstawionych wykresów, co nie jest oczywiste w interdyscyplinarnym środowisku odbiorców.
             Taka sytuacja występuje na granicy rozdziałów 3.3 oraz 3.4.
             Wniosek z rysunku 3.12, który kończy analizę z rozdziału 3.3 jest podsumowany w pierwszym akapicie rozdziału 3.4.
-            Takich sytuacji jest więcej, ale nie spotkałem się z oczywistą luką i brakiem informacji, a co najwyżej z jej nieodpowiednią lokalizacją.
+            Takich sytuacji jest więcej, ale nie spotkałem się z oczywistą luką i brakiem informacji, a co najwyżej z jej nieodpowiednią lokalizacją.}
         }
     \end{block}
+    {\renewcommand\normalsize{\small}%
+    \normalsize
     W tym momencie nie jestem już w stanie niestety poprawić tekstu, ale rozumiem uwagi, że całość mogła przysporzyć trudność podczas czytania.
-    W pracy opisywane są wyniki, które doprowadziły do uzyskania zamierzonego celu chociaż po drodze były różne koncepcje na temat tego jak rozwiązać problem. Zapewne to mogło również wpłynąć na to, że opisując w ten spoób procesz niektóre fragmenty są mniej zrozumiałe i lokalizacja wytłumaczenia może budzić pewne wątpliwości.
+    W pracy opisywane są wyniki, które doprowadziły do uzyskania zamierzonego celu chociaż po drodze były różne koncepcje na temat tego jak rozwiązać problem. Zapewne to mogło również wpłynąć na to, że opisując w ten spoób procesz niektóre fragmenty są mniej zrozumiałe i lokalizacja wytłumaczenia może budzić pewne wątpliwości.}
 \end{frame}
 
 
