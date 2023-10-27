@@ -351,7 +351,7 @@ Parametry,  jak slew rate, odpowiedź na skok jednostkowy czy też liniowosć fa
     \begin{columns}
 
         \column{.48\textwidth}
-
+\vspace{-1em}
         \begin{figure}
             \centering
             \includegraphics[scale=0.45]{scripts/tmp/responses.pdf}
@@ -367,14 +367,48 @@ Parametry,  jak slew rate, odpowiedź na skok jednostkowy czy też liniowosć fa
 
 
 \begin{frame}[t]
+    \vspace{-1em}
+
 \begin{block}{\dk}
     \cit{
+        {\renewcommand\normalsize{\small}%
+\normalsize
         Teza o dużym znaczeniu współczynnika THD dla niskoczęstotliwościowych składowych sygnałów nie jest poparta odpowiednimi przykładami uzasadniającymi to znaczenie.
         Jednak wymagałoby to dokładniejszej analizy własności rejestrowanych sygnałów neuronalnych, co jednak wykracza poza zakres pracy.
+        }
     }
 \end{block}
 
+{\renewcommand\normalsize{\small}%
+\normalsize
 W tym miejscu chciałabym podkreślić, że współczynnik THD na poziomie 1\% to nie jest bardzo niską wartością. W pracy nie optymalizowano tego parametru do poziomu bardzo niskiego, co faktycznie wymagałoby uzasadnienia biologicznego. THD jest miarą liniowości rejestrowanego sygnału powszechnie używaną w literaturze, jednak dla tego typu systemów podawany jest dla jednej wartości daleko od zakresu, w którym jest narażony na bardzo dużą nieliniowość. W pracy i na prezentacji przedstawiono że w niektórych systemach THD może być nawet o jeden rząd wielkości większe niż proponowany wymóg projektowy 1\% dlatego podnoszono znaczenie tego parametru.
+
+
+}
+\vspace{-1em}
+
+\begin{columns}
+
+    \column{.3\textwidth}
+    \begin{figure}[H]
+        \centering
+            \includegraphics[scale = 0.5]{scripts/tranTHDAmp/tranTHDAmp_ner.pdf}
+    \end{figure}   
+
+    \column{.3\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.5]{scripts/embc2021THD_size/embc2021THD_size_0_100.pdf}
+    \end{figure}   
+
+    \column{.3\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{ch1/lfp_ap_spectrum}  
+        \end{figure}	
+
+\end{columns}
+
 
 
 \end{frame}
@@ -431,7 +465,7 @@ Dziękuje za uwagi dotyczące układu  pracy. Cieszę się, że zaproponowany  u
 \end{block}
 
 Dziękuje za uwagę dotyczącą sortowania bibliografii w pracy. 
-Sortowanie numeryczne pozwoliło mi uporządkować cytowane prace w sposób, który lepiej oddawał hierarchię źródeł. 
+Sortowanie numeryczne pozwoliło mi uporządkować cytowane prace w sposób, który lepiej oddawał kolejność występowania źródeł. 
 Rozumiem, że różni czytelnicy preferują różne metody sortowania, ale w tym przypadku uznałam, że sortowanie numeryczne za bardziej odpowiednie szczególnie, że w wersji elektronicznej dzięki linkom między numerem, a pozycją można łatwo odszukać interesującą pozycję w bibliografii.
 
 
@@ -463,18 +497,7 @@ Faktycznie doszło do pominięcia tych informacji i nie wyświetlenia ich przy k
 
 \end{frame}
 
-\begin{frame}[t]
-    \begin{block}{\tb}
-        \cit{
-            W tekście cytowanych jest kilka rodzin modeli symulacyjnych tranzystora MOS, należy się domyślać, że w dalszym ciągu użyty został model EKV.
-        }
-    \end{block}
 
-    \cit{
-    Należy przypomnieć, że tworząc symulacje dostosowane do submikronowych procesów technologicznych CMOS nadal opiera się na niedoskonałych modelach BSIM w wersji 4.3.0.}
-
-    Model EKV nie jest zaimplementowany w środowisku CADENCE, czyli narzędziach które służą przeprowadzaniu symulacji submikronowych procesów technologicznych CMOS ale jest pożyteczny w kontekście zrozumienia zjawisk fizycznych w tranzystorach MOS. 
-\end{frame}
   
 \begin{frame}[t]
 
@@ -543,6 +566,18 @@ Wymagało to oczywiście stworzenia indywidualnych narzędzi symulacyjnych, proj
 
 
 \end{frame}
+\begin{frame}[t]
+    \begin{block}{\tb}
+        \cit{
+            W tekście cytowanych jest kilka rodzin modeli symulacyjnych tranzystora MOS, należy się domyślać, że w dalszym ciągu użyty został model EKV.
+        }
+    \end{block}
+
+    \cit{
+    Należy przypomnieć, że tworząc symulacje dostosowane do submikronowych procesów technologicznych CMOS nadal opiera się na niedoskonałych modelach BSIM w wersji 4.3.0.}
+
+    Model EKV nie jest zaimplementowany w środowisku CADENCE, czyli narzędziach które służą przeprowadzaniu symulacji submikronowych procesów technologicznych CMOS ale jest pożyteczny w kontekście zrozumienia zjawisk fizycznych w tranzystorach MOS. 
+\end{frame}
 
 \begin{frame}[t]
     \begin{block}{\tb}
@@ -566,6 +601,7 @@ Wymagało to oczywiście stworzenia indywidualnych narzędzi symulacyjnych, proj
         }
 }
     \end{block}
+    \vspace{-1em}
     {\renewcommand\normalsize{\small}%
     \normalsize
     Eksperyment przeprowadzony w IBD był standardową procedurą opartą na doświadczeniu osoby go wykonującej, wykorzystującej różne systemy pomiarowe dlatego w momencie opisu pracy uznano za wystarczające tego typu porównanie. Dziękuję jednak za podanie propozycji w jaki sposób można byłoby udoskonalić ten aspekt co może się przydać podczas potencjalnej publikacji wyników układu scalonego.}
@@ -603,17 +639,7 @@ Dla częstości pośrednich obserwuje się nachylenie charakterystyki zależne o
         
     \end{columns}
 \end{frame}
-\begin{frame}[t]
 
-    \begin{block}{\tb}
-        \cit{
-            Warto również odnotować niekonsekwentny charakter opisu procesów fizykochemicznych zachodzących po stronie tkanki, które czasem opisywane są jako procesy jonowe, czasem jako procesy elektrochemiczne, a czasem odnoszone są do pojęcia warstwy podwójnej i efektów pojemnościowych.
-            Co do zasady użyte modele matematyczne nie budzą wątpliwości, choć model matematyczny tkanki jest zdawkowy [...]
-        }
-    \end{block}
-W pracy opierano się na powszechnie używanym prostym modelu tkanka elektroda. Uznano, że na potrzeby pracy takie podejście za wystarczające. 
-
-\end{frame}
 
 
 \begin{frame}[t]
@@ -699,6 +725,20 @@ W pracy opierano się na powszechnie używanym prostym modelu tkanka elektroda. 
 \end{frame}
 
 \begin{frame}[t]
+
+    \begin{block}{\tb}
+        \cit{
+            Warto również odnotować niekonsekwentny charakter opisu procesów fizykochemicznych zachodzących po stronie tkanki, które czasem opisywane są jako procesy jonowe, czasem jako procesy elektrochemiczne, a czasem odnoszone są do pojęcia warstwy podwójnej i efektów pojemnościowych.
+            Co do zasady użyte modele matematyczne nie budzą wątpliwości, choć model matematyczny tkanki jest zdawkowy [...]
+        }
+    \end{block}
+W pracy opierano się na powszechnie używanym prostym modelu tkanka elektroda. Uznano, że na potrzeby wyznaczenia celów pracy takie podejście za wystarczające. 
+Praca skupiała się na aspekcie eksploracji parametrów przedwzmacniacza oraz oceny możliwości zbudowania efektywnego układu na potrzeby przyszłego systemu łączącego rejestrację i stymulacją elektryczną komórek nerwowych w mózgu na dużą skalę pomiarową.
+Z tego powodu uznałam w momencie pracy, że warto wprowadzić czytelnika w tematykę procesów zachodzących na styku elektrody i tkanki. 
+
+\end{frame}
+
+\begin{frame}[t]
     \vspace{-1em}
     \begin{block}{\tb}
         \cit{
@@ -729,8 +769,7 @@ W pracy opierano się na powszechnie używanym prostym modelu tkanka elektroda. 
          }}
     \end{block}
 \end{frame}
-\begin{frame}[t]
-\end{frame}
+
 
 \begin{frame}[t]
     \begin{block}{\tb}
@@ -744,22 +783,95 @@ W pracy opierano się na powszechnie używanym prostym modelu tkanka elektroda. 
             Przy odległej lokalizacji elektrody odniesienia trudno jest interpretować otrzymane przebiegi jako neurogenne.
         }
     \end{block}
+    
+\end{frame}
+
+
+
+\begin{frame}[t]
+    \begin{columns}
+
+    \column{.475\textwidth}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.1]{ch2/neuropixelsch.png} 
+    \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
+
+\end{figure}
+
+\column{.475\textwidth}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{ch2/crosstalkSch.jpg} 
+    \includegraphics[scale=0.5]{ch3/pseudo-lay.pdf} 
+
+
+\end{figure}
+\end{columns}
 \end{frame}
 
 \begin{frame}[t]
+    \vspace{-1em}
     \begin{block}{\tb}
         \cit{
             Odwrócenie amplitudy obserwowane na elektrodzie 0 wygląda w pierwszym przybliżeniu na wynik zmiany fazy wynikający ze sprzężenia pojemnościowego -- trudno byłoby zinterpretować odwrócenie amplitudy wprost jako odwrócenie kierunku prądu -- jest to jeden z najciekawszych wyników dotyczących samych narzędzi, sugerujący konieczność dalszego rozwoju techniki modelowania.
         }
     \end{block}
+
+    \begin{columns}
+
+        \column{.2\textwidth}
+\vspace{-1em}
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.3]{scripts/tmp/avgLFPResponseMap_filtering39.pdf}
+        \end{figure}
+        \column{.78\textwidth}
+        {\renewcommand\normalsize{\small}%
+        \normalsize
+        \cit{Polarność sygnału wskazuje na kierunek przepływu jonów, do elektrody lub od elektrody.} - ten fragment tyczy się wytłumaczenia tego dlaczego poszczególne panele się różną, nie odnoszą się do tego co się stało na elektrodzie zero. Zgodnie z wiedzą ekspercką osoby wykonującej pomiar i jej doświadczeniem w poprzednich eksperymentach efekt na elektrodzie zerowej został wytłumaczony jak efekt pracy tkanki i obserwowane sygnały.
+        W pracy przedstawiono to wytłumaczenie jednak niestety w niezbyt klarowny sposób.
+
+        \cit{Jeżeli uwzględnimy fakt, że pokazane dwie serie rejestracji zostały wykonane w znacznym odstępie czasowym ok. 100 minut, obserwację zmiany kształtu sygnały z bipolarnego na unipolarny należy interpretować jako zmianę w strukturze tkanki w pobliżu danej elektrody. 
+        Warstwa powierzchniowa tkanki jest bardziej narażana na wpływ czynników zewnętrznych, natomiast głębsze warstwy kory baryłkowej pozostają bardziej stabilne w czasie, co potwierdzają zarejestrowane sygnały.}}
+
+    \end{columns}
 \end{frame}
 
 \begin{frame}[t]
+    \vspace{-1em}
     \begin{block}{\tb}
         \cit{
             Odnośnie podnoszonego przez Autorkę faktu zniknięcia podwójnego maksimum widma THD, warto zauważyć, że rozwiązanie takie występowało już jako jeden z wariantów widma w analizie Monte-Carlo (rys 4.9) oraz wykazywało silną zależność od pojemności $C_{gb}$ (rys 3.10), co mogło być przyczyną obserwowanych różnic między widmem zmierzonym a wynikami symulacji.
         }
     \end{block}
+W pracy nie ma analitycznego wytłumaczenia charakteru zmian kształtu krzywej THD, ale należy przyjąć, że bardziej wiarygodny jest wynik otrzymany w pomiarach ponieważ środowisko symulacyjne może nie uwzględniać wszystkich efektów technologii jeżeli stosuje sią ją w dosyć nietypowych wariantach (brzegowych parametrach).  
+\vspace{-2em}
+
+    \begin{columns}
+
+        \column{.3\textwidth}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{scripts/analyseTran/analyseTranTechnology.pdf}
+    \end{figure}
+        
+    \column{.3\textwidth}
+
+    \begin{figure}[H]
+        \centering
+    \includegraphics[scale = 0.5]{scripts/mcTranResult/mcTranResult.pdf}
+    \end{figure}
+
+    \column{.3\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.5]{scripts/embc2021THD_size/embc2021THD_size_0_100.pdf}
+    \end{figure}
+        
+
+
+    \end{columns}
 \end{frame}
 
 % \begin{frame}[t]
