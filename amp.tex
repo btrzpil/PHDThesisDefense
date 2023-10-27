@@ -49,20 +49,26 @@
     }
     {\renewcommand\normalsize{\small}%
     \normalsize
-    % \begin{table}[H]
-    %     \centering
-    %     \begin{tabular}{lll} 
-    %     \toprule
-    %     \begin{tabular}[c]{@{}l@{}}Kluczowe \\tranzystory\end{tabular} & $W$ [$\SI{}{\micro\metre}$] & $L$ [$\SI{}{\micro\metre}$]  \\ 
-    %     \toprule
-    %     $M_{bias}$                                                       & 10                          & 10                           \\
-    %     $M_1,\ M_2$                                                    & 300                         & 1                            \\
-    %     $M_3,\ M_4$                                                    & 20                          & 2                            \\
-    %     $M_5,\ M_6$                                                    & 5                           & 5                            \\
-    %     $M_7,\ M_8$                                                    & 4                           & 48                           \\
-    %     \bottomrule
-    %     \end{tabular}
-    % \end{table}
+    \begin{itemize}
+        \item Konfiguracja  teleskopowej kaskody  jako aktywny OTA
+        \item Polaryzacja pary różnicowej w obszarze podprogowym pracy tranzystora
+        \item  Napięcie zasilania $\SI{\pm 1.8}{\volt}$
+    \end{itemize}
+    \vspace{-1em}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{lll} 
+        \toprule
+        \begin{tabular}[c]{@{}l@{}}Kluczowe \\tranzystory\end{tabular} & $W$ [$\SI{}{\micro\metre}$] & $L$ [$\SI{}{\micro\metre}$]  \\ 
+        \toprule
+        $M_{bias}$                                                       & 10                          & 10                           \\
+        $M_1,\ M_2$                                                    & 300                         & 1                            \\
+        $M_3,\ M_4$                                                    & 20                          & 2                            \\
+        $M_5,\ M_6$                                                    & 5                           & 5                            \\
+        $M_7,\ M_8$                                                    & 4                           & 48                           \\
+        \bottomrule
+        \end{tabular}
+    \end{table}
     }
     \end{block}
     \end{columns}   
@@ -134,7 +140,7 @@
         \begin{itemize}
             \item 8 wersji przedwzmacniacza i 14 kanałów
             \item 4 wersje tranzystorów PMOS tworzących pseudo-rezystory  --  $W/L$: $2/40,\ 1/40,\ 2/20,\ 1/20\ \SI{}{\micro\metre / \micro\metre}$
-            \item 2 konfiguracje pojemności -- $C_{in}/C_f = 4/200\ \SI{}{\pico\farad}/\SI{}{\femto\farad}$
+            \item 2 konfiguracje pojemności -- $C_{in}/C_f = 4/200,\ 8/400\ \SI{}{\pico\farad}/\SI{}{\femto\farad}$
         \end{itemize}
         }
     \end{block}

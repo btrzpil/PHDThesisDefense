@@ -50,11 +50,15 @@
 
 
 \begin{frame}{Podstawowe rozwiązania psuedo-rezystorów}
+    \vspace{-1em}
+    \begin{block}{}
+        Zastosowanie tranzystorów jako elementów rezystancjach, zwanych pseudo-rezystorami, jest powszechną praktyką w projektowaniu obwodów analogowych dla przypadków, w których bierne rezystory nie są odpowiednie ze względu na wartości wymaganych rezystancji lub powierzchnie takich elementów. 
+       \end{block}
     \begin{columns}
         \column{.48\textwidth}
-
+        \vspace{-2em}
         \begin{figure}[H]
-            \includegraphics[scale = 0.5]{ch2/ntpr.pdf}
+            \includegraphics[scale = 0.4]{ch2/ntpr.pdf}
         \end{figure}
         \begin{alertblock}{}
             brak możliwości regulacji wartości rezystancji
@@ -64,10 +68,11 @@
 
         \column{.48\textwidth}
         \begin{figure}[H]
-            \includegraphics[scale = 0.5]{ch2/tpr.pdf}
+            \includegraphics[scale = 0.4]{ch2/tpr.pdf}
         \end{figure}
+        \vspace{-1em}
         \begin{exampleblock}{}
-            możliwość sterowania częstotliwością graniczną
+            możliwość regulacji wartości rezystancji za pomocą modyfikacji napięcia panującego na bramce tranzystora
         \end{exampleblock}
 
     \end{columns}
@@ -125,8 +130,8 @@
         \column{.5\textwidth}
         \vspace{-2em} %5mm vertical space
 
-        \begin{alertblock}{Zmienne napięcia na bramce -- $variable-V_{gs}$}
-                    Zmieniające się napięcie panujące pomiędzy bramką a źródłem tranzystora w zależności od sygnału wejściowego
+        \begin{alertblock}{Zmieniające się napięcie  pomiędzy bramką a źródłem tranzystora w zależności od sygnału wejściowego -- $variable-V_{gs}$}
+                 
 
             \begin{figure}[H]
                 \centering
@@ -139,8 +144,7 @@
         \column{.45\textwidth}
         \vspace{-2em} %5mm vertical space
 
-        \begin{exampleblock}{Słałe napięcia na bramce -- $fixed-V_{gs}$}
-                        Zachowanie stałego napięcia pomiędzy bramką, a źródłem niezależnie od sygnału wejsciowego 
+        \begin{exampleblock}{Słałe napięcia pomiędzy bramką, a źródłem niezależnie od sygnału wejsciowego -- $fixed-V_{gs}$}
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale = 0.75]{ch3/fig1-ac_work_simplicite}
@@ -150,30 +154,38 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Analiza Transient sprzężenia AC}
+\begin{frame}{Analiza liniowości pseudo-rezystorów}
     \vspace{-1em}
-    \begin{block}{Ustawienia symulacji}
-\begin{itemize}
-    \item Częstotliwość graniczna dla sprzężenia AC $\SI{\sim 1}{\hertz}$
-    \item $\mathrm{THD} = \frac{\sqrt{\sum_{n=2}^{+\infty} U_k^2}}{U_1}$
-\end{itemize}
-    \end{block}
+
 
 
     \begin{columns}
-        \column{.48\textwidth}
+        \column{.33\textwidth}
+        \begin{block}{Ustawienia symulacji}
+            \begin{itemize}
+                \item Badanie odpowiedzi układu  w dziedzinie czasu na wymuszenia sinusoidalne
+                \item Częstotliwość graniczna dla układów z sprzężeniem AC $\SI{\sim 1}{\hertz}$
+                \item Analiza: Transformata Fouriera -- wyznaczenie współczynnika THD -- miara liniowości rejestrowanego sygnału
+                \item $\mathrm{THD} = \frac{\sqrt{\sum_{n=2}^{+\infty} U_k^2}}{U_1}$
+                % \item Amplitudy poszczególnych harmonicznych 
+            \end{itemize}
+                \end{block}
+        \column{.32\textwidth}
         \vspace{-1em} %5mm vertical space
-
+        \begin{alertblock}{$variable-V_{gs}$}
         \begin{figure}[H]
             \centering
-            \includegraphics[scale = 0.7]{scripts/tranTHDAmp/tranTHDAmp_ner.pdf}
+            \includegraphics[scale = 0.65]{scripts/tranTHDAmp/tranTHDAmp_ner.pdf}
         \end{figure}
-        \column{.48\textwidth}
+    \end{alertblock}
+        \column{.32\textwidth}
         \vspace{-1em} %5mm vertical space
+        \begin{exampleblock}{$fixed-V_{gs}$}
         \begin{figure}[H]
             \centering
-            \includegraphics[scale = 0.7]{scripts/tranTHDAmp/tranTHDAmp_pr_sim.pdf}
+            \includegraphics[scale = 0.65]{scripts/tranTHDAmp/tranTHDAmp_pr_sim.pdf}
         \end{figure}
+    \end{exampleblock}
     \end{columns}
 
 \end{frame}
@@ -309,16 +321,28 @@
 
 \begin{frame}{Wpływ pojemności wejściowych na szumy i zniekształcenia}
     \begin{columns}
-        \column{.3\textwidth}
+        \column{.49\textwidth}
+        \vspace{-1em}
+
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
+            \includegraphics[scale=0.45]{ch2/conceptAC_Harrison.pdf} 
         \end{figure}
-            \column{.7\textwidth}
+\vspace{-2em}
+
+        \begin{block}{Parametry}
+            \begin{itemize}
+                \item Różne wartości $C_{in}$, oraz $C_{f}$ przy stałym stosunku wzmocnienia $Gain = \SI{20}{\volt\per\volt}$
+                \item Wartości $R_{f}$ dostoswane dla każdej symulacji niezależnie tak, aby uzyskać tę samą częstotliwość graniczną $\SI{1}{\hertz}$
+                \item Ekwiwalentne szumy wejściowe mierzone w paśmie $\SI{1}{\hertz}$ -- $\SI{10}{\kilo\hertz}$
+            \end{itemize}
+                \end{block}
+
+            \column{.5\textwidth}
 
     \begin{figure}[H]
         \centering
-        \includegraphics{scripts/tmp/thd_C_in.pdf} 
+        \includegraphics[scale=0.8]{scripts/tmp/thd_C_in.pdf} 
     \end{figure}
 \end{columns}
 
