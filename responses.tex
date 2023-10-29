@@ -16,7 +16,7 @@
             }}
     \end{block}
     Tezy prace są tożsame z celem pracy i explicite nie zostały sformułowane w ramach odrębnych stwierdzeń.
-Rozumiem, że byłby to przydatne podczas czytania, chociaż uważałam to w momencie za nienaturalne z wyżej wymienionego powodu.
+    Rozumiem, że byłoby to przydatne podczas czytania.%, chociaż uważałam to w momencie za nienaturalne z wyżej wymienionego powodu.
 
 \end{frame}
 
@@ -31,8 +31,8 @@ Rozumiem, że byłby to przydatne podczas czytania, chociaż uważałam to w mom
             Struktura rozprawy jest logiczna, jednak w pracy występuje pewna (moim zdaniem stanowczo zbyt liczna) liczba uchybień edycyjnych (tekstowych, językowych), np. forma gramatyczna, powtórzenia, brak przedimków lub słów itp.
             }
         }
-\end{block}
-\vspace{-1em}
+    \end{block}
+    \vspace{-1em}
 
     \begin{block}{\af}
         \cit{
@@ -44,10 +44,6 @@ Rozumiem, że byłby to przydatne podczas czytania, chociaż uważałam to w mom
             }
         }
     \end{block}
-
-
-    
-
 
     \begin{columns}
 
@@ -61,22 +57,18 @@ Rozumiem, że byłby to przydatne podczas czytania, chociaż uważałam to w mom
 
         {\renewcommand\normalsize{\small}%
         \normalsize
-        Zależność współczynnika THD od częstotliwości oraz rozkłady PSD na wyjściu dla różnych ustawień granicznej przy stałej wartości $C_{in} = \SI{4}{\pico\farad}$ i wzmocnieniu $\SI{20}{\frac{\volt}{\volt}}$.
-            Amplituda sygnału: $\SI{10}{\milli\volt_{pp}}$.
-            Wartości napięcia $V_{gs} $ były ustawione dla każdej symulacji niezależnie, aby uzyskać wymagane wartości dolnej częstotliwości granicznej.  
-            Na wykresie \textbf{w legendzie} zostały \textbf{podane} ekwiwalentne szumy wejściowe w paśmie $\SI{1}{\hertz}$ -- $\SI{10}{\kilo\hertz}$ dla poszczególnych rozwiązań.
+        Zależność współczynnika THD od częstotliwości oraz rozkłady PSD na wyjściu dla różnych ustawień częstotliwości granicznej przy stałej wartości $C_{in} = \SI{4}{\pico\farad}$ i wzmocnieniu $\SI{20}{\frac{\volt}{\volt}}$.
+        Amplituda sygnału: $\SI{10}{\milli\volt_{pp}}$.
+        Wartości napięcia $V_{gs} $ były ustawione dla każdej symulacji niezależnie, aby uzyskać wymagane wartości dolnej częstotliwości granicznej.  
+        Na wykresie \textbf{w legendzie} zostały \textbf{podane} ekwiwalentne szumy wejściowe w paśmie $\SI{1}{\hertz}$ -- $\SI{10}{\kilo\hertz}$ dla poszczególnych rozwiązań.
         }
     
     \end{columns}
-
 \end{frame}
 
 \begin{frame}[t]
     \input{tab.tex}
 \end{frame}
-
-
-
 
 \begin{frame}[t]
     \vspace{-1em}
@@ -87,23 +79,20 @@ Rozumiem, że byłby to przydatne podczas czytania, chociaż uważałam to w mom
             Zwykle jednak wymagania projektowe formułowane są explicite w formie granicznych wartości istotnych parametrów, lecz takich na dla pracy nie określono. 
             W tej sytuacji pierwszorzędnego znaczenia nabiera porównanie wartości osiągniętych parametrów zaprojektowanego wzmacniacza z danymi dostępnymi z literatury. 
             Brak zestawienia porównawczego w formie tabeli budzi pewien niedosyt. 
-            Wprawdzie standardowo w odniesieniu do zniekształceń harmonicznych wartość THD podawana jest zwykle dla częstotliwości 1 kHz, a nie w szerszym zakresie, to jednak takie zestawienie byłoby zasadne uwzględniając zarówno ogólne stwierdzenia jak i wartości innych parametrów.}
+            Wprawdzie standardowo w odniesieniu do zniekształceń harmonicznych wartość THD podawana jest zwykle dla częstotliwości 1 kHz, a nie w szerszym zakresie, to jednak takie zestawienie byłoby zasadne, uwzględniając zarówno ogólne stwierdzenia, jak i wartości innych parametrów.}
         }
     \end{block}
     {\renewcommand\normalsize{\small}%
 \normalsize
-Powodem dla którego nie zostały podane sztywne wartości dotyczące systemu wynika z tego, że celem projektu było zbadanie możliwości zbudowanie takiego wzmacniacza w wybranej technoligii. Nie celowano w konkretny zestaw parametrów ponieważ powierzchnia, moc i szumy są parametrami, które się wymieniają i optymalizacja jednego parametru pogarsza pozostałe parametry.
-W trakcie opracowywania układu pamiętano jaki zakres parametrów jest wymagany by nadawał się do rejestracji,  zbudowano kilka struktur testowych umożliwiających eksplorowanie ograniczeń technologicznych pod kątem budowy odczytu dla wielokanałowej sondy. 
+Powodem, dla którego nie zostały podane sztywne wartości dotyczące systemu, wynika z tego, że celem projektu było zbadanie możliwości zbudowanie takiego wzmacniacza w wybranej technologii. Nie celowano w konkretny zestaw parametrów, ponieważ powierzchnia, moc i szumy są parametrami, które się wymieniają i optymalizacja jednego parametru pogarsza pozostałe parametry.
+W trakcie opracowywania układu pamiętano jaki zakres parametrów jest wymagany, by nadawał się do rejestracji.
+Zbudowano kilka struktur testowych umożliwiających eksplorowanie ograniczeń technologicznych pod kątem budowy odczytu dla wielokanałowej sondy. 
 
 }
-
-
     
 \end{frame}
 
 %%% Komorowski
-
-
 
 \begin{frame}[t]
     \begin{block}{\dk}
@@ -114,10 +103,10 @@ W trakcie opracowywania układu pamiętano jaki zakres parametrów jest wymagany
     \end{block}
 
     Rozumiem, że w kontekście rosnącej popularności rozwiązań opartych o wzmacniacz o małym lub jednostkowym wzmocnieniu i przetwornik analogowo-cyfrowy ubogi fragment w rozdziale dotyczącym obecnego stanu wiedzy budzi niedosyt.
-    Rozwiązania te jednak tyczą  się głównie zastosowań związanych z rejestracją sygnałów EEG. Układy  te charakteryzują się innymi wymaganiami dotyczącymi ilości kanałów pomiarowych, rozmiarów oraz technologii w której są wykonywane, dlatego zdecydowano się nie poszerzać pracy o ten aspekt szczególnie, że w przypadku systemów dedykowanych rejestracji mikroelektrodowej aplikowanych wewnątrz mózgu nie jest to kierunek wiodący.
+    Rozwiązania te jednak tyczą  się głównie zastosowań związanych z rejestracją sygnałów EEG. Układy  te charakteryzują się innymi wymaganiami dotyczącymi ilości kanałów pomiarowych, rozmiarów oraz technologii, w której są wykonywane.
+    Dlatego zdecydowano się nie poszerzać pracy o ten aspekt, szczególnie że w przypadku systemów dedykowanych rejestracji mikroelektrodowej aplikowanych wewnątrz mózgu nie jest to kierunek wiodący.
 
 \end{frame}
-
 
 \begin{frame}[t]
     \begin{block}{\dk}
@@ -127,8 +116,6 @@ W trakcie opracowywania układu pamiętano jaki zakres parametrów jest wymagany
         }
     \end{block}
     Z jednej strony ten materiał mógłby być krótszy, ale z drugiej strony uwagi pana dr. hab. Buchnera sugerują, że powinien być bardziej rozbudowany.
-    
-
 \end{frame}
 
 \begin{frame}[t]
@@ -140,25 +127,26 @@ W trakcie opracowywania układu pamiętano jaki zakres parametrów jest wymagany
             Wyrażenie "\high{mniejsze multipleksery}" (str. 34) jest mało precyzyjne, a właściwie w użytym kontekście nieprawidłowe.
             Również definicja wyrażenia "\high{front-end}" (str. 35) budzi moje wątpliwości.
             Użycie wyrażenia "\high{może zostać drastycznie zmniejszona}" wydaje mi się również niezbyt fortunne.
-            Autorka rozprawy dosyć często używa wyrażenia \high{offset wyjściowy}, moim zdaniem jednak poprawnie powinno się użytwać wyrażenia offset napięcia wyjściowego.
+            Autorka rozprawy dosyć często używa wyrażenia \high{offset wyjściowy}, moim zdaniem jednak poprawnie powinno się stosować wyrażenie offset napięcia wyjściowego.
         }
     \end{block}
 
     \begin{columns}
-
         \column{.3\textwidth}
         \vspace{-1em}
         \begin{figure}[H]
             \includegraphics[scale = 0.2]{ch2/afe.png}
         \end{figure}
 
-    
         \column{.75\textwidth}
         {\renewcommand\normalsize{\small}%
-\normalsize
-Układ odczytu jest pojęciem szerszym aniżeli wzmacniacz, który jest częścią układu odczytowego. Pojęcie może jest niefortunne i lepsze byłoby używanie określenia tor odczytu opisując drogę sygnału. 
-Dodatkowo pojęcie \textit{Front End} jest powszechnie używane w kontekście struktur scalonych opisując fragment toru odczytowego, który odpowiada za wstępne przetworzenie sygnału.
-Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obejmujące mniejszą liczbę kanałów wejściowych. Dzięki mniejszej liczbie kanałów można wykorzystywać niższe częstotliwości zegarów odpowiedzialnych za próbkowanie sygnału.}
+        \normalsize
+            Układ odczytu jest pojęciem szerszym aniżeli wzmacniacz, który jest częścią układu odczytowego. 
+            Pojęcie może jest niefortunne i lepsze byłoby określenie \high{tor odczytu} opisując drogę sygnału. 
+            Dodatkowo pojęcie \textit{Front End} jest powszechnie używane w kontekście struktur scalonych, opisując fragment toru odczytowego, który odpowiada za wstępne przetworzenie sygnału.
+            Pojęcie mniejsze multipleksery jest niefortunne -- chodziło o multipleksery obejmujące mniejszą liczbę kanałów wejściowych. 
+            Dzięki mniejszej liczbie kanałów można wykorzystywać niższe częstotliwości zegarów odpowiedzialnych za próbkowanie sygnału.
+        }
     \end{columns}
     
 \end{frame}
@@ -174,7 +162,8 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
     \end{block}
     Oczywiście częstotliwość próbkowania jest zdeterminowana charakterystyką sygnału zgodnie z twierdzeniem Nyquista.
     W powyższym stwierdzeniu nieumiejętnie próbowano przekazać, że częstotliwość ADC zależy od architektury, a konkretnie od ilości obsługiwanych kanałów w przetworniku.
-    Jeżeli użyjemy ADC obsługujące jeden kanał jego częstotliwość próbkowania jest tożsama z częstotliwością próbkowana sygnału, ale w przypadku multipleksowania wielu kanałów do jednego ADC  jego częstotliwość systemu musi być  odpowiednio większa i stąd doszło do słabego wytłumaczenia zagadnienia.
+    Jeżeli użyjemy ADC obsługujące jeden kanał jego częstotliwość próbkowania jest tożsama z częstotliwością próbkowana sygnału, ale w przypadku multipleksowania wielu kanałów do jednego ADC jego częstotliwość systemu musi być odpowiednio większa.
+    W efekcie doszło do słabego wytłumaczenia zagadnienia.
  
 \end{frame}
 
@@ -199,8 +188,10 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
         \end{figure}
     
         \column{.6\textwidth}
-        Impedancja przy niskich częstotliwościach ma charakter rezystancyjny, Wartość $R_{ct}$ (rezystancja elektrochemiczna) jest duża i dla szumów nie ma znaczenia podobnie jak wartość pojemności warstwy podwójnej.  Szum termiczny zależy od parametru $R_{sp}$ (rezystancja rozproszona), który w modelu jest w szeregowym połączeniu ścieżki sygnału, i parametr ten zależy  od rozmiaru elektrody.
-        W przypadku niskich częstotliwości jeżeli impedancja jest duża w stosunku do impedancji wejściowej wzmacniacza otrzymujemy dzielnik napięciowy, który może powodować atenuację sygnału. 
+        Impedancja przy niskich częstotliwościach ma charakter rezystancyjny.
+        Wartość $R_{ct}$ (rezystancja elektrochemiczna) jest duża i dla szumów nie ma znaczenia podobnie jak wartość pojemności warstwy podwójnej.  
+        Szum termiczny zależy od parametru $R_{sp}$ (rezystancja rozproszona), który w modelu jest w szeregowym połączeniu ścieżki sygnału, i parametr ten zależy  od rozmiaru elektrody.
+        W przypadku niskich częstotliwości, jeżeli impedancja jest duża w stosunku do impedancji wejściowej wzmacniacza, otrzymujemy dzielnik napięciowy, który może powodować atenuację sygnału. 
         
     \end{columns}
 \end{frame}
@@ -211,7 +202,7 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
             Niektóre fragmenty tekstu są dla mnie niezrozumiałe lub budzą pewne wątpliwości
             [...]
             \high{
-                Z punktu widzenia minimalizacji poboru mocy najkorzystniejsza jest polaryzacja tranzystorów w zakresie słabej inwersji, poniważ w tym zakresie transkonduktancji do prądu polaryzacji tranzystora jest największy [48].
+                Z punktu widzenia minimalizacji poboru mocy najkorzystniejsza jest polaryzacja tranzystorów w zakresie słabej inwersji, ponieważ w tym zakresie transkonduktancji do prądu polaryzacji tranzystora jest największy [48].
             }
         }
     \end{block}
@@ -223,8 +214,8 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
     
         \column{.67\textwidth}
         Szumy termiczne kanału tranzystora są odwrotnie proporcjonalne do transkonduktancji dlatego zależy nam na dużej wartości tego parametru. 
-        Wartość tego parametru jest związana z wartością prądu polaryzacji tranzystora -- w obszarze podprogowym zależność jest proporcjonalna do pierwiastka z prądu, zaś w silnej inwersji zależność jest od kwadratu tej wartości.
-        Wartość prądu  przekłada się pobór mocy, dlatego ważne jest jak uzyskać daną transkonduktancję przy minimalnym prądzie. 
+        Wartość tego parametru jest związana z wartością prądu polaryzacji tranzystora -- w obszarze podprogowym zależność jest $\approx\sqrt[2]{I_d}$, zaś w silnej inwersji $\approx I_d^2$.
+        Wartość prądu przekłada się na pobór mocy, dlatego ważne jest uzyskanie danej transkonduktancji przy minimalnym prądzie. 
         Na rysunku przedstawiono stosunek transkonduktancji do prądu drenu w funkcji znormalizowanego prądu drenu dla trzech technologii i na podstawie tego można zobaczyć, że najkorzystniejszy jest obszar podprogowy.
      \end{columns}
 \end{frame}
@@ -256,11 +247,8 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
         \end{figure}
     
         \column{.75\textwidth}
-        "ale przy stałym stosunku $C_{in}/C_{f} = 20 V/V$" oczywiście jest niefortunno pomyłką wynikającą z tego, że stosunek pojemności określa wzmocnienie, które wynosi $K = 20 V/V$. Jednak w przypadku stosunku pojemności należało użyć właściwych jednostek.
-
+        "ale przy stałym stosunku $C_{in}/C_{f} = 20 V/V$" oczywiście jest niefortunną pomyłką wynikającą z tego, że stosunek pojemności określa wzmocnienie, które wynosi $K = 20 V/V$. Jednak w przypadku stosunku pojemności należało użyć właściwych jednostek.
         Sprzężenie zmiennoprądowe zapewnia usunięcie składowej stałej, dlatego nie ma obawy o nasycenie wzmacniacza jak w przypadku sprzężenia stałoprądowego.
-
-
     \end{columns}
 
 \end{frame}
@@ -279,23 +267,15 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
     \end{block}
 
     \begin{columns}
-
         \column{.4\textwidth}
         \begin{figure}[H]
             \includegraphics[scale = 0.4]{ch4/sf.pdf}
         \end{figure}
-
-
         \column{.6\textwidth}
-
-
-
-Powyższe zdania stanowią uchybienie edytorskie i powinno być. Ostatnie zdanie nie jest już również potrzebne.
-\cit{
-Jak wspomniano wcześniej, w docelowym rozwiązaniu przewiduje się zastosowanie drugiego stopnia wzmacniającego. Przy założeniu, że kolejny stopień będzie miał wysoką impedancję \textbf{wejściową}, może on być sterowany bezpośrednio z kaskody o wysokiej impedancji wyjściowej.
-}
-
-
+            Powyższe zdania stanowią uchybienie edytorskie i powinno być. Ostatnie zdanie nie jest już również potrzebne.
+            \cit{
+                Jak wspomniano wcześniej, w docelowym rozwiązaniu przewiduje się zastosowanie drugiego stopnia wzmacniającego. Przy założeniu, że kolejny stopień będzie miał wysoką impedancję \textbf{wejściową}, może on być sterowany bezpośrednio z kaskody o wysokiej impedancji wyjściowej.
+            }
         % By móc utrzymać wysokie wzmocnienie różnicowe prądu stałego oferowane przez przedwzmacniacz niezależnie od dalszych elementów toru odczytowego powinien on zapewniać niską rezystancję wyjściową ze względu na możliwość obciążenia parametrów przedwzmacniacza.
         % Aby układ przedwzmacniacza miał niską rezystancję wyjściową należało dodać stopień buforujący do wyjścia OTA.
     \end{columns} 
@@ -313,17 +293,18 @@ Jak wspomniano wcześniej, w docelowym rozwiązaniu przewiduje się zastosowanie
         NEF = v_{ni,rms}\cdot\sqrt{\frac{2\cdot I_{tot}}{V_t\cdot 4k\cdot T \cdot \Delta f \cdot \pi}},
         \label{equ:NEF}
     \end{equation}
-    gdzie $v_{ni,rms}$ ekwiwalentne szumy wejściowe~(IRN), a $I_{tot}$ to prąd całkowity płynący przez obwód wzmacniacza, 
+    gdzie:
+    \begin{itemize}
+        \item $v_{ni,rms}$ -- ekwiwalentne szumy wejściowe~(IRN), 
+        \item $I_{tot}$ -- prąd całkowity płynący przez obwód wzmacniacza, 
+        \item $\Delta f$ -- efektywna szerokość pasma szumowego wzmacniacza (reprezentuje zakres częstotliwości, w którym rozważa się szum wzmacniacza),
+        \item $V_t$ -- napięcie termiczne, zazwyczaj wyrażane jako $kT/q$, gdzie: $k$ -- stała Boltzmanna, $T$ -- temperatura w kelwinach, a $q$ -- ładunek elektronu.
+    \end{itemize}
     
- 
-    $\Delta f$ Jest to efektywna szerokość pasma szumowego wzmacniacza. Reprezentuje zakres częstotliwości, w którym rozważa się szum wzmacniacza.
-
-    $V_t$ To napięcie termiczne, zazwyczaj wyrażane jako kT/q, gdzie "k" to stała Boltzmanna, "T" to temperatura w kelwinach, a "q" to ładunek elektronu.
-
-
+    % $v_{ni,rms}$ ekwiwalentne szumy wejściowe~(IRN), a $I_{tot}$ to prąd całkowity płynący przez obwód wzmacniacza, 
+    % $\Delta f$ Jest to efektywna szerokość pasma szumowego wzmacniacza. Reprezentuje zakres częstotliwości, w którym rozważa się szum wzmacniacza.
+    % $V_t$ To napięcie termiczne, zazwyczaj wyrażane jako kT/q, gdzie "k" to stała Boltzmanna, "T" to temperatura w kelwinach, a "q" to ładunek elektronu.
 \end{frame}
-
-
 
 \begin{frame}[t]
     \vspace{-1em}
@@ -332,8 +313,8 @@ Jak wspomniano wcześniej, w docelowym rozwiązaniu przewiduje się zastosowanie
         \normalsize
         \cit{
             W pracy skupiono się na analizie własności i projektowaniu rezystora półprzewodnikowego, nieco mniej zajmując się samym wzmacniaczem -- który jest najważniejszym elementem pracy.
-            W szczególności dotyczy to parametrou CMRR wzmacniacza.
-            Podobnie niewiele uwagi poświęconu napięciu offsetu wzmacniacza, chociaż jego obecność jest widoczna we wszystkich zarejestrowanych przebiegach.
+            W szczególności dotyczy to parametru CMRR wzmacniacza.
+            Podobnie niewiele uwagi poświęcono napięciu offsetu wzmacniacza, chociaż jego obecność jest widoczna we wszystkich zarejestrowanych przebiegach.
             Tu przydatne byłoby jakieś oszacowanie.
             Konsekwencją takiego podejścia jest dość zwięzły opis samej struktury wzmacniacza i jego własności tu przydałaby się nieco bardziej obszerna analiza.
         }
@@ -344,10 +325,11 @@ Jak wspomniano wcześniej, w docelowym rozwiązaniu przewiduje się zastosowanie
     \end{block}
     {\renewcommand\normalsize{\small}%
     \normalsize
-Celem w tej pracy była głónie analiza nieliniowości pseudo-rezystora, dlatego skupiono się na opisie tej struktury i jej własności.  Przy projektowaniu wzmacniacza powyższe  parametry  były brane pod uwagę, razem z innymi parametrami jak szumy czy wejściowe napiecie niezrównoważniea co uznano za standardową procedurę optymaliacji pary różnocowej natomiast nie zostały szczegółowo opisane.
+        Celem w tej pracy była głównie analiza nieliniowości pseudo-rezystora, dlatego skupiono się na opisie tej struktury i jej własności. 
+        Przy projektowaniu wzmacniacza powyższe parametry były brane pod uwagę, razem z innymi parametrami jak szumy czy wejściowe napięcie niezrównoważenia co uznano za standardową procedurę optymalizacji pary różnicowej -- natomiast nie zostały szczegółowo opisane.
 
-
-Parametry,  jak slew rate, odpowiedź na skok jednostkowy czy też liniowosć fazy zostały wzięte pod uwagę przy projekcie. Te aspekty nie zostały detalicznie opisane ponieważ nie uznano tych parametrów za krytyczne ze względu na zakres pracy wzmacniacza (pasmo rejestrowanych sygnałów) jak również trudne do osiągnięcia na akceptowalnym poziomie. 
+        Parametry, jak \textit{slew rate}, odpowiedź na skok jednostkowy czy też liniowość fazy zostały wzięte pod uwagę przy projekcie. 
+        Te aspekty nie zostały detalicznie opisane, ponieważ nie uznano tych parametrów za krytyczne ze względu na zakres pracy wzmacniacza (pasmo rejestrowanych sygnałów), jak również trudne do osiągnięcia na akceptowalnym poziomie. 
     }
 \end{frame}
 
@@ -361,7 +343,8 @@ Parametry,  jak slew rate, odpowiedź na skok jednostkowy czy też liniowosć fa
             \includegraphics[scale=0.45]{scripts/tmp/responses.pdf}
         \end{figure}
         \column{.48\textwidth}
-        W przypadku stałego poziomu dc, który jest widoczny na przebiegach sygnału wynika on z właściwości wtórnika źródłowego, który jest na wyjściu i zapewnia odpowiednią impedancję wyjściową. Jest to systematyczny efekt po wszystkich kanałach co jest widoczne na poniższym wykresie. 
+        W przypadku stałego poziomu DC, który jest widoczny na przebiegach sygnału, wynika on z właściwości wtórnika źródłowego, który jest na wyjściu i zapewnia odpowiednią impedancję wyjściową. 
+        Jest to systematyczny efekt we wszystkich kanałach, co jest widoczne na wykresie. 
 
     \end{columns}
 
@@ -372,48 +355,41 @@ Parametry,  jak slew rate, odpowiedź na skok jednostkowy czy też liniowosć fa
 
 \begin{frame}[t]
     \vspace{-1em}
-
-\begin{block}{\dk}
-    \cit{
-        {\renewcommand\normalsize{\small}%
-\normalsize
-        Teza o dużym znaczeniu współczynnika THD dla niskoczęstotliwościowych składowych sygnałów nie jest poparta odpowiednimi przykładami uzasadniającymi to znaczenie.
-        Jednak wymagałoby to dokładniejszej analizy własności rejestrowanych sygnałów neuronalnych, co jednak wykracza poza zakres pracy.
+    \begin{block}{\dk}
+        \cit{
+            {\renewcommand\normalsize{\small}%
+            \normalsize
+                Teza o dużym znaczeniu współczynnika THD dla niskoczęstotliwościowych składowych sygnałów nie jest poparta odpowiednimi przykładami uzasadniającymi to znaczenie.
+                Jednak wymagałoby to dokładniejszej analizy własności rejestrowanych sygnałów neuronalnych, co jednak wykracza poza zakres pracy.
+            }
         }
+    \end{block}
+
+    {\renewcommand\normalsize{\scriptsize}%
+    \normalsize
+        W tym miejscu chciałabym podkreślić, że współczynnik THD na poziomie 1\% nie jest bardzo niską wartością. 
+        W pracy nie optymalizowano tego parametru do poziomu bardzo niskiego, co faktycznie wymagałoby uzasadnienia biologicznego. 
+        THD jest miarą liniowości rejestrowanego sygnału powszechnie używaną w literaturze, jednak dla tego typu systemów podawany jest dla jednej wartości daleko od zakresu, w którym jest narażony na bardzo dużą nieliniowość. 
+        W pracy i podczas prezentacji przedstawiono, że w niektórych systemach THD może być nawet o jeden rząd wielkości większy niż proponowany wymóg projektowy (1\%), dlatego podnoszono znaczenie tego parametru.
     }
-\end{block}
 
-{\renewcommand\normalsize{\scriptsize}%
-\normalsize
-W tym miejscu chciałabym podkreślić, że współczynnik THD na poziomie 1\% to nie jest bardzo niską wartością. W pracy nie optymalizowano tego parametru do poziomu bardzo niskiego, co faktycznie wymagałoby uzasadnienia biologicznego. THD jest miarą liniowości rejestrowanego sygnału powszechnie używaną w literaturze, jednak dla tego typu systemów podawany jest dla jednej wartości daleko od zakresu, w którym jest narażony na bardzo dużą nieliniowość. W pracy i na prezentacji przedstawiono że w niektórych systemach THD może być nawet o jeden rząd wielkości większy niż proponowany wymóg projektowy 1\% dlatego podnoszono znaczenie tego parametru.
-
-
-}
-
-\begin{columns}
-
- 
-
+    \begin{columns}
     \column{.3\textwidth}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.5]{ch1/lfp_ap_spectrum}  
-        \end{figure}	
-    \column{.3\textwidth}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.17]{Figures/genovTHD.png}
-
-    \end{figure}
-        \column{.35\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{ch1/lfp_ap_spectrum}  
+            \end{figure}	
+        \column{.3\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.17]{Figures/genovTHD.png}
+        \end{figure}
+    \column{.35\textwidth}
         {\renewcommand\normalsize{\scriptsize}%
-\normalsize
-        Jedyna praca jaką udało mi się zależność wskazująca na problem nieliniowości w zakresie niskich częstotliwości które są podstawową częścią rejestrowanych sygnałów.
-        Symulacje THD dla sygnału sinusoidalnego o amplitudzie: $\SI{1.4}{\milli\volt_{pp}}$ -- K. Abdelhalim and R. Genov, doi: 10.1109/ISCAS.2012.6271415}
-
-\end{columns}
-
-
+        \normalsize
+            Jedyna praca, jaką udało mi się zależność wskazująca na problem nieliniowości w zakresie niskich częstotliwości, które są podstawową częścią rejestrowanych sygnałów.
+            Symulacje THD dla sygnału sinusoidalnego o amplitudzie: $\SI{1.4}{\milli\volt_{pp}}$ -- K. Abdelhalim and R. Genov, doi: 10.1109/ISCAS.2012.6271415}
+    \end{columns}
 
 \end{frame}
 
@@ -451,39 +427,33 @@ W tym miejscu chciałabym podkreślić, że współczynnik THD na poziomie 1\% t
         \cit{
             Język rozprawy jest bardzo dobry, odnotowano jedynie nieliczne przypadki łączenia imiesłowu przysłówkowego ze stroną bierną.
         }
-\end{block}
+    \end{block}
 
-\begin{block}{\tb}
-    \cit{
-        Nie jest zachowany klasyczny układ publikacji naukowej, natomiast zaproponowany układ jest logiczny i przejrzysty.
+    \begin{block}{\tb}
+        \cit{
+            Nie jest zachowany klasyczny układ publikacji naukowej, natomiast zaproponowany układ jest logiczny i przejrzysty.
+        }
+    \end{block}
+
+    Dziękuje za uwagi dotyczące układu  pracy. Cieszę się, że zaproponowany  układ został uznany za logiczny i przejrzysty. 
+    \begin{block}{\tb}
+        \cit{
+            Użycie bibliografii jest nieco utrudnione przez brak sortowania alfabetycznego.
+        }
+    \end{block}
+    {\renewcommand\normalsize{\scriptsize}%
+    \normalsize
+        Dziękuje za uwagę dotyczącą sortowania bibliografii w pracy. 
+        Sortowanie numeryczne pozwoliło mi uporządkować cytowane prace w sposób, który lepiej oddawał kolejność występowania źródeł. 
+        Rozumiem, że różni czytelnicy preferują różne metody sortowania, ale w tym przypadku uznałam, że sortowanie numeryczne za bardziej odpowiednie, szczególnie że w wersji elektronicznej dzięki linkom między numerem a pozycją można łatwo odszukać interesującą pozycję w bibliografii.
     }
-\end{block}
-
-Dziękuje za uwagi dotyczące układu  pracy. Cieszę się, że zaproponowany  układ został uznany za logiczny i przejrzysty. 
-
-
-\begin{block}{\tb}
-    \cit{
-        Użycie bibliografii jest nieco utrudnione przez brak sortowania alfabetycznego.
-    }
-\end{block}
-
-Dziękuje za uwagę dotyczącą sortowania bibliografii w pracy. 
-Sortowanie numeryczne pozwoliło mi uporządkować cytowane prace w sposób, który lepiej oddawał kolejność występowania źródeł. 
-Rozumiem, że różni czytelnicy preferują różne metody sortowania, ale w tym przypadku uznałam, że sortowanie numeryczne za bardziej odpowiednie szczególnie, że w wersji elektronicznej dzięki linkom między numerem, a pozycją można łatwo odszukać interesującą pozycję w bibliografii.
-
-
 \end{frame}
-
-
-
-
 
 \begin{frame}[t]
     \begin{block}{\tb}
         \cit{
-            Cytowanie na ogół jest poprawne, jedynie cztery źródła to źródła internetow, dla których jedynym adresem publikacyjnym jest strona www. 
-            Podane są one [...] bez daty dostępu, co jest błędem, jednak ich charakter nie wskazuje na ulotność ponieważ są to w większości strony firmowe, zawierające charakterystyki produktów.
+            Cytowanie na ogół jest poprawne, jedynie cztery źródła to źródła internetowe, dla których jedynym adresem publikacyjnym jest strona www. 
+            Podane są one [...] bez daty dostępu, co jest błędem, jednak ich charakter nie wskazuje na ulotność, ponieważ są to w większości strony firmowe, zawierające charakterystyki produktów.
         }
     \end{block}
 
