@@ -149,7 +149,7 @@
         \column{.48\textwidth}
         \begin{block}{Wymagania stawiane interfejsom neuroelektronicznym umożliwiającym rejestrację sygnałów LFP i AP}
             \begin{itemize}
-                \item Stałe napięcie na styku elektrody -- do $\SIrange{1}{2}{\volt}$ 
+                \item Stałe napięcie na  elektrodzie -- do $\SI{1}{\volt}$ 
                 \item Szumy $<\SI{10}{\micro\volt}$ dla pasma LFP i AP
                 \item Liniowość rejestrowanego sygnału
                 \item Pobór mocy -- limit ogrzewania tkanki mózgowej --  mniej niż  $\SI{1}{\degreeCelsius}$ 
@@ -225,11 +225,74 @@
 
 % \end{frame}
 
-\begin{frame}{Sprzężenie zmiennoprądowe i stałoprądowe}
+% \begin{frame}{Sprzężenie zmiennoprądowe i stałoprądowe}
+    
+
+%     \begin{columns}
+%         \column{.55\textwidth}
+%         \vspace{-1em} %5mm vertical space
+
+%         \begin{figure}[H]
+%             \centering
+%             \includegraphics[scale=0.5]{ch2/conceptAC_Harrison.pdf} 
+%         \end{figure}
+%         \vspace{-2em} %5mm vertical space
+
+%         {\renewcommand\normalsize{\small}%
+%         \normalsize
+    
+%         % \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem AC}
+%     %5mm vertical space
+    
+%         % \begin{exampleblock}{Zalety}
+%         % \begin{exampleblock}{Sprzężenie zmiennoprądowe}
+%         \begin{exampleblock}{}
+
+%             \begin{itemize}
+%                 \item Odcięcie napięcia stałego na elektrodzie 
+%                 \item Konieczność implementacji filtru górnoprzepustowego z dolną częstotliwością graniczną rzędu~$\SI{\sim 1}{\hertz}$ 
+%                 \item Ograniczenia na pojemności kondensatorów w technologii CMOS $\sim\SI{}{\pico\farad}$
+%                 \item  Wymagane rezystancje  $\sim\SI{}{\tera\ohm}$
+%             \end{itemize}
+%         \end{exampleblock}
+    
+%         }
+
+
+%         \column{.43\textwidth}
+%         \vspace{-3em} %5mm vertical space
+
+%         \begin{figure}[H]
+%             \hspace{-2em} %5mm vertical space
+%             \includegraphics[scale = 0.48]{ch2/dc_coupling.pdf}
+%         \end{figure}
+
+
+%     {\renewcommand\normalsize{\small}%
+%     \normalsize
+%     % \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem DC}
+%     \vspace{-1em} %5mm vertical space
+
+%     % \begin{alertblock}{Sprzężenie stałoprądowe}
+%         \begin{alertblock}{}
+
+%         \begin{itemize}
+%             \item Alternatywne podejście do eliminacji składowej stałej napięcia na styku elektrody i tkanki
+%         \end{itemize}
+%     \end{alertblock}
+%     }
+
+%     \end{columns}
+
+% \end{frame}
+
+
+
+\begin{frame}{Sprzężenie zmiennoprądowe}
     
 
     \begin{columns}
-        \column{.55\textwidth}
+        \column{.5\textwidth}
         \vspace{-1em} %5mm vertical space
 
         \begin{figure}[H]
@@ -249,7 +312,7 @@
         \begin{exampleblock}{}
 
             \begin{itemize}
-                \item Całkowite usunięcie napięcia stałego na elektrodzie 
+                \item Odcięcie napięcia stałego na elektrodzie 
                 \item Konieczność implementacji filtru górnoprzepustowego z dolną częstotliwością graniczną rzędu~$\SI{\sim 1}{\hertz}$ 
                 \item Ograniczenia na pojemności kondensatorów w technologii CMOS $\sim\SI{}{\pico\farad}$
                 \item  Wymagane rezystancje  $\sim\SI{}{\tera\ohm}$
@@ -259,28 +322,46 @@
         }
 
 
-        \column{.43\textwidth}
-        \vspace{-3em} %5mm vertical space
-
-        \begin{figure}[H]
-            \hspace{-2em} %5mm vertical space
-            \includegraphics[scale = 0.48]{ch2/dc_coupling.pdf}
-        \end{figure}
+        \column{.45\textwidth}
+        \vspace{-1.5em}
+        \begin{block}{Pseduo-rezysotry -- podstawowe rozwiązania}
 
 
-    {\renewcommand\normalsize{\small}%
-    \normalsize
-    % \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem DC}
-    \vspace{-1em} %5mm vertical space
 
-    % \begin{alertblock}{Sprzężenie stałoprądowe}
-        \begin{alertblock}{}
 
-        \begin{itemize}
-            \item Alternatywne podejście do eliminacji składowej stałej napięcia na styku elektrody i tkanki
-        \end{itemize}
-    \end{alertblock}
-    }
+            \begin{figure}[H]
+            \includegraphics[scale = 0.48]{Figures/ps.pdf}
+            \end{figure}
+            \vspace{-1em}
+
+            {\renewcommand\normalsize{\small}%
+            \normalsize
+            Zastosowanie tranzystorów jako elementów rezystancjach, zwanych pseudo-rezystorami, jest powszechną praktyką w projektowaniu obwodów analogowych dla przypadków, w których bierne rezystory nie są odpowiednie ze względu na wartości wymaganych rezystancji lub powierzchnie takich elementów.    }
+        \end{block}
+    %     \vspace{-3em} %5mm vertical space
+
+    %     \begin{figure}[H]
+    %         \hspace{-2em} %5mm vertical space
+    %         \includegraphics[scale = 0.48]{ch2/dc_coupling.pdf}
+    %     \end{figure}
+
+
+    % {\renewcommand\normalsize{\small}%
+    % \normalsize
+    % % \begin{alertblock}{Wyzwania zwiazane z sprzęzeniem DC}
+    % \vspace{-1em} %5mm vertical space
+
+    % % \begin{alertblock}{Sprzężenie stałoprądowe}
+    %     \begin{alertblock}{}
+
+    %     \begin{itemize}
+    %         \item Alternatywne podejście do eliminacji składowej stałej napięcia na styku elektrody i tkanki
+    %     \end{itemize}
+    % \end{alertblock}
+    % }
+
+
+
 
     \end{columns}
 

@@ -214,7 +214,7 @@ Zbudowano kilka struktur testowych umożliwiających eksplorowanie ograniczeń t
     
         \column{.67\textwidth}
         Szumy termiczne kanału tranzystora są odwrotnie proporcjonalne do transkonduktancji dlatego zależy nam na dużej wartości tego parametru. 
-        Wartość tego parametru jest związana z wartością prądu polaryzacji tranzystora -- w obszarze podprogowym zależność jest $\approx\sqrt[2]{I_d}$, zaś w silnej inwersji $\approx I_d^2$.
+        Wartość tego parametru jest związana z wartością prądu polaryzacji tranzystora -- w obszarze podprogowym zależność jest $g_m\sim I_d$ , zaś w silnej inwersji $g_m\sim\sqrt[2]{I_d}$.
         Wartość prądu przekłada się na pobór mocy, dlatego ważne jest uzyskanie danej transkonduktancji przy minimalnym prądzie. 
         Na rysunku przedstawiono stosunek transkonduktancji do prądu drenu w funkcji znormalizowanego prądu drenu dla trzech technologii i na podstawie tego można zobaczyć, że najkorzystniejszy jest obszar podprogowy.
      \end{columns}
@@ -364,7 +364,7 @@ Zbudowano kilka struktur testowych umożliwiających eksplorowanie ograniczeń t
             }
         }
     \end{block}
-
+\vspace{-1em}
     {\renewcommand\normalsize{\scriptsize}%
     \normalsize
         W tym miejscu chciałabym podkreślić, że współczynnik THD na poziomie 1\% nie jest bardzo niską wartością. 
@@ -385,6 +385,8 @@ Zbudowano kilka struktur testowych umożliwiających eksplorowanie ograniczeń t
             \includegraphics[scale=0.17]{Figures/genovTHD.png}
         \end{figure}
     \column{.35\textwidth}
+    \vspace{-1em}
+
         {\renewcommand\normalsize{\scriptsize}%
         \normalsize
             Jedyna praca, jaką udało mi się zależność wskazująca na problem nieliniowości w zakresie niskich częstotliwości, które są podstawową częścią rejestrowanych sygnałów.
@@ -748,11 +750,10 @@ Zbudowano kilka struktur testowych umożliwiających eksplorowanie ograniczeń t
 \end{frame}
 
 \begin{frame}[t]
-W pracy podczas wyznaczania wymagań dla systemu, ze względu na charakter sygnałów, opierano się na wiedzy literaturowej osób rejestrującej takie sygnały.
-
+W pracy podczas wyznaczania wymagań dla systemu, ze względu na charakter sygnałów, opierano się na wiedzy literaturowej oraz doświadczeniu osób rejestrujących takie sygnały.
 Dodatkowo zakładano, że w przypadku mikroelektrod umiejscowionych w bezpośrednim sąsiedztwie komórki nerwowej główny dominujący wpływ ma rezystywny charakter medium. 
 Rejestracja w takich systemach odbywa się na bardzo krótkich dystansach.
-W pomiarach EEG i Ecog sygnał transmitowany jest przez różne tkanki i zagadnienie modelowania tych sygnałów nie jest trywialne i istotne w kontekście stworzenia wiernych systemów rejestrujących.
+W pomiarach EEG i ECoG sygnał transmitowany jest przez różne tkanki i zagadnienie modelowania tych sygnałów nie jest trywialne i istotne w kontekście stworzenia wiernych systemów rejestrujących.
 
 Chciałabym podkreślić, że mimo takiego uproszczonego podejścia możliwe było wyznaczenie wymagań projektowych w kontekście szumów, zakresu amplitudy i częstotliwości rejestrowanego sygnału.
 
@@ -816,7 +817,7 @@ Dodatkowo głównym aspektem poruszanym w pracy była eksploracja ograniczeń te
         {\renewcommand\normalsize{\small}%
             \normalsize
             \cit{Polarność sygnału wskazuje na kierunek przepływu jonów, do elektrody lub od elektrody.} - ten fragment tyczy się wytłumaczenia, dlaczego poszczególne panele się różną, nie odnoszą się do tego, co się stało na elektrodzie zero. 
-            Zgodnie z wiedzą ekspercką osoby wykonującej pomiar i jej doświadczeniem w poprzednich eksperymentach efekt na elektrodzie zerowej został \high{wytłumaczony jak efekt pracy tkanki i obserwowane sygnały}????.
+            Zgodnie z wiedzą ekspercką osoby wykonującej pomiar i jej doświadczeniem w poprzednich eksperymentach efekt na elektrodzie zerowej został wytłumaczony jak efekt relaksacji mechanicznej tkanki.
             W pracy przedstawiono to wytłumaczenie jednak niestety w niezbyt klarowny sposób.
 
             \cit{Jeżeli uwzględnimy fakt, że pokazane dwie serie rejestracji zostały wykonane w znacznym odstępie czasowym ok. 100 minut, obserwację zmiany kształtu sygnału z bipolarnego na unipolarny należy interpretować jako zmianę w strukturze tkanki w pobliżu danej elektrody. 
