@@ -37,24 +37,33 @@
 \begin{frame}{Przedwzmacniacz z wejściowym obwodem sprzęgającym AC}
     \begin{columns}
 
-    \column{.65\textwidth}
+    \column{.43\textwidth}
+    \vspace{-2em}
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.45]{ch4/channel.pdf} 
     \end{figure}   
 
-    \column{.35\textwidth}
+    \column{.52\textwidth}
+    \vspace{-1em}
 
     \begin{block}{
     }
+    
     {\renewcommand\normalsize{\small}%
     \normalsize
     \begin{itemize}
-        \item Konfiguracja  teleskopowej kaskody  jako aktywny OTA
+        \item Konfiguracja teleskopowej kaskody 
         \item Polaryzacja pary różnicowej w obszarze podprogowym pracy tranzystora
-        \item  Napięcie zasilania $\SI{\pm 1.8}{\volt}$
+        \item  Skalowanie wymiarów tranzystorów z uwzględnieniem optymalizacji szumów (szumów 1/f) oraz wejściowych napięć niezrównoważenia wzmacniacza
+        \item Napięcie zasilania $\SI{\pm 1.8}{\volt}$
     \end{itemize}
+    }
+    \end{block}
+
     \vspace{-1em}
+    {\renewcommand\normalsize{\small}%
+    \normalsize
     \begin{table}[H]
         \centering
         \begin{tabular}{lll} 
@@ -70,7 +79,7 @@
         \end{tabular}
     \end{table}
     }
-    \end{block}
+
     \end{columns}   
   
 \end{frame}
@@ -130,31 +139,32 @@
 % \end{frame}
 
 
-\begin{frame}{}
+\begin{frame}{Kompozycja układu testowego}
     \begin{columns}
 
-    \column{.45\textwidth}
+    \column{.65\textwidth}
+    \vspace{-0.5em}
+
     \begin{block}{}
         {\renewcommand\normalsize{\small}%
         \normalsize
         \begin{itemize}
             \item 8 wersji przedwzmacniacza i 14 kanałów
-            \item 4 wersje tranzystorów PMOS tworzących pseudo-rezystory  --  $W/L$: $2/40,\ 1/40,\ 2/20,\ 1/20\ \SI{}{\micro\metre / \micro\metre}$
+            \item 4 wersje tranzystorów tworzących pseudo-rezystory  --  $W/L$: $2/40,\ 1/40,\ 2/20,\ 1/20\ \SI{}{\micro\metre / \micro\metre}$
             \item 2 konfiguracje pojemności -- $C_{in}/C_f = 4/200,\ 8/400\ \SI{}{\pico\farad}/\SI{}{\femto\farad}$
         \end{itemize}
         }
     \end{block}
+    \vspace{-1em}
 
-\vspace{-1em}
     \begin{figure}[H]
         \centering
         \includegraphics[trim={0 12cm 0 0},clip, scale = 0.5]{ch4/layoutASIC.pdf} 
     \end{figure}   
-    \column{.5\textwidth}
+    \column{.35\textwidth}
 
-    \begin{block}{
-Symulacje Post-Layout
-    }
+    \vspace{-2em}
+
 
     \begin{figure}[H]
         \centering
@@ -165,7 +175,7 @@ Symulacje Post-Layout
         \centering
         \includegraphics[scale = 0.45]{scripts/noiseContribution/noiseContributionOut.pdf}  
     \end{figure}
-    \end{block}
+
     \end{columns}   
   
 \end{frame}

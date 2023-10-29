@@ -67,6 +67,8 @@
 
 
         \column{.48\textwidth}
+        \vspace{-1em}
+
         \begin{figure}[H]
             \includegraphics[scale = 0.4]{ch2/tpr.pdf}
         \end{figure}
@@ -124,18 +126,18 @@
 
 % \end{frame}
 
-\begin{frame}{Architektura wzmacniacza neuronowego wykorzystującego sprzężenie zmiennoprądowe w różnych implementacjach pseudo-rezystorów}
+\begin{frame}{Architektura wzmacniacza neuronowego wykorzystującego sprzężenie zmiennoprądowe z różnymi implementacjami pseudo-rezystorów}
     \begin{columns}[t]
 
         \column{.5\textwidth}
         \vspace{-2em} %5mm vertical space
 
-        \begin{alertblock}{Zmieniające się napięcie  pomiędzy bramką a źródłem tranzystora w zależności od sygnału wejściowego -- $variable-V_{gs}$}
+        \begin{alertblock}{Zmieniające się napięcie  pomiędzy bramką a źródłem tranzystora w zależności od sygnału wejściowego: $variable-V_{gs}$}
                  
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale = 0.75]{ch3/fig1-ac_standard.pdf}
+                \includegraphics[scale = 0.55]{Figures/standard.pdf}
             \end{figure}
         \end{alertblock}
 
@@ -144,10 +146,10 @@
         \column{.45\textwidth}
         \vspace{-2em} %5mm vertical space
 
-        \begin{exampleblock}{Słałe napięcia pomiędzy bramką, a źródłem niezależnie od sygnału wejsciowego -- $fixed-V_{gs}$}
+        \begin{exampleblock}{Słałe napięcia pomiędzy bramką, a źródłem niezależnie od sygnału wejsciowego: $fixed-V_{gs}$}
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale = 0.75]{ch3/fig1-ac_work_simplicite}
+                \includegraphics[scale = 0.55]{Figures/project.pdf}
             \end{figure}
         \end{exampleblock}
 
@@ -155,6 +157,56 @@
 \end{frame}
 
 \begin{frame}{Analiza liniowości pseudo-rezystorów}
+    \vspace{-1em}
+
+
+
+    \begin{columns}
+        \column{.33\textwidth}
+        \begin{block}{Modele symulacyjne}
+            \begin{itemize}
+                \item $variable-V_{gs}$
+                 \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale = 0.5]{Figures/standardDC.pdf}
+                \end{figure}
+                \item $fixed-V_{gs}$
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale = 0.5]{Figures/projectDC.pdf}
+                \end{figure}
+            \end{itemize}
+
+\end{block}
+        \column{.64\textwidth}
+        \begin{itemize}
+            \item Badanie odpowiedzi stałoprądowej  
+            \item Napięcia polaryzujące bramki tranzystorów dostosowane do ustawień  częstotliwości graniczna dla układów z sprzężeniem AC $\SI{\sim 1}{\hertz}$
+
+            % \item Amplitudy poszczególnych harmonicznych 
+        \end{itemize}
+    \begin{columns}
+    \column{.45\textwidth}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale = 0.6]{scripts/tmp/pseudoresistors_IV.pdf}
+        \end{figure}
+
+    \column{.45\textwidth}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics [scale = 0.6]{scripts/tmp/pseudoresistors_R.pdf}
+        \end{figure}
+
+    \end{columns}
+\end{columns}
+
+
+\end{frame}
+
+\begin{frame}{Analiza zniekształceń pseudo-rezystorów}
     \vspace{-1em}
 
 
@@ -339,11 +391,17 @@
                 \end{block}
 
             \column{.5\textwidth}
-
+\vspace{-1em}
     \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.8]{scripts/tmp/thd_C_in.pdf} 
+        \includegraphics[scale=0.8]{Figures/thd_C_in.pdf} 
     \end{figure}
+    \vspace{-2em}
+
+    {\renewcommand\normalsize{\small}%
+    \normalsize
+    Powierzchnia pojemności $\SI{4}{\pico\farad} \approx\SI{2000}{\micro\metre\squared}$ 
+    Powierzchnia pojedynczego przedwzmacniacza (szacunek)  $\approx\SI{7000}{\micro\metre\squared}$ }
 \end{columns}
 
 \end{frame}

@@ -16,7 +16,7 @@
             }}
     \end{block}
     Tezy prace są tożsame z celem pracy i explicite nie zostały sformułowane w ramach odrębnych stwierdzeń.
-Zdaję sobie po uwagach, że byłby to przydatne podczas czytania, chociaż uważałam to w momencie za nienaturalne z wyżej wymienionego powodu.
+Rozumiem, że byłby to przydatne podczas czytania, chociaż uważałam to w momencie za nienaturalne z wyżej wymienionego powodu.
 
 \end{frame}
 
@@ -54,7 +54,7 @@ Zdaję sobie po uwagach, że byłby to przydatne podczas czytania, chociaż uwa�
         \column{.35\textwidth}
         \vspace{-1.5em}
         \begin{figure}[H]
-            \includegraphics[scale = 0.45]{scripts/tmp/thd_f_C.pdf}
+            \includegraphics[scale = 0.45]{Figures/thd_f_C.pdf}
         \end{figure}
     
         \column{.65\textwidth}
@@ -92,10 +92,12 @@ Zdaję sobie po uwagach, że byłby to przydatne podczas czytania, chociaż uwa�
     \end{block}
     {\renewcommand\normalsize{\small}%
 \normalsize
-Powodem dla którego nie zostały podane sztywne wartości dotyczące systemu wynika z tego, że celem projektubyło zbadanie możliwości zbudowanie takiego wzmacniacza. Natomiast specyficzne wymagania sa zależne od zastosowanie. Celem pracy było zbadanie i zrozumienie ograniczeń wynikających z technologii oraz możliwości zakresu parametrów jakie są osiągalne  niż celowanie w jeden konkretny zestaw parametrów. W zależności z jakimi  elektrodami  przeprowadza się eksperyment te wymagania mogą być różne ponieważ powierzchnia, moc i szumy są parametrami, które się wymieniają - zestaw który z parametrów jest bardziej krytyczny zależy od elektrod i eksperymentów. 
-% Rozumiem, że brak zbiorczej tabeli porównującej budzi niedosyt. O ile w przypadku szumów jest przyjety konsensus dotyczący wartości i raczej wiekszość prac operuje w podobnym przedziale (5-8 uVrms dla obu zakresów) to w przypadku wartości THD mijałoby się z celem ponieważ w literature brak danych, które byłyby porównywalne.
+Powodem dla którego nie zostały podane sztywne wartości dotyczące systemu wynika z tego, że celem projektu było zbadanie możliwości zbudowanie takiego wzmacniacza w wybranej technoligii. Nie celowano w konkretny zestaw parametrów ponieważ powierzchnia, moc i szumy są parametrami, które się wymieniają i optymalizacja jednego parametru pogarsza pozostałe parametry.
+W trakcie opracowywania układu pamiętano jaki zakres parametrów jest wymagany by nadawał się do rejestracji,  zbudowano kilka struktur testowych umożliwiających eksplorowanie ograniczeń technologicznych pod kątem budowy odczytu dla wielokanałowej sondy. 
 
 }
+
+
     
 \end{frame}
 
@@ -111,8 +113,8 @@ Powodem dla którego nie zostały podane sztywne wartości dotyczące systemu wy
         }
     \end{block}
 
-    Rozumiem, że w kontekście rosnącej popularności rozwiązań opartych o wzmacniacz o małym lub jednostkowym wzmocnieniu i przetwornikom analogowo-cyfrowym ubogi fragment w rozdziale dotyczącym obecnego stanu wiedzy bddzi niedosyt.
-    Rozwiązanie te jednak tyczą  się głównie zastosowań związanych z rejestracją sygnałów EEG. Układy  te charakteryzują się innymi wymaganiami dotyczącymi ilości kanałów pomiarowych, rozmiarów oraz technologii w której są wykonywane, dlatego zdecydowano się nie poszerzać o ten aspekt pracy szczególnie, że w przypadku systemów dedykowanych rejestracji mikroelektrodowej aplikowanych wewnątrz mózgu nie jest to kierunek wiodący dlatego nie poszerzano pracy o ten aspekt.
+    Rozumiem, że w kontekście rosnącej popularności rozwiązań opartych o wzmacniacz o małym lub jednostkowym wzmocnieniu i przetwornik analogowo-cyfrowy ubogi fragment w rozdziale dotyczącym obecnego stanu wiedzy budzi niedosyt.
+    Rozwiązania te jednak tyczą  się głównie zastosowań związanych z rejestracją sygnałów EEG. Układy  te charakteryzują się innymi wymaganiami dotyczącymi ilości kanałów pomiarowych, rozmiarów oraz technologii w której są wykonywane, dlatego zdecydowano się nie poszerzać pracy o ten aspekt szczególnie, że w przypadku systemów dedykowanych rejestracji mikroelektrodowej aplikowanych wewnątrz mózgu nie jest to kierunek wiodący.
 
 \end{frame}
 
@@ -124,7 +126,7 @@ Powodem dla którego nie zostały podane sztywne wartości dotyczące systemu wy
             Materiał ciekawy i ważny z punktu widzenia pracy, ale być może mógłby być krótszy.
         }
     \end{block}
-    Chociaż obszerna część medyczno-biologiczna w przedstawionej pracy może się wydawać długo chiałam podkreślić, że jej rozmiar był wynikiem interdyscyplinarnego charakteru projektu i chęci przedstawienia wszechstronnej wiedzy różnej grupie odbiorców. Ta obszerność miała pozwolić na lepsze zrozumieni charkaterystyk sygnałów LFP i AP oraz zwiększyć użyteczność badań do innych zastosowań poprzez sporwadzenie wymagań biologicznych do rozumianych pojeć używanych w grupie projektantów elektroniki. Rozumiem jednak że część mogłayby być krótsza.
+    Z jednej strony ten materiał mógłby być krótszy, ale z drugiej strony uwagi pana dr. hab. Buchnera sugerują, że powinien być bardziej rozbudowany.
     
 
 \end{frame}
@@ -171,8 +173,8 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
         }
     \end{block}
     Oczywiście częstotliwość próbkowania jest zdeterminowana charakterystyką sygnału zgodnie z twierdzeniem Nyquista.
-    W powyższym stwierdzeniu nieumiejętnie próbowano przekazać, że częstotliwość wielokanałowego ADC zależy od architektury, a konkretnie od ilości obsługiwanych kanałów w przetworniku.
-    Jeżeli użyjemy ADC obsługujące jeden kanał jego częstotliwość próbkowania jest tożsama z częstotliwością próbkowana kanału, ale w przypadku wielokanałowego ADC jego częstotliwość systemu musi być skalowanie odpowiednio większa i stąd doszło do słabego wytłumaczenia zagadnienia.
+    W powyższym stwierdzeniu nieumiejętnie próbowano przekazać, że częstotliwość ADC zależy od architektury, a konkretnie od ilości obsługiwanych kanałów w przetworniku.
+    Jeżeli użyjemy ADC obsługujące jeden kanał jego częstotliwość próbkowania jest tożsama z częstotliwością próbkowana sygnału, ale w przypadku multipleksowania wielu kanałów do jednego ADC  jego częstotliwość systemu musi być  odpowiednio większa i stąd doszło do słabego wytłumaczenia zagadnienia.
  
 \end{frame}
 
@@ -197,8 +199,8 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
         \end{figure}
     
         \column{.6\textwidth}
-        Impedancja przy niskich częstotliwościach ma charakter rezystancyjny, Wartość Rct (rezystancja elektrochemiczna) jest duża i dla szumów nie ma znaczenia podobnie jak wartość pojemności warstwy podwójnej.  Szum termiczny zależy od parametru Rsp (rezystancja rozproszona), który w modelu jest w szeregowym połączeniu ścieżki sygnału, i parametr ten zależy on od rozmiaru elektrody.
-        Podobnie w przypadku niskich częstotliwości jeżeli impedancja jest duża w stosunku do impedancji wejściowej pierwszego elementu toru odczytowego czyli w tym przypadku wzmacniacza otrzymujemy dzielnik napięciowy, który może powodować atenuację sygnału. 
+        Impedancja przy niskich częstotliwościach ma charakter rezystancyjny, Wartość $R_{ct}$ (rezystancja elektrochemiczna) jest duża i dla szumów nie ma znaczenia podobnie jak wartość pojemności warstwy podwójnej.  Szum termiczny zależy od parametru $R_{sp}$ (rezystancja rozproszona), który w modelu jest w szeregowym połączeniu ścieżki sygnału, i parametr ten zależy  od rozmiaru elektrody.
+        W przypadku niskich częstotliwości jeżeli impedancja jest duża w stosunku do impedancji wejściowej wzmacniacza otrzymujemy dzielnik napięciowy, który może powodować atenuację sygnału. 
         
     \end{columns}
 \end{frame}
@@ -214,13 +216,15 @@ Pojęcie mniejsze multipleksery jest niefortunne - chodziło o multipleksery obe
         }
     \end{block}
     \begin{columns}
-        \column{.43\textwidth}
+        \column{.3\textwidth}
         \begin{figure}[H]
-            \includegraphics[scale=0.25]{ch3/gmid_id.png} 
+            \includegraphics[scale=0.18]{ch3/gmid_id.png} 
         \end{figure}
     
-        \column{.55\textwidth}
-        Szumy termiczne kanału tranzystora są odwrotnie proporcjonalne do transkonduktancji dlatego zależy nam na dużej wartości tego parametru. Wartość tego parametru jest ściśle związana z wartością prądu polaryzacji tranzystora, która przekłada się pobór mocy, dlatego ważne jest jak uzyskać daną transkonduktancje przy minimalnym prądzie. 
+        \column{.67\textwidth}
+        Szumy termiczne kanału tranzystora są odwrotnie proporcjonalne do transkonduktancji dlatego zależy nam na dużej wartości tego parametru. 
+        Wartość tego parametru jest związana z wartością prądu polaryzacji tranzystora -- w obszarze podprogowym zależność jest proporcjonalna do pierwiastka z prądu, zaś w silnej inwersji zależność jest od kwadratu tej wartości.
+        Wartość prądu  przekłada się pobór mocy, dlatego ważne jest jak uzyskać daną transkonduktancję przy minimalnym prądzie. 
         Na rysunku przedstawiono stosunek transkonduktancji do prądu drenu w funkcji znormalizowanego prądu drenu dla trzech technologii i na podstawie tego można zobaczyć, że najkorzystniejszy jest obszar podprogowy.
      \end{columns}
 \end{frame}
@@ -340,7 +344,7 @@ Jak wspomniano wcześniej, w docelowym rozwiązaniu przewiduje się zastosowanie
     \end{block}
     {\renewcommand\normalsize{\small}%
     \normalsize
-Celem w tej pracy była głónie analiza nieliniowości pseudo-rezystora, dlatego skupiono się na opisie tej struktury i jej własności.  Przy projektowaniu wzmacniacza powyższe  parametry  były brane pod uwagę, razem z innymi parametrami jak szumy czy offset co uznano za standardową procedurę optymaliacji pary różnocowej natomiast nie zostały szczegółowo opisane.
+Celem w tej pracy była głónie analiza nieliniowości pseudo-rezystora, dlatego skupiono się na opisie tej struktury i jej własności.  Przy projektowaniu wzmacniacza powyższe  parametry  były brane pod uwagę, razem z innymi parametrami jak szumy czy wejściowe napiecie niezrównoważniea co uznano za standardową procedurę optymaliacji pary różnocowej natomiast nie zostały szczegółowo opisane.
 
 
 Parametry,  jak slew rate, odpowiedź na skok jednostkowy czy też liniowosć fazy zostały wzięte pod uwagę przy projekcie. Te aspekty nie zostały detalicznie opisane ponieważ nie uznano tych parametrów za krytyczne ze względu na zakres pracy wzmacniacza (pasmo rejestrowanych sygnałów) jak również trudne do osiągnięcia na akceptowalnym poziomie. 
@@ -379,33 +383,33 @@ Parametry,  jak slew rate, odpowiedź na skok jednostkowy czy też liniowosć fa
     }
 \end{block}
 
-{\renewcommand\normalsize{\small}%
+{\renewcommand\normalsize{\scriptsize}%
 \normalsize
-W tym miejscu chciałabym podkreślić, że współczynnik THD na poziomie 1\% to nie jest bardzo niską wartością. W pracy nie optymalizowano tego parametru do poziomu bardzo niskiego, co faktycznie wymagałoby uzasadnienia biologicznego. THD jest miarą liniowości rejestrowanego sygnału powszechnie używaną w literaturze, jednak dla tego typu systemów podawany jest dla jednej wartości daleko od zakresu, w którym jest narażony na bardzo dużą nieliniowość. W pracy i na prezentacji przedstawiono że w niektórych systemach THD może być nawet o jeden rząd wielkości większe niż proponowany wymóg projektowy 1\% dlatego podnoszono znaczenie tego parametru.
+W tym miejscu chciałabym podkreślić, że współczynnik THD na poziomie 1\% to nie jest bardzo niską wartością. W pracy nie optymalizowano tego parametru do poziomu bardzo niskiego, co faktycznie wymagałoby uzasadnienia biologicznego. THD jest miarą liniowości rejestrowanego sygnału powszechnie używaną w literaturze, jednak dla tego typu systemów podawany jest dla jednej wartości daleko od zakresu, w którym jest narażony na bardzo dużą nieliniowość. W pracy i na prezentacji przedstawiono że w niektórych systemach THD może być nawet o jeden rząd wielkości większy niż proponowany wymóg projektowy 1\% dlatego podnoszono znaczenie tego parametru.
 
 
 }
-\vspace{-1em}
 
 \begin{columns}
 
-    \column{.3\textwidth}
-    \begin{figure}[H]
-        \centering
-            \includegraphics[scale = 0.5]{scripts/tranTHDAmp/tranTHDAmp_ner.pdf}
-    \end{figure}   
-
-    \column{.3\textwidth}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[trim={0 0.25cm 0 0.25cm}, clip, scale = 0.5]{scripts/embc2021THD_size/embc2021THD_size_0_100.pdf}
-    \end{figure}   
+ 
 
     \column{.3\textwidth}
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.5]{ch1/lfp_ap_spectrum}  
         \end{figure}	
+    \column{.3\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.17]{Figures/genovTHD.png}
+
+    \end{figure}
+        \column{.35\textwidth}
+        {\renewcommand\normalsize{\scriptsize}%
+\normalsize
+        Jedyna praca jaką udało mi się zależność wskazująca na problem nieliniowości w zakresie niskich częstotliwości które są podstawową częścią rejestrowanych sygnałów.
+        Symulacje THD dla sygnału sinusoidalnego o amplitudzie: $\SI{1.4}{\milli\volt_{pp}}$ -- K. Abdelhalim and R. Genov, doi: 10.1109/ISCAS.2012.6271415}
 
 \end{columns}
 
@@ -506,7 +510,10 @@ Faktycznie doszło do pominięcia tych informacji i nie wyświetlenia ich przy k
             Protokół badania nie jest dokładnie opisany, ale zakłada badanie odpowiedzi wywołanej na mechaniczne drażnienie wibrys u szczura, z jednoczesną rejestracją aktywności LFP w obszarze od kory mózgowej (Cx) do wnętrza mózgu (Th).
         }
     \end{block}
-    Eksperyment biologiczny, który jest opisany w pracy opiera się na standardowej procedurze badania odpowiedzi neuronalnej w korze mózgowe na mechaniczne drażnienie wibrys u szczura oraz aktywności spontanicznej w wzgórzu. Protokół badania opisany jest w formie minimalistycznej koniecznej do zrozumienia otrzymanych odpowiedzi. Chciałam podkreślić, że aspekt biologiczny, w tym przygotowanie zwierzęcia stał po stronie osoby wykonującej tego typu eksperymentuy i mającej doświadczenie w tej kwestii.
+    Eksperyment biologiczny, który jest opisany w pracy opiera się na standardowej procedurze badania odpowiedzi neuronalnej w korze mózgowe na mechaniczne drażnienie wibrys u szczura oraz aktywności spontanicznej w wzgórzu.
+ Protokół badania opisany jest w formie  wystarczającej do zrozumienia otrzymanych odpowiedzi.
+ Dodatkowo procedura biologiczna nie stanowiła miejsca do testowania nowych możliwości pomiarowych wymiarze neurobiologicznym i została zaproponowana przez panią dr hab. Ewę Kublik wykonującej tego typu eksperymenty i mającej ogromne doświadczenie.
+ Zaprezentowane wyniki pomiarowe w tej sekcji miały służyć zademonstrowania możliwości układu w kontekście efektywnej rejestracji sygnałów LFP i potencjałów czynnościowych.
 \end{frame}
 
 \begin{frame}[t]
@@ -531,7 +538,7 @@ Faktycznie doszło do pominięcia tych informacji i nie wyświetlenia ich przy k
         }
     \end{block}
 
-Jest to kompletnie nowy projekt, i nie ma bezpośredniego odniesienia do poprzednich prac zespołu dlatego nie były one szczegółowo omówione.
+Jest to całkowicie nowy projekt, i nie ma bezpośredniego odniesienia do poprzednich prac zespołu dlatego nie były one szczegółowo omówione.
 W poprzednich pracach zespołu zagadnienie pseudo-rezystorów nie było adresowane w żaden sposób.
 Dodatkowo opracowany wzmacniacz wykonany jest w innej technologii niż dotychczasowe projekty.
 Został od początku do końca opracowany i zoptymalizowany w ramach przedstawianej pracy.
@@ -550,10 +557,18 @@ Wymagało to oczywiście stworzenia indywidualnych narzędzi symulacyjnych, proj
     \end{block}
     Ze względu na złożoność czasową procedury pomiarowej (kilkaset okresów dla danej częstotliwości sygnału wejściowego) nie było możliwe przeprowadzenie dogłębnej analizy wolnozmiennych sygnałów przy ustawieniu bardzo niskiej częstotliwości granicznej dlatego oparto się w rozważaniach na pomiarach THD w funkcji częstotliwości sygnału wejściowego z ustawieniami częstotliwość granicznej powyżej 1 Hz.
     
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.4]{scripts/embc2021THD_fc/embc2021THD_fc.pdf}  
-    \end{figure}
+    \begin{columns}
+
+        \column{.43\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale = 0.4]{scripts/embc2021THD_fc/embc2021THD_fc.pdf}  
+        \end{figure}
+    
+        \column{.55\textwidth}
+        Czas wykonania pomiarów przedstawionych na wykresie zajmował około tydzień roboczy. Pomiar w niższym zakresie wymagałby wielokrotnie więcej czasu. 
+    \end{columns}
+
 
     % \begin{block}{\tb}
     %     \cit{
@@ -576,7 +591,7 @@ Wymagało to oczywiście stworzenia indywidualnych narzędzi symulacyjnych, proj
     \cit{
     Należy przypomnieć, że tworząc symulacje dostosowane do submikronowych procesów technologicznych CMOS nadal opiera się na niedoskonałych modelach BSIM w wersji 4.3.0.}
 
-    Model EKV nie jest zaimplementowany w środowisku CADENCE, czyli narzędziach które służą przeprowadzaniu symulacji submikronowych procesów technologicznych CMOS ale jest pożyteczny w kontekście zrozumienia zjawisk fizycznych w tranzystorach MOS. 
+    Model EKV nie jest zaimplementowany dla modeli tranzystorów w  środowisku CADENCE, czyli narzędziach które służą przeprowadzaniu symulacji submikronowych procesów technologicznych CMOS ale jest pożyteczny w kontekście zrozumienia zjawisk fizycznych w tranzystorach MOS. 
 \end{frame}
 
 \begin{frame}[t]
@@ -601,7 +616,6 @@ Wymagało to oczywiście stworzenia indywidualnych narzędzi symulacyjnych, proj
         }
 }
     \end{block}
-    \vspace{-1em}
     {\renewcommand\normalsize{\small}%
     \normalsize
     Eksperyment przeprowadzony w IBD był standardową procedurą opartą na doświadczeniu osoby go wykonującej, wykorzystującej różne systemy pomiarowe dlatego w momencie opisu pracy uznano za wystarczające tego typu porównanie. Dziękuję jednak za podanie propozycji w jaki sposób można byłoby udoskonalić ten aspekt co może się przydać podczas potencjalnej publikacji wyników układu scalonego.}
@@ -632,6 +646,7 @@ Wymagało to oczywiście stworzenia indywidualnych narzędzi symulacyjnych, proj
     
         \column{.55\textwidth}
 Wykres przedstawia charakter impedancji w zależności od częstotliwości a nie filtr.
+
 \cit{Zależność impedancji elektrody $Z$ od częstości sygnału. 
 Przy niskich częstościach element pojemnościowy $Z_{CPA}(j\omega)$ zachowuje się jak przerwa w obwodzie. 
 Natomiast dla wysokich częstotliwości, element ten stanowi zwarcie w obwodzie i impedancja elektrody zmierza do $R_{SP}$. 
@@ -681,20 +696,17 @@ Dla częstości pośrednich obserwuje się nachylenie charakterystyki zależne o
         }
     \end{block}
     \begin{columns}
-        \column{.3\textwidth}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.3]{ch2/conceptAC_Harrison.pdf} 
-        \end{figure}
+        \column{.4\textwidth}
+        Na powyższych wykresach nie ma widocznych znacznych różnic w nachyleniu wykresów, różnice wynikają z przesunięciu częstotliwości granicznych co zostało omówione w pracy wraz z powodem dla których dane zjawisko występuje. 
             \column{.3\textwidth}
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale = 0.3]{scripts/tmp/fig3_R1.pdf}
+                \includegraphics[scale = 0.35]{scripts/tmp/fig3_R1.pdf}
             \end{figure}
             \column{.3\textwidth}
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale = 0.3]{scripts/tmp/fig3_R2.pdf}
+                \includegraphics[scale = 0.35]{scripts/tmp/fig3_R2.pdf}
             \end{figure}
         \end{columns}
         
@@ -702,15 +714,15 @@ Dla częstości pośrednich obserwuje się nachylenie charakterystyki zależne o
             \centering
             \begin{subfigure}[b]{0.485\textwidth}
                 \centering
-                \includegraphics[scale = 0.5]{scripts/tmp/noiseGND_in.pdf}
+                \includegraphics[scale = 0.45]{scripts/tmp/noiseGND_in.pdf}
             \end{subfigure}
             % \hfill
             \begin{subfigure}[b]{0.485\textwidth}
                 \centering
-                \includegraphics[scale = 0.5]{scripts/tmp/noiseElektrodaNaCl.pdf}
+                \includegraphics[scale = 0.45]{scripts/tmp/noiseElektrodaNaCl.pdf}
             \end{subfigure}     
         \end{figure}
-        Na powyższych wykresach nie ma widocznych znacznych różnic w nachyleniu wykresów, równize wynikają z przesunięciu częstoliwości granicznych co zostało omówione w pracy wraz z powodem dla których dane zjawisko występuje. 
+
 \end{frame}
 
 
@@ -734,7 +746,7 @@ Dla częstości pośrednich obserwuje się nachylenie charakterystyki zależne o
     \end{block}
 W pracy opierano się na powszechnie używanym prostym modelu tkanka elektroda. Uznano, że na potrzeby wyznaczenia celów pracy takie podejście za wystarczające. 
 Praca skupiała się na aspekcie eksploracji parametrów przedwzmacniacza oraz oceny możliwości zbudowania efektywnego układu na potrzeby przyszłego systemu łączącego rejestrację i stymulacją elektryczną komórek nerwowych w mózgu na dużą skalę pomiarową.
-Z tego powodu uznałam w momencie pracy, że warto wprowadzić czytelnika w tematykę procesów zachodzących na styku elektrody i tkanki. 
+W trakcie pisania pracy uznałam, że warto wprowadzić czytelnika w tematykę procesów zachodzących na styku elektrody i tkanki na podstawowym poziomie. 
 
 \end{frame}
 
@@ -770,7 +782,20 @@ Z tego powodu uznałam w momencie pracy, że warto wprowadzić czytelnika w tema
     \end{block}
 \end{frame}
 
+\begin{frame}[t]
+W pracy podczas wyznaczania wymagań dla systemu ze względu na charakter sygnałów opierano się na wiedzy literaturowej osób rejestrującej takie sygnały.
 
+Dodatkowo zakładano że w przypadku mikroelektrod umiejscowionych w bezpośrednim sąsiedztwie komórki nerwowej główny dominujący wpływ ma rezystywny charakter medium. Rejestracja w takich systemach odbywa się na bardzo krótkich dystansach.
+W pomiarach EEG i Ecog sygnał transmitowany jest przez różne tkanki i zagadnienie modelowania tych sygnałów nie jest trywialne i istotne w kontekście stworzenia wiernych systemów rejestrujących.
+
+Chciałabym podkreślić, że mimo takiego uproszczonego podejścia możliwe było wyznaczenie wymagań projektowych w kontekście szumów, zakresu amplitudy i częstotliwości rejestrowanego sygnału.
+
+Dodatkowo głównym aspektem poruszanym w pracy była eksploracja ograniczeń technologii w kontekście stworzenia przyszłego systemu tysiące kanałów odczytowych.
+
+
+
+
+\end{frame}
 \begin{frame}[t]
     \begin{block}{\tb}
         \cit{
@@ -784,6 +809,7 @@ Z tego powodu uznałam w momencie pracy, że warto wprowadzić czytelnika w tema
         }
     \end{block}
     
+    W praktyce trudno jest zapewnić idealnie symetryczny pomiar, ponieważ impedancja elektrody referencyjne jest zawsze inna niż elektrody pomiarowej, nawet w przypadku sondy Neuropixel. Możliwym rozwiązaniem, stosowanym zresztą powszechnie, jest wykonanie elektrody referencyjnej o możliwie małej impedancji. Oczywiście nie zapewnia to tłumienia sygnałów współbieżnych generowanych w badanej tkance, ale pomaga w tłumieniu sygnałów współbieżnych pochodzących z zakłóceń elektromagnetycznych. 
 \end{frame}
 
 

@@ -1,7 +1,7 @@
 \begin{frame}{Cele pracy}
 
     \begin{alertblock}{}
-        Celem projektu przedstawionego w niniejszej pracy było opracowanie przedwzmacniacza należącego do toru odczytowego dedykowanego do sondy neuronalnej umożliwiającej rejestrację sygnałów mózgowych.
+        Celem projektu przedstawionego w niniejszej pracy było opracowanie i weryfikacja koncepcji przedwzmacniacza dedykowanego do wielokanałowej sondy neuronalnej umożliwiającej rejestrację aktywności neuronalnej mózgu.
     \end{alertblock}
 
     \begin{block}{Główne zadania}
@@ -10,32 +10,38 @@
             \item Optymalizacja kluczowych parametrów przedwzmacniaczy neuronalnych
             \item  Projekt układu scalonego, obwodu drukowanego oraz systemu akwizycji danych
             \item Wykonanie testów elektronicznych oraz analiza parametrów i charakterystyk opracowanego układu scalonego
-            \item Udział w eksperymentach neurobiologicznych i analiza zebranych danych
+            \item Weryfikacja funkcjonalności opracowanego przedwzmacniacza  w eksperymentach neurobiologicznych i analiza zebranych danych
         \end{itemize}
     \end{block}
-    \begin{alertblock}{}
-        Przeprowadzone badania miały charakter eksploracji parametrów przedwzmacniacza oraz oceny możliwości zbudowania efektywnego układu na potrzeby przyszłego systemu łączącego rejestrację i stymulacją elektryczną komórek nerwowych w mózgu na dużą skalę pomiarową.
-    \end{alertblock}
+
     
 \end{frame}
 
-\begin{frame}{Zakresy amplitud i częstotliwości sygnałów neuronowych}
+\begin{frame}{Zakresy amplitud i częstotliwości sygnałów neuronowych w różnych technikach rejestracji}
     \begin{columns}
         \column{.48\textwidth}
+        \vspace{-2em}
+
         \begin{figure}[H]
             \includegraphics[scale=0.2]{ch1/brain.jpg}
           \end{figure}
+
           \begin{block}{Metody rejestracji}
             \begin{itemize}
+                {\renewcommand\normalsize{\small}%
+                \normalsize
                 \item LFP -- Local Field Potential
                 \item AP --  Action Potential
                 \item ECoG -- Electrocorticography
                 \item EEG -- Electroencephalography
+                }
             \end{itemize}
         \end{block}
 
 
         \column{.48\textwidth}
+        \vspace{-2em}
+
         \begin{figure}[H]
             \centering
             \includegraphics[scale=1.0]{ch1/lfp_ap_spectrum}  
@@ -128,7 +134,7 @@
 
 
 
-\begin{frame}{Kanał rejestracji neuronowej z wykorzystaniem elektrod zewnątrzkomórkowych}
+\begin{frame}{Kanał rejestracji neuronowej z wykorzystaniem mikroelektrod zewnątrzkomórkowych}
 \vspace{-1em}
     \begin{columns}
         \column{.48\textwidth}
@@ -146,12 +152,12 @@
         \column{.48\textwidth}
         \begin{block}{Wymagania stawiane interfejsom neuroelektronicznym umożliwiającym rejestrację sygnałów LFP i AP}
             \begin{itemize}
-                \item Stały offset napięcia na styku elektrody -- do $\SIrange{1}{2}{\volt}$ 
-                \item Szumy $<\SI{5}{\micro\volt}$ dla pasma LFP i AP
+                \item Stałe napięcie na styku elektrody -- do $\SIrange{1}{2}{\volt}$ 
+                \item Szumy $<\SI{10}{\micro\volt}$ dla pasma LFP i AP
                 \item Liniowość rejestrowanego sygnału
                 \item Pobór mocy -- limit ogrzewania tkanki mózgowej --  mniej niż  $\SI{1}{\degreeCelsius}$ 
                 \item Zróżnicowane sygnały: amplituda do $\SI{10}{\milli\volt_{pp}}$ dla LFP i od  $\SI{50}{\micro\volt}$ dla AP
-                \item Skalowalność systemu -- tysiące kanałów dla przyszłych systemów
+                \item Skalowalność -- tysiące kanałów dla przyszłych systemów
             \end{itemize}
         \end{block}
         % Schemat typowego kanału rejestracji neuronowej i modelu elektrycznego interfejsu tkanka-mikroelektroda: 
@@ -226,7 +232,7 @@
     
 
     \begin{columns}
-        \column{.48\textwidth}
+        \column{.55\textwidth}
         \vspace{-1em} %5mm vertical space
 
         \begin{figure}[H]
@@ -246,22 +252,22 @@
         \begin{exampleblock}{}
 
             \begin{itemize}
-                \item Całkowite usunięcie offsetu napięcia stałego na elektrodzie 
-                \item Konieczność implementacji filtru górnoprzepustowego z częstotliwością graniczną rzędu~$\SI{\sim 1}{\hertz}$ 
-                \item Pojemności w CMOS $\sim\SI{}{\femto\farad\per\micro\metre\squared}$
-                \item  Rezystancja sprzężenia zwrotnego  $\sim\SI{}{\tera\ohm}$
+                \item Całkowite usunięcie napięcia stałego na elektrodzie 
+                \item Konieczność implementacji filtru górnoprzepustowego z dolną częstotliwością graniczną rzędu~$\SI{\sim 1}{\hertz}$ 
+                \item Ograniczenia na pojemności kondensatorów w technologii CMOS ~pF $\sim\SI{}{\pico\farad}$
+                \item  Wymagane rezystancje  $\sim\SI{}{\tera\ohm}$
             \end{itemize}
         \end{exampleblock}
     
         }
 
 
-        \column{.48\textwidth}
+        \column{.43\textwidth}
         \vspace{-3em} %5mm vertical space
 
         \begin{figure}[H]
-            \centering
-            \includegraphics[scale = 0.5]{ch2/dc_coupling.pdf}
+            \hspace{-2em} %5mm vertical space
+            \includegraphics[scale = 0.48]{ch2/dc_coupling.pdf}
         \end{figure}
 
 
