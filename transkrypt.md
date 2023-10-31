@@ -330,6 +330,194 @@ W laboratorium elektronicznym składowe te były trochę większe i je usuwałam
 
 ---
 
+buch
+
+*Język rozprawy jest bardzo dobry, odnotowano jedynie nieliczne przypadki łączenia imiesłowu przysłówkowego ze stroną bierną.*
+
+*Nie jest zachowany klasyczny układ publikacji naukowej, natomiast zaproponowany układ jest logiczny i przejrzysty.*
+
+*Użycie bibliografii jest nieco utrudnione przez brak sortowania alfabetycznego.*
+
+btj
+
+Stosując sortowanie alfabetyczne, prawdopodobnie łatwiej byłoby się odnosić do artykułów poszczególnych autorów.
+
+---
+
+buch
+
+*Cytowanie na ogół jest poprawne, jedynie cztery źródła to źródła internetowe, dla których jedynym adresem publikacyjnym jest strona www. 
+Podane są one [...] bez daty dostępu, co jest błędem, jednak ich charakter nie wskazuje na ulotność, ponieważ są to w większości strony firmowe, zawierające charakterystyki produktów.*
+
+btj 
+
+Faktycznie doszło do pominięcia tych informacji.
+
+---
+
+buch 
+
+*natomiast rysunki stanowiące autocytaty z prac, których współautorką jest Autorka, nie są oznaczone jako takie.*
+
+Tak wykorzystywałam w pracy rysunki z publikacji, ale zostały one dostosowane i przeredagowane na potrzeby omawianej pracy.
+Uznałam, że nie ma konieczności oznaczania ich jako autocytaty, w szczególności, że była autorem wszystkich tych grafik źródłowych również.
+
+buch
+
+W kontekście oryginalności dorobku spotkałem się z takim standardem, że rysunki, które były wcześniej opublikowane oddzielnie, przy czym lista autorów była dłuższa niż jeden, są odnoszone np. "porównaj", "zmodyfikowane wg."
+W tym momencie nie ma wątpliwości dotyczącej tego, że...
+W zasadzie, gdyby nie fakt, że jest to Pani praca, to należałoby zakwalifikować jako (auto)plagiat.
+
+---
+
+buch
+
+*Protokół badania nie jest dokładnie opisany, ale zakłada badanie odpowiedzi wywołanej na mechaniczne drażnienie wibrys u szczura, z jednoczesną rejestracją aktywności LFP w obszarze od kory mózgowej (Cx) do wnętrza mózgu (Th).*
+
+btj
+
+Chciałam podkreślić, że eksperyment był wykonywany w Instytucie Biologii Doświadczalnej przy współudziale dr hab. Ewą Kublik zgodnie ze standardowo stosowaną przez nią procedurą badania odpowiedzi neuronalnych w korze mózgowej na mechaniczne drażnienie wibrys szczura oraz aktywności spontanicznej.
+Protokół badania jest opisany na tyle, na ile wydawało mi się konieczne do zrozumienia zarejestrowanych przebiegów.
+Ta procedura biologiczna, liczba powtórzeń i uśrednianie odpowiedzi było zaproponowane właśnie przez dr hab. Ewę Kublik wykonującej takie eksperymenty bardzo często, przez co ma odpowiednie doświadczenie.
+
+buch
+
+Tak to jest jasne.
+
+---
+
+buch
+
+*Kod źródłowy skryptów wypracowanych w ramach pracy nie jest częścią rozprawy ani nie jest dostępny w publicznym repozytorium, choć publikacja kodu pomogłaby w ocenie kompetencji Autorki.*
+
+buch
+
+Moża przejść dalej...
+
+---
+
+buch
+
+*w analizie stanu sztuki Autorka pomija dorobek jej macierzystego zespołu, chociaż go cytuje [...].
+W związku z tym recenzent skazany jest na domysły.
+Należy przyjąć, że istotną nowością omawianej pracy jest użycie pseudorezystorów, ponieważ ta technika nie pojawia się w tytułach wymienionych [...] powyżej pozycji dorobku.*
+
+btj
+
+Czy ta odpowiedź...
+
+buch
+
+Tak absolutnie. Sam ją zasugerowałem.
+To jest inny przypadek, jeżeli mamy silny zespół pracujący przez dłuższy czas w tym samym obszarze tematycznym, w którym wiedza jest po prostu dokładana przez kolejne osoby wchodzące w badania.
+Pani bardzo szczegółowo opisała stan sztuki w ogóle rozwiązań do pomiarów biologicznych.
+Natomiast mi w tym stanie sztuki zabrakło dorobku macierzystej jednostki, która by pokazała, gdzie był ten punkt odcięcia, w którym Pani wkroczyła na scenę i zaczęła generować oryginalny, twórczy wkład.
+Ponieważ zadaniem recenzji jest wyodrębnienie Pani wartości dodanej na bazie również wyników zespołu, również w kontekście faktu, że lista autorów publikacji jest szersza.
+W związku z tym, gdyby taki rozdział się tam znalazł na koniec opisu stanu sztuki (opis dorobku zespołu badawczego), no to oczywiście by ułatwiło ocenę oryginalności Pani wkładu.
+
+btj
+
+To był całkowicie nowy projekt.
+
+buch
+
+Tak się domyśliłem.
+
+---
+
+buch
+
+*Metodykę procesu badawczego należy podzielić na dwa etapy [...]. 
+Pierwszy z tych etapów nie budzi zasadniczych wątpliwości. 
+Jedyny zidentyfikowany brak dotyczy wspomnianych na str. 68 wolnozmiennych oscylacji, które nie zostały uwzględnione w scenariuszach testowych, a jak wspomniano wcześniej w tekście, mają istotne znacznie dla działalności wzmacniacza.*
+
+btj
+
+Pozwoliłam zaprezentować tutaj wykres, który przedstawia zależność współczynnika THD od częstotliwości sygnału wejściowego dla różnych ustawień częstotliwości granicznej.
+Chciałam tutaj podkreślić, że pomiar tego typu charakterystyk wymaga bardzo długich pomiarów ze względu na uśrednianie sygnałów.
+Nie byłam w stanie zmierzyć tego dla niższych częstotliwości, ponieważ w ich przypadku pomiar jednej krzywej trwałby kilka dni.
+
+buch
+
+Tu zasadniczo też jest dla mnie oczywiste, dlaczego Pani tak zrobiła, ale podobnie jak kolega, powiem, że właściwie zabrakło jednego zdania, które by wskazywało na to, że Pani jest świadoma tego, że warunki testowe, które Pani aplikuje do testowania konstrukcji, nie obejmują pełnego zakresu zniekształceń, z którymi może się Pani zetknąć w rzeczywistym pomiarze.
+
+---
+
+buch 
+
+*W tekście cytowanych jest kilka rodzin modeli symulacyjnych tranzystora MOS, należy się domyślać, że w dalszym ciągu użyty został model EKV.*
+
+btj
+
+Model EKV nie jest zaimplementowany dla modeli tranzystorów w środowisku CADENCE, czyli narzędziach, które służą przeprowadzaniu symulacji submikronowych procesów technologicznych CMOS, ale jest pożyteczny w kontekście zrozumienia zjawisk fizycznych i porównaniu wyników symulacyjnych z tym, co otrzymujemy w szczególności, gdy opieramy się na parametrach brzegowych technologii.
+
+buch
+
+To ewidentnie wynika z interdyscyplinarności i pewne braki wiedzy oczywiście da się odczuć.
+
+pf
+
+Właśnie miałem o to pytać, dlaczego w ogóle Pani pisze o tym (modelu EKV), gdy w CADENCE PSIM, więc dostałem już odpowiedź.
+Mówiąc o tym, że to ułatwia zrozumienie -- model powinien być jak najbliższy odtwarzaniu zjawisk fizycznych, żeby eliminować parametry strojenia i aproksymacji matematycznych z sufitu.
+Czy Pani to w pracy wykorzystała w jakiś sposób?
+
+btj
+
+Nie, używałam modeli symulacyjnych z CADENCE. 
+Jednak przy próbie interpretacji właściwości bez fizycznego układu używałam EKV.
+
+pf
+
+Dziękuję
+
+---
+
+buch
+
+*Pewne wątpliwości budzi natomiast metodyka procesu weryfikacji w eksperymencie neurofizjologicznym.
+W przypadku pomiarów o charakterze unikatowym nie ma możliwości porównania wyniku z urządzeniami referencyjnymi.
+Wydaje się jednak, że ten przypadek tu nie zachodzi.
+Bardziej właściwe wydaje się porównanie omawianego urządzenia pomiarowego z urządzeniem referencyjnym w sposób, który wykaże prawidłowość realizowanych za jego pomocą pomiarów.
+Istnieją również wspierające ten proces metody statystyczne, takie jak metoda Blanda-Altmana.*
+
+*W przypadku niniejszej pracy zastosowano jakościową metodę weryfikacji, którą jest zgodność otrzymanych z użyciem urządzenia wyników z oczekiwaniami eksperymentatora.
+Oczekiwania te zbudowane są na podstawie dostępnej wiedzy, a ta zawiera oczywiście wyniki pomiarów, które można uznać za referencyjne.
+Jednak nie ulega wątpliwości, że tego typu analiza jest dużo słabsza z perspektywy matematycznej niż analiza porównawcza dwóch urządzeń korzystających z tego samego źródła sygnału.*
+
+btj
+
+Eksperyment biologiczny był przeprowadzony całkowicie w oparciu na doświadczeniu i autorytecie dr hab. Ewy Kublik.
+Ona ma do czynienia z różnymi systemami pomiarowymi, stąd uznałam takie podejście za wystarczające. 
+
+---
+
+buch
+
+*wykres przedstawiony na rys. 2.4 przedstawia filtr górnoprzepustowy, a nie dolnoprzepustowy (wysoka impedancja występuje w paśmie niskich częstotliwości, a impedancja w paśmie wysokich częstości jest niska).*
+
+btj
+
+Ten model nie przedstawia filtru, tylko model impedancji elektrody w zależności od częstotliwości sygnału.
+
+---
+
+buch
+
+*Autorka opisuje proces inżynierski z perspektywy ex post. 
+W związku z tym zdarza się, że relacjonując wykonane badanie, czy analizę nie umieszcza na końcu rozdziału wniosków z tego badania.
+Pojawiają się one niejako mimochodem jako uzasadnienie decyzji projektowej, której podjęcie jest relacjonowane w rozdziale następnym.
+Taka sytuacja występuje na granicy rozdziałów 3.2.1 i 3.2.2, kiedy zostaje w zasadzie podjęta decyzja o eliminacji z dalszych rozważań konfiguracji variable-$V_{gs}$, do czego przesłanki dostarcza rozdział 3.2.1.
+Co do rozdziału 3.2.1 to skądinąd nie jest od początku jasne, w jakim celu są prowadzone opisywane w nim rozważania.
+Staje się to jasne w rozdziale 3.2.2, kiedy okazuje się, że celem tego rozdziału było rozważenie przesłanek za wyborem jednej z dwóch konfiguracji.*
+
+*Zdarza się również, że Autorka uznaje, że wniosek w sposób oczywisty wynika z przedstawionych wykresów, co nie jest oczywiste w interdyscyplinarnym środowisku odbiorców.
+Taka sytuacja występuje na granicy rozdziałów 3.3 oraz 3.4.
+Wniosek z rysunku 3.12, który kończy analizę z rozdziału 3.3, jest podsumowany w pierwszym akapicie rozdziału 3.4.
+Takich sytuacji jest więcej, ale nie spotkałem się z oczywistą luką i brakiem informacji, a co najwyżej z jej nieodpowiednią lokalizacją.*
+
+
+
+
 ## Publiczna dyskusja:
 
 Opracowanie: dr inż. Paweł Jurgielewicz 
