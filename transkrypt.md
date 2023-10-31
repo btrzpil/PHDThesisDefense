@@ -139,4 +139,197 @@ Również definicja wyrażenia "front-end" (str. 35) budzi moje wątpliwości.
 Użycie wyrażenia "może zostać drastycznie zmniejszona" wydaje mi się również niezbyt fortunne.
 Autorka rozprawy dosyć często używa wyrażenia offset wyjściowy, moim zdaniem jednak poprawnie powinno się stosować wyrażenie offset napięcia wyjściowego.*
 
+btj
+
+Tor odczytu obejmuje wzmacniacz, przetworniki, multipleksery i jest pojęciem szerszym, aniżeli wzmacniacz, dlatego używałam pojęcia "tor odczytu" w kontekście całego toru, a wzmacniacz jako ten fragment, który za pierwszy stopień wejściowy.
+
+Kolejno "front-end", to pewnie wynika z tego, że w kontekście struktur scalonych jest to powszechnie używane pojęcie, które opisuje ten tor odczytu, wstępne przetwarzanie.
+
+kom
+
+Pozwolę sobie na drobny komentarz. 
+Zastanawiałem się nad definicją "front-endu".
+Kiedyś spotkałem się pierwszy raz w swojej historii, było to kilkanaście lat temu -- jak to tłumaczyć na polski? Dlaczego "front"? Dlaczego "end"?
+Kiedyś znalazłem publikację "front", czyli analogówka, zakończona przetwornikiem cyfrowym "end".
+
+pf
+
+Ja nie cierpię określenia "front-end" i "back-end", ponieważ w różnych środowiskach jest to troszeczkę inaczej używane.
+Więc ja się zgadzam z Panem Profesorem, że lepiej tego nie używać.
+Natomiast nie odniosłem wrażenia, że jest użyte błędnie, bo ja się już z tym spotykałem w środowisku elektroników, niektórzy lubią.
+
+dąbr
+
+W ramach komentarza to jest coś, co mnie od długiego czasu też gnębiło, co zrobić w języku polskim z tym.
+Nasza działalność, oprócz tej działalności, to jest również detekcja promieniowania i tam ten "front-end" jest tak powszechnie używany.
+Ja się powołuję na naszego profesora seniora Korbla, który był purystą językowym.
+W pewnym momencie wydał książeczkę z tytułem "front-end".
+Od tego czasu uznałem, że to zostało w języku polskim usankcjonowane, aczkolwiek w odniesieniu do elektroniki związanej z detekcją promieniowania.
+
+btj
+
+Kontynuując, w kontekście sformułowania "może zostać drastycznie zmniejszona" w pracy chodziło mi o multipleksery obejmujące mniejszą liczbę kanałów wejściowych.
+Jeżeli mamy mniejszą liczbę kanałów, można wykorzystywać mniejsze częstotliwości zegarów odpowiedzialnych za próbkowanie sygnałów.
+
+---
+
+kom
+
+*Wzmacniacz LNA występuje w każdym kanale, skąd następnie sygnał jest przesyłany poprzez MUX z podziałem czasu.
+Wadą tego rozwiązania jest to, że gdy liczba kanałów wzrasta, częstotliwość próbkowania ADC również wzrasta, co powoduje większy pobór mocy. - Częstotliwość próbkowania powinna być zależna od właściwości próbkowanego (rejestrowanego) sygnału, a nie zależeć od architektury systemu.*
+
+btj
+
+Oczywiście częstotliwość próbkowania jest zdeterminowana charakterystyką sygnału zgodnie z twierdzeniem Nyquista.
+W powyższym stwierdzeniu nieumiejętnie próbowano przekazać, że częstotliwość ADC zależy od architektury, a konkretnie od ilości obsługiwanych kanałów w przetworniku.
+Jeżeli użyjemy ADC obsługujące jeden kanał jego częstotliwość próbkowania jest tożsama z częstotliwością próbkowana sygnału, ale w przypadku multipleksowania wielu kanałów do jednego ADC jego częstotliwość systemu musi być odpowiednio większa.
+
+kom
+
+Ja mam na myśli, że ma Pani tu na myśli częstotliwość taktowania.
+Częstotliwość próbkowania oraz częstotliwość taktowania to są dwie różne rzeczy.
+Zgodzę się, że w tego typu układach pobór mocy jest większy i zależy od częstotliwości taktowania.
+
+---
+
+kom 
+
+*Impedancja mikroelektrody jest ważnym parametrem dla rejestracji zewnątrzkomórkowej, ponieważ określa szumy elektrody oraz tłumienie sygnału. -- w jaki sposób impedancja określa te parametry?*
+
+btj
+
+Tutaj przywołuję wykres zależności impedancji od...
+
+kom
+
+Ja Pani przerwę, gdyby Pani napisała "wpływa" to by było poprawnie.
+Impedancja nie "określa" szumów.
+Można przejść dalej
+
+---
+
+kom
+
+*Niektóre fragmenty tekstu są dla mnie niezrozumiałe lub budzą pewne wątpliwości
+Z punktu widzenia minimalizacji poboru mocy najkorzystniejsza jest polaryzacja tranzystorów w zakresie słabej inwersji, ponieważ w tym zakresie transkonduktancji do prądu polaryzacji tranzystora jest największy [48].*
+
+btj
+
+Szumy termiczne są odwrotnie proporcjonalne do wartości transkonduktancji, więc zależy nam na tym, żeby ta wartość transkonduktancji była jak największa.
+Na nią wpływa prądu drenu, zależnie od zakresu pracy tranzystora.
+W obszarze podprogowym zależność ta jest liniowa, natomiast w silnej inwersji pierwiastkowa.
+
+---
+
+kom 
+
+*Niektóre fragmenty tekstu są dla mnie niezrozumiałe lub budzą pewne wątpliwości
+[...] ale przy stałym stosunku $C_{in}/C_{f} = 20 V/V$*
+
+*W pracy przyjęto wzmocnienie dla pierwszego stopnia projektowanego wzmacniacza na poziomie $K = 20 V/V$.
+Czy w kontekście możliwości pojawienia się składowej stałej napięcia na wejściu wzmacniacza spowodowanego zjawiskami zachodzącymi na styku tkanka--elektroda wartość ta nie jest zbyt duża i czy nie będzie powodowała nasycenia stopnia wejściowego wzmacniacza?*
+
+btj
+
+Przede wszystkim, wzmocnienie takiego układu z definicji wynika ze stosunku pojemności i ono jest stałe, w tym przypadku $20 V/V$ -- pojemności nie są wyrażone w tych jednostkach oczywiście.
+
+Sprzężenie zmiennoprądowe zapewnia usunięcie składowej stałej i nie ma obawy o nasycenie, ponieważ pojemności eliminują składową stałą sygnału.
+
+---
+
+kom 
+
+*Niektóre fragmenty tekstu są dla mnie niezrozumiałe lub budzą pewne wątpliwości
+[...]
+Jak wspomniano wcześniej, w docelowym rozwiązaniu przewiduje się zastosowanie drugiego stopnia wzmacniającego. 
+Przy założeniu, że kolejny stopień będzie miał wysoką impedancję wyjściową, może on być sterowany bezpośrednio z kaskody o wysokiej impedancji wyjściowej. 
+Dla celów testowych potrzebujemy jednak stopnia wyjściowego o relatywnie niskiej impedancji wyjściowej, który skutkowałby zwiększeniem poboru mocy układu prototypowego.*
+
+kom
+
+Myślę, że to możemy pominąć, bo myślę, że to była tylko niefortunna gra słów.
+
+---
+
+kom
+
+*Wzór 2.2 na str. 88 -- brak liczby 4 w mianowniku pod pierwiastkiem, nie wszystkie składowe wzoru są wyjaśnione i opisane.*
+
+btj
+
+Oczywiście brakowało czynnika 4 we wzorze, a poszczególne symbole nie zostały wytłumaczone w tekście rozprawy.
+Sam wzór natomiast dotyczy jakościowego porównania krytycznych parametrów przedwzmacniacza: polaryzację, szumy wejściowe i zakres.
+
+---
+
+kom
+
+*W pracy skupiono się na analizie własności i projektowaniu rezystora półprzewodnikowego, nieco mniej zajmując się samym wzmacniaczem -- który jest najważniejszym elementem pracy.
+W szczególności dotyczy to parametru CMRR wzmacniacza.
+Podobnie niewiele uwagi poświęcono napięciu offsetu wzmacniacza, chociaż jego obecność jest widoczna we wszystkich zarejestrowanych przebiegach.
+Tu przydatne byłoby jakieś oszacowanie.
+Konsekwencją takiego podejścia jest dość zwięzły opis samej struktury wzmacniacza i jego własności tu przydałaby się nieco bardziej obszerna analiza.*
+
+*Wybór współczynnika THD do oceny parametrów wzmacniacza jest poprawny, ale w mojej opinii w pracy trochę za mało uwagi poświęcono innym, dość istotnym parametrom wzmacniacza mających wpływ na jakość rejestrowanych sygnałów np. takich jak liniowość fazy, odpowiedź na skok jednostkowy czy szybkość narastania (SR -- ang. slew rate).*
+
+btj
+
+Celem w tej pracy była głównie analiza nieliniowości pseudo-rezystora, dlatego skupiono się na opisie tej struktury i jej własności. 
+Przy projektowaniu wzmacniacza wszystkie te parametry były brane pod uwagę, razem z innymi parametrami jak szumy czy wejściowe napięcie niezrównoważenia i szumy, co uznano za standardową procedurę optymalizacji pary różnicowej wchodzącej w skład teleskopowej kaskody pracującej jako operacyjny wzmacniacz transkonduktanycyjny
+
+kom
+
+Po prostu można było tylko podać te parametry albo założenia. Tak na przyszłość.
+
+btj
+
+Wracając do poziomu DC, który widać na poszczególnych kanałach. 
+Wynika on z właściwości wtórnika źródłowego, który jest na wejściu i zapewnia odpowiednią impedancję wejściową.
+Wspomniany efekt jest widoczny systematycznie na wszystkich kanałach -- ta wartość nie wynika z poziomu samego przedwzmacniacza, tylko ze wspominanej impedancji.
+
+buch
+
+Czyli to jest artefakt?
+
+btj
+
+W pewnym sensie można tak to nazwać.
+
+---
+
+kom
+
+*Teza o dużym znaczeniu współczynnika THD dla niskoczęstotliwościowych składowych sygnałów nie jest poparta odpowiednimi przykładami uzasadniającymi to znaczenie.
+Jednak wymagałoby to dokładniejszej analizy własności rejestrowanych sygnałów neuronalnych, co jednak wykracza poza zakres pracy.*
+
+btj
+
+Tutaj chcę podkreślić, że THD na poziomie 1 % nie jest wartością wyśrubowaną.
+W pracy nie podejmowano dalszej optymalizacji THD, bo wtedy trzeba byłoby szukać uzasadnienia praktycznego.
+THD jest powszechnie stosowaną miarą nieliniowości sygnału.
+W literaturze spotkałam się tylko z jedną pracą, która pokazywała zależność współczynnika THD od sygnału.
+Ci autorzy porównują swój układ z tą konwencjonalną metodą.
+Zaproponowali własne rozwiązanie, ale sygnał wejściowy miał amplitudę $1,4 mV_{pp}$.
+Ja optymalizowałam do $10 mV_{pp}$, ponieważ pokrywa on zakres sygnałów LFP, co będzie pokazane później na przykładzie zarejestrowanych danych z eksperymentu elektrofizjologicznego.
+
+---
+
+kom
+
+*Zastanawiający jest brak w analizach widmowych zarejestrowanych sygnałów, składowych sieci i ich harmonicznych.
+Być może zostały użyte filtry typu notch, ale nie wspomniano o tym w pracy.*
+
+btj
+
+Tutaj pozwoliłam sobie przedstawić wyniki weryfikujące widmową gęstość mocy szumów.
+Po lewej są te z weryfikacji elektronicznej z uziemionymi wszystkimi wejściami.
+Natomiast te po prawej zmierzono już razem z sondą wieloelektrodową w eksperymencie ze zwierzętami.
+Odpowiednie dostosowanie warunków w eksperymencie elektrofizjologicznym umożliwia znaczną redukcję składowych sieci.
+Jest widoczne delikatne 50 Hz, potem 150 Hz -- nie wymagało to jednak stworzenia osobnego filtru notch.
+W laboratorium elektronicznym składowe te były trochę większe i je usuwałam w trakcie analizy danych.
+
+---
+
 ## Publiczna dyskusja:
+
+Opracowanie: dr inż. Paweł Jurgielewicz 
