@@ -515,7 +515,169 @@ Taka sytuacja występuje na granicy rozdziałów 3.3 oraz 3.4.
 Wniosek z rysunku 3.12, który kończy analizę z rozdziału 3.3, jest podsumowany w pierwszym akapicie rozdziału 3.4.
 Takich sytuacji jest więcej, ale nie spotkałem się z oczywistą luką i brakiem informacji, a co najwyżej z jej nieodpowiednią lokalizacją.*
 
+btj
 
+Nie jestem już w stanie niestety poprawić tekstu, ale rozumiem uwagi, że całość mogła przysporzyć trudność podczas czytania.
+
+---
+
+buch
+
+*Kilkukrotnie Autorka traktuje uzyskane wyniki jako oczywiste i nie tłumaczy, która z cech wykresu dowodzi wyciąganego wniosku.
+W kilku przypadkach cechą tą jest różnica nachyleń między dwoma połówkami wykresy -- sytuacja ta dotyczy rys 3.11 oraz 5.18.*
+
+btj
+
+O które nachylenia chodziło Panu konkretnie w tych przypadkach?
+
+buch
+
+Nie przypomnę sobie precyzyjnie, ale z tego, co pamiętam, konkluzja płynąca z rysunku wynikała z faktu różnicy nachyleń, która nie była komentowana, ale później oczywiście *[fragment nieczytelny]*
+
+---
+
+buch
+
+*Z całkowitych drobiazgów należy zwrócić uwagę na tabelę 3.1, w której zmienna $R_f$ powinna stanowić kolejną kolumnę tabeli.*
+
+btj
+
+Tak, ta tabela mogłaby wyglądać tak, jak na prezentowanym slajdzie.
+
+---
+
+buch
+
+*Warto również odnotować niekonsekwentny charakter opisu procesów fizykochemicznych zachodzących po stronie tkanki, które czasem opisywane są jako procesy jonowe, czasem jako procesy elektrochemiczne, a czasem odnoszone są do pojęcia warstwy podwójnej i efektów pojemnościowych.
+Co do zasady użyte modele matematyczne nie budzą wątpliwości, choć model matematyczny tkanki jest zdawkowy [...]*
+
+btj
+
+Uznałam, że na potrzeby wyznaczenia celów projektowych jest to wystarczające.
+W pracy skupiałam się na optymalizacji parametrów przedwzmacniacza.
+
+buch
+
+Możemy do tego wrócić ewentualnie w dyskusji, ale wytłumaczę się, skąd się bierze moja wątpliwość.
+W schemacie tego pomiaru, który zakłada te izolujące kondensatory na wejściu, które powodują, że sprzężenie na wejściu jest zmiennoprądowe, to Pani odnosi się do wartości pojemności tych kondensatorów i później na nich opiera późniejsze wymagania dotyczące własności tych konstrukcji, czyli np. dotyczące częstotliwości odcięcia.
+Te parametry pojemności są elementem ujawnionym w procesie projektowym.
+Kiedy popatrzyłem na ten wykres, zacząłem się zastanawiać, czy to są jedyne pojemności, które w tym procesie należałoby uwzględnić i co się dzieje po drugiej stronie tych kropeczek, które zaczynają ten tor pomiarowy.
+Jeżeli tam też występują jakieś pojemności, to one zasadniczo również się tu dodadzą.
+Jestem świadom, że nie jest to zarzut do Pani, dlatego że założenie o rezystancyjnym charakterze tkanki jest absolutnie powszechne.
+Proszę więc nie odbierać tego, jako personalny zarzut.
+Natomiast te moje wątpliwości się w pewnym sensie potwierdziły w obserwacji, do której się Pani odnosi we własnych pomiarach, czyli tym odwróceniu fazy na "zerowej" elektrodzie, które było pokazane w części pomiarowej.
+Oczywiście nie badałem głębiej tego zjawiska, to jest analiza na poziomie "machania rękami".
+Być może wpływ własności pojemnościowych tkanki należałoby się doszukiwać w źródłach tego zjawiska, dlaczego tak się stało że tam się ta faza odwróciła przy niewielkiej odległości między elektrodami.
+To jest taki temat, który stawiam bardziej ze znakiem zapytania niż z kropką.
+
+btj
+
+Do tego jeszcze przejdę za chwilę.
+
+---
+
+buch
+
+*Co do mankamentów merytorycznych, występujących w dysertacji, jest ich kilka.
+Pierwszy z nich [...] dotyczy faktu, że model źródła, tkanki i sprzężenia jest niejednoznaczny i nie do końca odpowiada rzeczywistości pomiarowej.
+Niezależnie od widma samego źródła, skumulowane efekty pojemności i lokalnego przewodzenia w tkance, nakładają na źródła swoją charakterystykę, która faworyzuje niskie częstotliwości [8].
+Efekty jonowe są składową tego zjawiska [9] ale nie mają dominującego charakteru [10].*
+
+*Potencjał stały jest przede wszystkim efektem brzegowym, związanym z tworzeniem warstwy podwójnej, które z kolei wynika z różnicy potencjałów chemicznych między kontaktującymi się fazami [10].
+Oczywiście rozdzielenie ładunku objętościowego również zachodzi [9], ale jest to efekt fizyczny, a nie fizykochemiczny.
+Przemiany elektrochemiczne modą zachodzić, dopiero gdy przekroczona jest określona energia aktywacji [10].
+W odniesieniu do elektrod stymulujących piszą o tym Merrill i wsp. -- pozycja [113] literatury -- te rozważania można rozszerzyć na elektrody pomiarowe [8-10].*
+
+*Fluktuacje termiczne dotyczą nie tylko rezystancji, ale również pojemności -- taki proces jak tworzenie warstwy podwójnej również jest poddany fluktuacjom.
+W związku z tym nie ma potrzeby odwoływania się do rezystancyjnej natury tkanki, po to, żeby uzasadnić użycie twierdzenia Nyquista.
+Należy to raczej uznać za brak modelu.
+Również rezystywny charakter tkanki nerwowej można poddać w wątpliwość -- cytowany przez Autorkę Destexhe ma w swoim dorobku pracę [7] poświęconą temu zagadnieniu.*
+
+btj
+
+W pracy podczas wyznaczania wymagań dla systemu, ze względu na charakter sygnałów, opierano się na wiedzy literaturowej oraz doświadczeniu osób rejestrujących takie sygnały.
+Dodatkowo zakładano, że w przypadku mikroelektrod umiejscowionych w bezpośrednim sąsiedztwie komórki nerwowej główny dominujący wpływ ma rezystywny charakter medium. 
+Wiem, że w pomiarach EEG wyzwaniem jest modelowanie charakteru rejestrowanych odpowiedzi, ponieważ tam występuje silne tłumienie przez czaszkę przez kolejne różne struktury o odmiennym charakterze impedancyjnym.
+Tu stosowano się do uproszczonego modelu.
+
+buch
+
+Nawet jeżeli ostatni stopień jest rezystancyjny, bo czaszka można się spodziewać, że ma taki charakter, to w tym momencie należy uznać, że to sprzężenie następuje z pojemnościami, które są głębiej.
+Tutaj ze zdaniem Pani, że w niskich częstotliwościach efekty pojemnościowe nie występują, to ja bym raczej polemizował, bo jeżeli efekty pojemnościowe gdzieś występują to właśnie w niskich częstotliwościach ze względu na charakter dyspersji.
+Jeżeli się spytać rasowego elektroników, gdzie kondensator ma większą pojemność, a gdzie mniejszą to oni natychmiast odpowiedzą, że w wysokich częstotliwościach ma mniejszą pojemność.
+Idźmy dalej.
+
+---
+
+buchner
+
+*Czynnikiem, który w sposób zasadniczy wpływa na model błędu i model sprzężenia tkanki z elektrodą jest lokalizacja elektrody referencyjnej.
+Nie ulega wątpliwości, że sonda MEA jest czymś zupełnie innym niż elektroda referencyjna, więc pomiar jest asymetryczny.
+Nie zmienia to jednak faktu, że nadal jest to pomiar bipolarny.
+Niektóre konstrukcje, takie jak opisywany przez Autorkę Neuropixel, są bipolarne i symetryczne (por rys. 2.8, także rys. 2.13) inne nie są (rys. 2.12, 3.7!).
+Zdecydowanie brakuje odniesienia do tej fundamentalnej różnicy.
+Im dalej umieszczona jest elektroda referencyjna, tym większy wpływ na sygnał ma interferencja 50 Hz, oraz wszystkie źródła endogenne, w szczególności silny sygnał kardiogenny.
+Przy odległej lokalizacji elektrody odniesienia trudno jest interpretować otrzymane przebiegi jako neurogenne.*
+
+btj
+
+W praktyce trudno jest zapewnić idealnie symetryczny pomiar, ponieważ impedancja elektrody referencyjne jest zawsze inna niż elektrody pomiarowej, nawet w przypadku sondy Neuropixel. 
+Możliwym rozwiązaniem, stosowanym zresztą powszechnie, jest wykonanie elektrody referencyjnej o możliwie małej impedancji, co zapewni lepszą symetryzację tych wejść.
+Oczywiście nie zapewnia to tłumienia sygnałów współbieżnych generowanych w badanej tkance, ale pomaga w tłumieniu sygnałów współbieżnych pochodzących z zakłóceń elektromagnetycznych. 
+Na przykładzie, wzmacniacz Neuropixel jest różnicowo-różnicowy, czyli wyjście jest różnicowe, ale tak jest w najnowszej jego wersji -- poprzednio było to różnicowo-singlended, czyli z pojedynczym wyjściem sygnału.
+Wynika z tego, jak komponowany jest kolejny stopień.
+Jest to związane z tym, o czym mówiłam wcześniej.
+Ten model, do którego się Pan odnosi z jedną linią sygnałową, jest to uproszczony schemat przedstawiający przesłuchy na poszczególnych kanałach.
+Wzmacniacz jest oczywiście różnicowy, jednak aby zamodelować efekty przesłuchów tak to narysowałam dla ułatwienia.
+
+buch
+
+Proszę mieć świadomość, że jeśli umieści Pani elektrodę referencyjną np. na prawej nodze, w tym momencie źródłem sygnału staje się wszystko, co jest między badanym punktem na sondzie neuronowej a prawą nogą.
+To jest ta świadomość, której również dość powszechnie w tych pomiarach brakuje.
+Jak widzę wielokanałowe zapisy z powierzchni klatki piersiowej, tam nie ma nigdzie informacji, o tym, gdzie została zlokalizowana elektroda referencyjna.
+To jest, znowu, ogólna uwaga.
+
+---
+
+buch
+
+*Odwrócenie amplitudy obserwowane na elektrodzie $0$ wygląda w pierwszym przybliżeniu na wynik zmiany fazy wynikający ze sprzężenia pojemnościowego -- trudno byłoby zinterpretować odwrócenie amplitudy wprost jako odwrócenie kierunku prądu -- jest to jeden z najciekawszych wyników dotyczących samych narzędzi, sugerujący konieczność dalszego rozwoju techniki modelowania.*
+
+btj
+
+Różnica czasu między poszczególnymi rejestracjami wynosiła ok. 100 minut.
+Na podstawie wcześniejszych eksperymentów, może dochodzić do efektów mechanicznej relaksacji tkanki i względnego przemieszczenia się źródeł.
+
+buch
+
+Jeżeli do implantowania elektrody dochodzi do powstania np. krwiaka, który w funkcji czasu jest niestabilny, to jest to czynnik, który ma wpływ na pomiary.
+Natomiast można to wyeliminować poprzez kilkukrotne powtarzanie eksperymentu na różnych zwierzętach, zmieniając kolejność pomiarów.
+W tym momencie można do pewnego stopnia to zniwelować
+
+btj
+
+W tym eksperymencie, ze względu na możliwości nie mogłam powtórzyć pomiaru.
+
+buch
+
+Nie dyskutuję.
+
+---
+
+buch 
+
+*Odnośnie podnoszonego przez Autorkę faktu zniknięcia podwójnego maksimum widma THD, warto zauważyć, że rozwiązanie takie występowało już jako jeden z wariantów widma w analizie Monte-Carlo (rys 4.9) oraz wykazywało silną zależność od pojemności $C_{gb}$ (rys 3.10), co mogło być przyczyną obserwowanych różnic między widmem zmierzonym a wynikami symulacji.*
+
+btj
+
+Środowisko symulacyjne nie uwzględnia wszystkich efektów brzegowych -- bardziej wiarygodne są wyniki z weryfikacji elektronicznej.
+Zatem aż tak bardzo nie przywiązywałam się do tego, że te dwa maksima występują.
+Silna zależność od częstotliwości granicznej *[fragment nieczytelny]* i wartość amplitudy są porównywalne co świadczy o dobrym opisie danych przez symulację.
+Jednak wpływ tych pojemności nie jest dokładnie taki, jaki przewidują modele.
+
+buch
+
+Jestem usatysfakcjonowany.
 
 
 ## Publiczna dyskusja:
