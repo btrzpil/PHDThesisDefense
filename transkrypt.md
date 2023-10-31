@@ -672,14 +672,393 @@ btj
 
 Środowisko symulacyjne nie uwzględnia wszystkich efektów brzegowych -- bardziej wiarygodne są wyniki z weryfikacji elektronicznej.
 Zatem aż tak bardzo nie przywiązywałam się do tego, że te dwa maksima występują.
-Silna zależność od częstotliwości granicznej *[fragment nieczytelny]* i wartość amplitudy są porównywalne co świadczy o dobrym opisie danych przez symulację.
+Silna zależność od częstotliwości granicznej *[fragment nieczytelny]* i wartość amplitudy są porównywalne, co świadczy o dobrym opisie danych przez symulację.
 Jednak wpływ tych pojemności nie jest dokładnie taki, jaki przewidują modele.
 
 buch
 
 Jestem usatysfakcjonowany.
 
+__*Koniec odpowiedzi do uwag wyrażonych w recenzjach*__
 
 ## Publiczna dyskusja:
+
+żoł
+
+Proszę mi powiedzieć, dlaczego to THD jest tak ważne dla tych niskich częstotliwości? Nie dla wysokich (AP).
+
+btj
+
+Krytyczny zakres LFP 0,5 Hz do 100 Hz -- w takim zakresie zniekształcenia 20% czy 10% są bardzo duże.
+W literaturze typowo podaje się ten współczynnik dla 1 kHz i tam THD jest stosunkowo niższy.
+
+żoł
+
+Jeszcze raz -- dlaczego to ma znaczenie i co oznaczają te kreski czerwone?
+
+btj
+
+To jest zakres zakłóceń elektromagnetycznych sieci 50Hz/60Hz.
+LFP pokrywają się z tym zakresem -- krytyczne jest też uwzględnianie tego efektu w CMRR również.
+
+żoł
+
+Jakby mogła Pani pokazać slajd z pomiarów na szczurach z LFP -- no właśnie dlaczego akurat w tej części pasma te zniekształcenia mają znaczenie>?
+
+btj 
+
+Tutaj obserwowaliśmy odpowiedź na mechaniczną stymulację wibrys w korze baryłkowej jako przykład sygnałów LFP, który można rejestrować.
+Kształt odpowiedzi pokrywa się z oczekiwanym,
+
+żoł
+
+Dlaczego tutaj ma to znaczenie, a nie w AP?
+
+btj
+
+Bo tam są one na akceptowalnym poziomie, więc nie ma znaczenia THD w przypadku potencjałów czynnościowych, ponieważ ich częstotliwość jest w okolicy tego 1 kHz.
+
+żoł
+
+Chodzi mi o analizę sygnałów późniejszą. Jakie to ma znaczenie dla analizy
+
+btj
+
+LFP, czyli odpowiedź lokalnej populacji neuronów.
+Zasięg tych sygnałów może być jednak szerszy -- silne źródła sygnału w dalszej odległości i bliższe źródła, ale słabsze.
+Jeżeli zniekształcenia będą duże, nie da modelować charakteru źródeł sygnałowych na podstawie rejestracji.
+
+żoł
+Jak te zniekształcenia będą duże, tym trudniej jest...
+
+btj
+
+*[fragment nieczytelny]*
+
+żoł
+
+A ten 1% skąd się bierze? To jest hołd dla systemu dziesiętnego czy coś więcej?
+
+btj
+
+Tak. Należało wybrać jakąś wartość.
+Nieraz w literaturze pojawia się "1% osiągnięto dla amplitudy sygnału $10 mV_{pp}$ i częstotliwości 1 kHz.
+Stąd wzięłam ten 1% jako satysfakcjonujący wskaźnik.
+
+żoł
+
+Rozumiem, Pani bardziej optymalizowała, niż poszukiwała wartości.
+
+btj
+
+Tak jak powiedziałam wcześniej, należałoby przeprowadzić analizę sygnałów biologicznych do określenia, jaki poziom zniekształceń jest wystarczający.
+
+żoł
+
+Ten parametr możemy polepszać lub pogarszać kosztem czego głównie? Jakiego parametru?
+
+btj
+
+Pojemność.
+
+żoł
+
+Pojemność miałaby wpływ na co?
+
+btj
+
+Na powierzchnię.
+Używamy tranzystorów jako elementów rezystancyjnych -- one mają charakter nieliniowy.
+Można zmniejszyć udział rezystancji w sprzężeniu zwrotnym i dać większy udział pojemności, która będzie bardziej liniowa (będzie to też korzystniejsze pod kątem szumów).
+Nie można jednak w nieskończoność zwiększać tej pojemności, ponieważ to kosztuje powierzchnię.
+Pojemność $4 pF$ dla jednego kondensatora zajmuje $200 \mu m^2$, a powierzchnia całego przedwzmacniacza, czyli tego całego układu ze wzmacniaczem transkonduktancyjnym z dwoma pojemnościami, rezystorem wynosi tyle *[wartość na slajdzie]*. 
+*[Fizyczna wielkość elementu pojemnościowego]* stanowi to znaczący czynnik optymalizowany w tego typu wielokanałowych systemach.
+
+dąb
+
+Tutaj Pani wspomniała, jednak w pracy nie ma dyskusji na ten temat -- ten wzmacniacz może znaleźć zastosowanie w rozwiązaniach z jednoczesną stymulacją elektryczną.
+Kiedy robimy stymulację elektryczną, to generujemy olbrzymie artefakty.
+Kasowanie tych artefaktów zachodzi różnymi technikami, ale będzie się sprowadzać do odejmowania jakichś dwóch sygnałów -- tego artefaktu stymulacyjnego i rejestracji.
+Kiedy zaczynamy odejmować dwie duże wielkości, to te zniekształcenia sygnału jeszcze bardziej się uwidaczniają i jest to jeszcze bardziej krytyczne.
+Jest to ten drugi aspekt, trochę z tyłu głowy, w kontekście dalszego rozwoju tej techniki.
+
+buch
+
+Warto jeszcze zauważyć, że ta pojemność, która jest krytyczną czynnikiem, jeżeli chcemy ją zamknąć w układzie scalonym, to jest elementem ograniczającym.
+Natomiast można ją wyprowadzić na zewnątrz do elektrody i w tym momencie użycie warstw pojemnościowych na interfejsie między metalem a mierzoną tkanką.
+Tam są duże możliwości, jeśli chodzi o nowe materiały, które również u Państwa są budowane odnośnie tego, by zbudować tam układ pojemnościowy poza strukturami przedwzmacniacza.
+
+ph
+
+A czy taka pojemność nie będzie miała potem takiego upływu DC?
+
+buch
+
+To znaczy elektrody AgAgCl są stosowane powszechnie w praktyce medycznej, i możemy dyskutować.
+
+btj
+
+Ale jest jeszcze sprawa dopasowania impedancji do wzmacniacza, by nie powodować tłumienia sygnału
+
+buch 
+
+Zostawmy może ten temat i przejdźmy do dalszej dyskusji.
+
+żoł
+
+Tak się głośno zastanawiam.
+Jeśli pójść w tym kierunku ADC, czy to jest tak ważne, żeby te nieliniowości *[fragment nieczytelny]*
+
+buch
+
+Wspomniany tu był potencjał kontaktowy o dużej składowej stałej.
+Użycie elektrod AgAgCl pozwala na automatyczne kompensowanie składowej stałej, tak przynajmniej twierdzą elektrochemicy -- ja nigdy tego nie weryfikowałem.
+
+---
+
+pf
+
+Jako ciekawski troszkę o technologię.
+Mianowicie Pani wspomina w projekcie masek technologicznych, czyli przy projektowaniu topografii o tym, że jest to projekt krytyczny ze względu na zapewnienie jednorodności wzmocnienia kanałów odczytowych.
+Co Pani przez to stwierdzenie rozumie? Jak to się przekłada na projekt, który Pani wykonała?
+
+btj
+
+Integracja wielu kanałów odczytowych powinna skutkować jednorodnością parametrów elektronicznych, żeby rejestrowane sygnały były porównywalne.
+Stosowanie indywidualnej korekty jest możliwe, jednak te bloki będą zajmowały dodatkową powierzchnię. 
+Dla prezentowanego systemu stworzyłam blok korekty.
+Polaryzacja tranzystorów zależy od napięcia pomiędzy bramką a źródłem. 
+Rozrzut technologiczny tych par tranzystorów mógłby spowodować różnicę rezystancji, co implikowałoby różnicę częstotliwości granicznej np. 0.1 Hz vs 0.2 Hz między kanałami.
+Blok ten umożliwiałby kalibrowanie systemu i uzyskanie jednorodnych parametrów w całym układzie.
+
+pf
+
+Rozumiem. Ja troszkę inaczej odebrałem to stwierdzenie, że Pani zastosowała pewne specyficzne zabiegi przy projektowaniu topografii poszczególnych elementów.
+
+btj
+
+Tylko standardowe techniki dotyczące np. rozmieszczania pary różnicowej.
+
+pf
+
+To jak Pani zrealizowała parę różnicową w kontekście zaburzeń procesu technologicznego?
+Pani zrobiła analizy Monte-Carlo -- one odnoszą się wyłącznie do zaburzeń o charakterze pseudolosowym. 
+Natomiast mamy też deterministyczne
+
+btj
+
+Jak layout optymalizowałem?
+
+pf
+
+Tak, bo Pani tutaj o projekcie masek napisała, dlatego o to zapytałem. 
+Jak Pani parę różnicową zaprojektowała?
+
+btj
+
+Niestety nie mam tego obrazka...
+
+pf 
+
+To może Pani opowiedzieć.
+
+btj
+
+Jest znaczna różnica "W" i "L".
+Obie pary różnicowe muszą znajdować się blisko siebie i muszą być skonfigurowane na centroidowej tak samo.
+
+pf
+
+"Common centroid", tak?
+
+btj
+
+Tak. *[fragment nieczytelny]*
+
+pf
+
+Dobrze, już wiem, co Pani zrobiła, dziękuję.
+
+---
+
+żoł
+
+Jak wyglądał układ pomiarowy do pomiarów in-vivo czy to jest ten sam, który był na zdjęciu wcześniej?
+
+btj
+
+Tak, to ta sama płytka, jednak z drobnymi zmianami. 
+Trzeba było zmodyfikować system akwizycji danych oraz wejście sygnałów.
+Wykorzystanie przełączników umożliwiło wykorzystanie wejść z sondy Neuronexus.
+
+żoł
+
+W takim razie odległość między układem scalonym a elektrodą była dosyć znaczna.
+Te sygnały są stosunkowo słabe.
+
+btj
+
+Pomiary odbywały się w klatce Faradaya, co separuje od zewnętrznych źródeł.
+
+żoł
+
+Sama pojemność przewodu musiała być znaczna, który prowadził ten sygnał do układu scalonego. Kilka centymetrów, koncentryczny kabel, ale sobie radziło, jak rozumiem?
+
+btj
+
+Tak, opieraliśmy się też na wiedzy eksperymentatora i w jej opinii to nie było problemem.
+
+żoł
+
+Właśnie mówię o AP, gdzie mamy $10 \mu V$ .
+
+btj
+
+Dla LFP to nie będzie problemem.
+W tym konkretnym przypadku obserwowano potencjały czynnościowe o amplitudzie $1 mV$.
+
+żoł
+
+Dosyć mocne.
+
+btj
+
+Tak. Rejestracja przebiegała we wzgórzu, a nie w korze, ponieważ tam występują mocniejsze potencjały czynnościowe i to są również jedne z większych amplitud znanych w literaturze ($50 \mu V$ do właśnie $1 mV$). 
+
+żoł
+
+To właśnie wydawało mi się podejrzane. Tak właśnie kojarzę AP o amplitudach rzędu $100 \mu V$, a tutaj widzę, że się właśnie nie zgubiły.
+
+buch
+
+Taki temat: impedancja falowa tego obwodu wejściowego
+
+btj
+
+Impedancja falowa będzie miała znaczenie przy wyższych częstotliwościach sygnału -- tutaj jednak to nie są gigahertze i nie ma linii długiej.
+
+żoł
+
+Jakie jeszcze były zabiegi związane z zasilaniem tego układu scalonego by nie interferowało to z rejestrowanymi sygnałami? Stabilizator? Kondensator?
+
+btj
+
+Na płytce drukowanej zostały zastosowane pojemności odsprzęgające.
+
+buch
+
+W badaniach tego typu nie ma wymogu stosowania transoptora?
+
+btj
+
+Translatora napięć?
+
+buch
+
+Transoptora.
+
+żoł
+
+Chodzi o to, że z drugiej strony jest duża karta cyfrowa i cały pecet, który bardzo mocno "sieje".
+
+buch
+
+Chodzi o izolację galwaniczną toru pomiarowego od źródeł zasilania.
+W ludzkich pomiarach np. 
+
+btj
+
+*[fragment nieczytelny]*
+
+kom
+
+Chodzi o barierę galwaniczną, czyli odseparowanie zasilania od toru pomiarowego. 
+Czy przeprowadzała Pani pomiary na pececie zasilanym z gniazdka, czy na notebooku zasilanym z baterii?
+
+btj
+
+Z gniazdka.
+
+buch
+
+Tak jak już kilka razy padło, nie miała Pani wpływu na schemat układu pomiarowego i warunki wykonywania pomiaru były standardowe.
+W związku z tym również świadomość osób wykonujących te pomiary też była standardowa...
+
+kom
+
+Czy wykorzystano kartę pomiarową National Instruments?
+
+btj
+
+Tak.
+
+kom 
+
+Czy miała izolację galwaniczną? *[fragment nieczytelny]*
+
+btj
+
+Nie.
+
+dąbr
+
+Nie, na pewno nie.
+
+kom
+
+To bardziej dotyczy bezpieczeństwa tak naprawdę, gdyż tej sieci w sygnałach nie było widać.
+
+btj
+
+Sygnał sieci był widoczny przy weryfikacji elektronicznej.
+
+kom
+
+Z moich doświadczeń wynika, że użycie notebooka w tego typu pomiarach z zasilaniem bateryjnym znacząco pomaga.
+O ile jest taka możliwość. 
+
+żoł
+
+Te szumy zmierzone, jaką miały wartość?
+
+btj
+
+Takie jak wynika z tabeli na slajdzie.
+
+żoł
+
+Te szumy są dosyć dobre.
+
+---
+
+pf
+
+Jeszcze wrócę do technologii.
+Inżynier, jak chce coś zaprojektować, musi wybrać producenta i odpowiednią generację technologii i Pani w jednym z rozdziałów rozważa wpływ na zniekształcenia powierzchni bramki i grubości tlenku i porównuje Pani wyniki dla trzech wybranych technologii o różnym wymiarze charakterystycznym.
+Ponieważ powierzchnie, jakie Pani stosuje, są duże, no to ten wymiar minimalny nie ma właściwie żadnego znaczenia, tylko grubość tlenku.
+Pani tylko wspomina o tym, że grube tlenki Pani wybierała, ale czy mogłaby Pani to jakoś skonkretyzować.
+W większości technologii dostępne są tranzystory na różne napięcia progowe.
+W różny sposób to można kształtować m.in. grubością tlenku.
+Czy Pani może pamięta, jakie to były grubości? 
+Co to znaczy gruby tlenek tutaj?
+
+btj
+
+Technologia zapewnia podstawowe wersje elementów, które można modyfikować, stosując grubszą warstwę tlenku i dostosowywać tym samym do wyższych napięć zasilania.
+W wariancie podstawowym jest to $1.8 V$, a ja wykorzystywałam tranzystory $5 V$ - nie pamiętam jednak konkretnych wymiarów. 
+
+pf
+
+Tak, chodziło mi o grubość, z ciekawości.
+
+btj
+
+Ta technologia miała też inne korzystne własności: warstwa SOI, izolacja podłoża.
+
+pf
+
+Dobrze, dziękuję.
+
+__*koniec dyskusji*__
 
 Opracowanie: dr inż. Paweł Jurgielewicz 
